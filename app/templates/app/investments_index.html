@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>Investments by Country</h2>
+  <ul>
+    {% for c in countries %}
+      <li><a href="{% url 'app:country_detail' c.slug %}">{{ c.name }}</a></li>
+    {% empty %}
+      <li>No countries available.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

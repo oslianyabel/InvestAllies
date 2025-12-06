@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-06 11:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: .\app\templates\app\base.html:22
+msgid "Gold price"
+msgstr "Precio del oro"
+
+#: .\app\templates\app\base.html:24
+msgid "Gold calculator"
+msgstr "Calculadora de oro"
+
+#: .\app\templates\app\base.html:26
+msgid "Fuel price"
+msgstr "Precio del combustible"
+
+#: .\app\templates\app\base.html:28
+msgid "Fuel calculator"
+msgstr "Calculadora de combustible"
+
+#: .\app\templates\app\base.html:36
+msgid "International investment opportunities"
+msgstr "Oportunidades de inversión internacionales"
+
+#: .\app\templates\app\base.html:43
+msgid "Investments"
+msgstr "Inversiones"
+
+#: .\app\templates\app\base.html:44 .\app\templates\app\gold_index.html:5
+msgid "Gold"
+msgstr "Oro"
+
+#: .\app\templates\app\base.html:45 .\app\templates\app\fuel_index.html:5
+msgid "Fuel"
+msgstr "Combustible"
+
+#: .\app\templates\app\base.html:46
+msgid "Offshore"
+msgstr "Offshore"
+
+#: .\app\templates\app\base.html:47 .\app\templates\app\services_index.html:5
+msgid "Services"
+msgstr "Servicios"
+
+#: .\app\templates\app\base.html:52
+msgid "Contact"
+msgstr "Contacto"
+
+#: .\app\templates\app\country_articles.html:5
+#, python-format
+msgid "Articles for %(country.name)s"
+msgstr "Artículos para %(country.name)s"
+
+#: .\app\templates\app\country_detail.html:5
+#, python-format
+msgid "Country: %(country.name)s"
+msgstr "País: %(country.name)s"
+
+#: .\app\templates\app\country_detail.html:6
+msgid "Articles:"
+msgstr "Artículos:"
+
+#: .\app\templates\app\country_objects.html:5
+#, python-format
+msgid "Investment objects in %(country.name)s"
+msgstr "Oportunidades de inversión en %(country.name)s"
+
+#: .\app\templates\app\country_objects.html:8
+msgid "ROI:"
+msgstr "ROI:"
+
+#: .\app\templates\app\country_objects.html:10
+msgid "No objects."
+msgstr "No hay objetos."
+
+#: .\app\templates\app\fuel_articles.html:5
+msgid "Fuel Articles"
+msgstr "Artículos sobre combustible"
+
+#: .\app\templates\app\fuel_articles.html:10
+msgid "No fuel articles."
+msgstr "No hay artículos sobre combustible."
+
+#: .\app\templates\app\fuel_index.html:7
+#, python-format
+msgid "Latest: %(price.price)s %(price.currency)s (%(price.timestamp)s)"
+msgstr "Último: %(price.price)s %(price.currency)s (%(price.timestamp)s)"
+
+#: .\app\templates\app\fuel_index.html:9
+msgid "No live fuel price."
+msgstr "No hay precio de combustible en vivo."
+
+#: .\app\templates\app\gold_articles.html:5
+msgid "Gold Articles"
+msgstr "Artículos sobre oro"
+
+#: .\app\templates\app\gold_articles.html:10
+msgid "No gold articles available."
+msgstr "No hay artículos sobre oro disponibles."
+
+#: .\app\templates\app\gold_index.html:7
+#, python-format
+msgid "Live price: %(price.price)s (%(price.timestamp)s)"
+msgstr "Precio en vivo: %(price.price)s (%(price.timestamp)s)"
+
+#: .\app\templates\app\gold_index.html:9
+msgid "No live data"
+msgstr "No hay datos en vivo"
+
+#: .\app\templates\app\gold_index.html:11 .\app\templates\app\search.html:6
+msgid "Articles"
+msgstr "Artículos"
+
+#: .\app\templates\app\gold_index.html:16
+msgid "No gold articles."
+msgstr "No hay artículos sobre oro."
+
+#: .\app\templates\app\home.html:5
+msgid "Featured Countries"
+msgstr "Países destacados"
+
+#: .\app\templates\app\home.html:10
+msgid "No countries configured."
+msgstr "No hay países configurados."
+
+#: .\app\templates\app\home.html:14
+msgid "Featured Opportunities"
+msgstr "Oportunidades destacadas"
+
+#: .\app\templates\app\home.html:19
+msgid "No opportunities."
+msgstr "No hay oportunidades."
+
+#: .\app\templates\app\home.html:23
+msgid "Latest Articles"
+msgstr "Últimos artículos"
+
+#: .\app\templates\app\home.html:28
+msgid "No articles."
+msgstr "No hay artículos."
+
+#: .\app\templates\app\legal_articles.html:5
+msgid "Legal Articles"
+msgstr "Artículos legales"
+
+#: .\app\templates\app\legal_articles.html:10
+msgid "No legal articles."
+msgstr "No hay artículos legales."
+
+#: .\app\templates\app\search.html:5
+#, python-format
+msgid "Search results for \"%(q)s\""
+msgstr "Resultados de búsqueda para \"%(q)s\""
+
+#: .\app\templates\app\search.html:11
+msgid "No articles found."
+msgstr "No se encontraron artículos."
+
+#: .\app\templates\app\search.html:15
+msgid "Objects"
+msgstr "Oportunidades"
+
+#: .\app\templates\app\search.html:20
+msgid "No objects found."
+msgstr "No se encontraron oportunidades."
+
+#: .\app\templates\app\services_index.html:10
+msgid "No services."
+msgstr "No hay servicios."

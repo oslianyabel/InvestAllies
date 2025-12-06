@@ -1,0 +1,14 @@
+pedir svg para el logo y las banderas
+
+- para que es ckeditor paths
+
+templates
+- footer pegado al fondo (mobile)
+- traducciones mal ubicado (mobile)
+- falta legal/
+- redes mobile en vertical
+
+- VPS github conection
+- VPS deploy
+
+- api conections

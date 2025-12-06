@@ -1,0 +1,18 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <div class="hero">
+    <h2>Gold Calculator</h2>
+    <p>Use this calculator to estimate value based on weight and purity.</p>
+  </div>
+
+  <div class="card-custom">
+    <form>
+      <label>Weight (grams)</label>
+      <input type="number" name="weight" class="form-control" placeholder="e.g. 100">
+      <label>Purity (%)</label>
+      <input type="number" name="purity" class="form-control" placeholder="e.g. 99.9">
+      <div style="margin-top:10px;"><button class="btn btn-primary" type="submit">Calculate</button></div>
+    </form>
+  </div>
+{% endblock %}

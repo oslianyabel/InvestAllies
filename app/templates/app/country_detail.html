@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% blocktrans %}Country: {{ country.name }}{% endblocktrans %}</h2>
+  <p>{% trans "Articles:" %}</p>
+  <ul>
+    {% for a in articles %}
+      <li><a href="{% url 'app:article_detail' a.pk %}">{{ a.title }}</a></li>
+    {% empty %}
+      <li>No articles.</li>
+    {% endfor %}
+  </ul>
+
+  <p>Investment objects:</p>
+  <ul>
+    {% for o in objects %}
+      <li><a href="{% url 'app:object_detail' o.pk %}">{{ o.title }}</a> — {{ o.price }}</li>
+    {% empty %}
+      <li>No objects.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

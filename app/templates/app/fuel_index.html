@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% trans "Fuel" %}</h2>
+  {% if price %}
+    <p>{% blocktrans %}Latest: {{ price.price }} {{ price.currency }} ({{ price.timestamp }}){% endblocktrans %}</p>
+  {% else %}
+    <p>{% trans "No live fuel price." %}</p>
+  {% endif %}
+{% endblock %}

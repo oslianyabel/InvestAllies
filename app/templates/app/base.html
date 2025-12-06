@@ -1,0 +1,149 @@
+
+{% load static %}
+{% load i18n %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InvestAllies</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  <body class="bg-light" style="font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;">
+    <div class="topbar">
+      <div class="site-container topbar-inner">
+        <div class="topbar-links">
+          <a href="{% url 'app:gold_price' %}">{% trans "Gold price" %}</a>
+          <span class="muted">|</span>
+          <a href="{% url 'app:gold_calculator' %}">{% trans "Gold calculator" %}</a>
+          <span class="muted">|</span>
+          <a href="{% url 'app:fuel_price' %}">{% trans "Fuel price" %}</a>
+          <span class="muted">|</span>
+          <a href="{% url 'app:fuel_calculator' %}">{% trans "Fuel calculator" %}</a>
+        </div>
+        <!-- Topbar search form (submits via GET to the search view) -->
+        <form method="get" action="{% url 'app:search' %}" class="topbar-search" role="search" aria-label="Site search">
+          <label for="topbar-q" class="sr-only">{% trans "Search" %}</label>
+          <input id="topbar-q" name="q" type="search" placeholder="{% trans "Search articles, countries..." %}" value="{{ request.GET.q|default_if_none:'' }}" />
+          <button type="submit" class="topbar-search-btn" aria-label="{% trans "Search" %}">🔍</button>
+        </form>
+      </div>
+    </div>
+    <header class="site-header" id="navbar">
+      <div class="site-container header-inner">
+        <div class="brand">
+          <a class="logo" href="{% url 'app:home' %}">InvestAllies</a>
+          <div class="tagline">{% trans "International investment opportunities" %}</div>
+        </div>
+
+        <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+
+        <nav id="main-nav" class="main-nav">
+          <ul>
+            <li><a href="{% url 'app:investments_index' %}">{% trans "Investments" %}</a></li>
+            <li><a href="{% url 'app:gold_index' %}">{% trans "Gold" %}</a></li>
+            <li><a href="{% url 'app:fuel_index' %}">{% trans "Fuel" %}</a></li>
+            <li><a href="{% url 'app:offshore_index' %}">{% trans "Offshore" %}</a></li>
+            <li><a href="{% url 'app:services_index' %}">{% trans "Services" %}</a></li>
+          </ul>
+
+          <!-- Mobile-only: duplicate topbar content inside the hamburger menu -->
+          <div class="mobile-topbar-items" aria-hidden="true">
+            <div class="mobile-topbar-links">
+              <a href="{% url 'app:gold_price' %}">{% trans "Gold price" %}</a>
+              <span class="muted">|</span>
+              <a href="{% url 'app:gold_calculator' %}">{% trans "Gold calculator" %}</a>
+              <span class="muted">|</span>
+              <a href="{% url 'app:fuel_price' %}">{% trans "Fuel price" %}</a>
+              <span class="muted">|</span>
+              <a href="{% url 'app:fuel_calculator' %}">{% trans "Fuel calculator" %}</a>
+            </div>
+            <form method="get" action="{% url 'app:search' %}" class="mobile-topbar-search" role="search" aria-label="{% trans "Site search" %}">
+              <label for="mobile-topbar-q" class="sr-only">{% trans "Search" %}</label>
+              <input id="mobile-topbar-q" name="q" type="search" placeholder="{% trans "Search articles, countries..." %}" value="{{ request.GET.q|default_if_none:'' }}" />
+              <button type="submit" class="topbar-search-btn" aria-label="{% trans "Search" %}">🔍</button>
+            </form>
+          </div>
+        </nav>
+
+        <div class="header-cta">
+          <a class="btn btn-primary" href="#">{% trans "Contact" %}</a>
+          <div class="language-dropdown">
+            <button id="lang-toggle" class="lang-toggle" aria-haspopup="true" aria-expanded="false">{{ LANGUAGE_CODE|upper }}</button>
+            <div id="lang-menu" class="lang-menu" role="menu" aria-hidden="true">
+              {% for code, name in LANGUAGES %}
+                <form method="post" action="{% url 'set_language' %}" class="lang-form">
+                  {% csrf_token %}
+                  <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                  <input name="language" type="hidden" value="{{ code }}">
+                  <button type="submit" class="language-btn {% if LANGUAGE_CODE == code %}active{% endif %}">{{ name }}</button>
+                </form>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="site-container main-content">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="bg-dark text-light py-4 mt-auto">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>
+          <strong class="pl-10">InvestAllies</strong>
+          <div class="small pl-10">Trusted international investment insights</div>
+        </div>
+        <div class="footer-actions small">
+          <a href="{% url 'app:subscribe' %}" class="link-light subscribe-link">Subscribe to newsletter</a>
+          {% if social_links %}
+          <div class="social-links" aria-label="Social links">
+            {% for s in social_links %}
+              <a href="{{ s.url }}" target="_blank" rel="noopener noreferrer" class="social-link {{ s.platform }}">{{ s.get_platform_display }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="mt-3 mt-md-0 small text-muted pl-10">© {{ now.year }} InvestAllies</div>
+      </div>
+    </footer>
+
+    <script>
+      // simple nav toggle for mobile
+      (function(){
+        const toggle = document.getElementById('nav-toggle');
+        const nav = document.getElementById('main-nav');
+        toggle && toggle.addEventListener('click', ()=>{
+          nav.classList.toggle('open');
+        });
+      })();
+      // language dropdown toggle
+      (function(){
+        const lt = document.getElementById('lang-toggle');
+        const lm = document.getElementById('lang-menu');
+        if(lt && lm){
+          lt.addEventListener('click', (e)=>{
+            const open = lm.classList.toggle('show');
+            lt.setAttribute('aria-expanded', open? 'true':'false');
+            lm.setAttribute('aria-hidden', open? 'false':'true');
+          });
+          // close when clicking outside
+          document.addEventListener('click', (e)=>{
+            if(!lt.contains(e.target) && !lm.contains(e.target)){
+              lm.classList.remove('show');
+              lt.setAttribute('aria-expanded','false');
+              lm.setAttribute('aria-hidden','true');
+            }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

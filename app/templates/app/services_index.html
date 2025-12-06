@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% trans "Services" %}</h2>
+  <ul>
+    {% for s in services %}
+      <li><a href="{% url 'app:service_detail' s.slug %}">{{ s.title }}</a></li>
+    {% empty %}
+      <li>{% trans "No services." %}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

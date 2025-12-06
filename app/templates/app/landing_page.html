@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <div class="hero">
+    <h2>{{ landing.title }}</h2>
+    <div>{{ landing.content|safe }}</div>
+  </div>
+  {% if landing.service %}
+    <div class="card-custom">
+      <h3>Related service: {{ landing.service.title }}</h3>
+      <p>{{ landing.service.description }}</p>
+    </div>
+  {% endif %}
+{% endblock %}

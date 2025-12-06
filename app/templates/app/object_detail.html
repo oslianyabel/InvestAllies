@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>{{ object.title }}</h2>
+  <p>{{ object.description }}</p>
+  <p>Country: {{ object.country }}</p>
+  <p>Price: {{ object.price }}</p>
+  <p>Expected ROI: {{ object.expected_roi }}%</p>
+  {% if object.images %}
+    <div>
+      {% for img in object.images %}
+        <img src="{{ img }}" alt="{{ object.title }}" style="max-width:200px;">
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}

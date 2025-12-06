@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-06 11:44-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: .\app\templates\app\base.html:22
+msgid "Gold price"
+msgstr "Цена на золото"
+
+#: .\app\templates\app\base.html:24
+msgid "Gold calculator"
+msgstr "Калькулятор золота"
+
+#: .\app\templates\app\base.html:26
+msgid "Fuel price"
+msgstr "Цена топлива"
+
+#: .\app\templates\app\base.html:28
+msgid "Fuel calculator"
+msgstr "Калькулятор топлива"
+
+#: .\app\templates\app\base.html:36
+msgid "International investment opportunities"
+msgstr "Международные инвестиционные возможности"
+
+#: .\app\templates\app\base.html:43
+msgid "Investments"
+msgstr "Инвестиции"
+
+#: .\app\templates\app\base.html:44 .\app\templates\app\gold_index.html:5
+msgid "Gold"
+msgstr "Золото"
+
+#: .\app\templates\app\base.html:45 .\app\templates\app\fuel_index.html:5
+msgid "Fuel"
+msgstr "Топливо"
+
+#: .\app\templates\app\base.html:46
+msgid "Offshore"
+msgstr "Офшор"
+
+#: .\app\templates\app\base.html:47 .\app\templates\app\services_index.html:5
+msgid "Services"
+msgstr "Услуги"
+
+#: .\app\templates\app\base.html:52
+msgid "Contact"
+msgstr "Контакты"
+
+#: .\app\templates\app\country_articles.html:5
+#, python-format
+msgid "Articles for %(country.name)s"
+msgstr "Статьи по %(country.name)s"
+
+#: .\app\templates\app\country_detail.html:5
+#, python-format
+msgid "Country: %(country.name)s"
+msgstr "Страна: %(country.name)s"
+
+#: .\app\templates\app\country_detail.html:6
+msgid "Articles:"
+msgstr "Статьи:"
+
+#: .\app\templates\app\country_objects.html:5
+#, python-format
+msgid "Investment objects in %(country.name)s"
+msgstr "Инвестиционные объекты в %(country.name)s"
+
+#: .\app\templates\app\country_objects.html:8
+msgid "ROI:"
+msgstr "ROI:"
+
+#: .\app\templates\app\country_objects.html:10
+msgid "No objects."
+msgstr "Объектов нет."
+
+#: .\app\templates\app\fuel_articles.html:5
+msgid "Fuel Articles"
+msgstr "Статьи о топливе"
+
+#: .\app\templates\app\fuel_articles.html:10
+msgid "No fuel articles."
+msgstr "Нет статей о топливе."
+
+#: .\app\templates\app\fuel_index.html:7
+#, python-format
+msgid "Latest: %(price.price)s %(price.currency)s (%(price.timestamp)s)"
+msgstr "Последнее: %(price.price)s %(price.currency)s (%(price.timestamp)s)"
+
+#: .\app\templates\app\fuel_index.html:9
+msgid "No live fuel price."
+msgstr "Нет актуальной цены на топливо."
+
+#: .\app\templates\app\gold_articles.html:5
+msgid "Gold Articles"
+msgstr "Статьи о золоте"
+
+#: .\app\templates\app\gold_articles.html:10
+msgid "No gold articles available."
+msgstr "Нет доступных статей о золоте."
+
+#: .\app\templates\app\gold_index.html:7
+#, python-format
+msgid "Live price: %(price.price)s (%(price.timestamp)s)"
+msgstr "Текущая цена: %(price.price)s (%(price.timestamp)s)"
+
+#: .\app\templates\app\gold_index.html:9
+msgid "No live data"
+msgstr "Нет актуальных данных"
+
+#: .\app\templates\app\gold_index.html:11 .\app\templates\app\search.html:6
+msgid "Articles"
+msgstr "Статьи"
+
+#: .\app\templates\app\gold_index.html:16
+msgid "No gold articles."
+msgstr "Нет статей о золоте."
+
+#: .\app\templates\app\home.html:5
+msgid "Featured Countries"
+msgstr "Избранные страны"
+
+#: .\app\templates\app\home.html:10
+msgid "No countries configured."
+msgstr "Страны не настроены."
+
+#: .\app\templates\app\home.html:14
+msgid "Featured Opportunities"
+msgstr "Избранные предложения"
+
+#: .\app\templates\app\home.html:19
+msgid "No opportunities."
+msgstr "Нет предложений."
+
+#: .\app\templates\app\home.html:23
+msgid "Latest Articles"
+msgstr "Последние статьи"
+
+#: .\app\templates\app\home.html:28
+msgid "No articles."
+msgstr "Нет статей."
+
+#: .\app\templates\app\legal_articles.html:5
+msgid "Legal Articles"
+msgstr "Юридические статьи"
+
+#: .\app\templates\app\legal_articles.html:10
+msgid "No legal articles."
+msgstr "Нет юридических статей."
+
+#: .\app\templates\app\search.html:5
+#, python-format
+msgid "Search results for \"%(q)s\""
+msgstr "Результаты поиска для \"%(q)s\""
+
+#: .\app\templates\app\search.html:11
+msgid "No articles found."
+msgstr "Статьи не найдены."
+
+#: .\app\templates\app\search.html:15
+msgid "Objects"
+msgstr "Объекты"
+
+#: .\app\templates\app\search.html:20
+msgid "No objects found."
+msgstr "Объекты не найдены."
+
+#: .\app\templates\app\services_index.html:10
+msgid "No services."
+msgstr "Услуг нет."

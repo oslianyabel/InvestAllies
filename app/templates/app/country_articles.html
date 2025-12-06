@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% blocktrans %}Articles for {{ country.name }}{% endblocktrans %}</h2>
+  <ul>
+    {% for a in articles %}
+      <li><a href="{% url 'app:article_detail' a.pk %}">{{ a.title }}</a> — {{ a.created_at }}</li>
+    {% empty %}
+      <li>No articles.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

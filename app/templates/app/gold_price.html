@@ -1,0 +1,11 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>Gold price</h2>
+  {% if price %}
+    <p>Price: {{ price.price }} USD</p>
+    <p>Timestamp: {{ price.timestamp }}</p>
+  {% else %}
+    <p>No price available.</p>
+  {% endif %}
+{% endblock %}

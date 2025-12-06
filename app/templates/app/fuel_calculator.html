@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>Fuel CIF/FOB Calculator</h2>
+  <div class="card-custom">
+    <form>
+      <label>Volume (MT)</label>
+      <input name="volume" type="number" class="form-control">
+      <label>Price per unit</label>
+      <input name="price" type="number" class="form-control">
+      <div style="margin-top:10px"><button class="btn btn-primary">Calculate</button></div>
+    </form>
+  </div>
+{% endblock %}

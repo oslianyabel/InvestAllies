@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>Fuel Price</h2>
+  {% if price %}
+    <p>Type: {{ price.fuel_type }}</p>
+    <p>Price: {{ price.price }} {{ price.currency }}</p>
+    <p>Timestamp: {{ price.timestamp }}</p>
+  {% else %}
+    <p>No fuel price available.</p>
+  {% endif %}
+{% endblock %}

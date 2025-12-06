@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% blocktrans %}Investment objects in {{ country.name }}{% endblocktrans %}</h2>
+  <ul>
+    {% for o in objects %}
+      <li><a href="{% url 'app:object_detail' o.pk %}">{{ o.title }}</a> — {{ o.price }} — {% trans "ROI:" %} {{ o.expected_roi }}%</li>
+    {% empty %}
+      <li>{% trans "No objects." %}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

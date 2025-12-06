@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <article>
+    <h2>{{ article.title }}</h2>
+    {% if article.cover_image %}
+      <img src="{{ article.cover_image.url }}" alt="{{ article.title }}" style="max-width:300px;">
+    {% endif %}
+    <div>
+      {{ article.content|safe }}
+    </div>
+    <p>Category: {{ article.category }}</p>
+    <p>Country: {{ article.country }}</p>
+    <p>Published: {{ article.created_at }}</p>
+  </article>
+{% endblock %}

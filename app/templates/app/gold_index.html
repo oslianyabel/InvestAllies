@@ -1,0 +1,19 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% trans "Gold" %}</h2>
+  {% if price %}
+    <p>{% blocktrans %}Live price: {{ price.price }} ({{ price.timestamp }}){% endblocktrans %}</p>
+  {% else %}
+    <p>{% trans "No live data" %}</p>
+  {% endif %}
+  <h3>{% trans "Articles" %}</h3>
+  <ul>
+    {% for a in articles %}
+      <li><a href="{% url 'app:article_detail' a.pk %}">{{ a.title }}</a></li>
+    {% empty %}
+      <li>{% trans "No gold articles." %}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% blocktrans %}Search results for "{{ q }}"{% endblocktrans %}</h2>
+  <h3>{% trans "Articles" %}</h3>
+  <ul>
+    {% for a in articles %}
+      <li><a href="{% url 'app:article_detail' a.pk %}">{{ a.title }}</a></li>
+    {% empty %}
+      <li>{% trans "No articles found." %}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>{% trans "Objects" %}</h3>
+  <ul>
+    {% for o in objects %}
+      <li><a href="{% url 'app:object_detail' o.pk %}">{{ o.title }}</a></li>
+    {% empty %}
+      <li>{% trans "No objects found." %}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

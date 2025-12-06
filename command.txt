@@ -1,0 +1,1 @@
+python manage.py seed_fake_data --countries 6 --services 5 --articles 30 --objects 15 --socials 6

@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+
+{% block content %}
+  <h2>Offshore Services</h2>
+  <ul>
+    {% for s in services %}
+      <li><a href="{% url 'app:service_detail' s.slug %}">{{ s.title }}</a></li>
+    {% empty %}
+      <li>No offshore services.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

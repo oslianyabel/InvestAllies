@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% trans "Featured Countries" %}</h2>
+  <ul>
+    {% for c in countries %}
+      <li><a href="{% url 'app:country_detail' c.slug %}">{{ c.name }}</a></li>
+    {% empty %}
+      <li>{% trans "No countries configured." %}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>{% trans "Featured Opportunities" %}</h2>
+  <ul>
+    {% for o in featured_objects %}
+      <li><a href="{% url 'app:object_detail' o.pk %}">{{ o.title }}</a> — {{ o.price }}</li>
+    {% empty %}
+      <li>{% trans "No opportunities." %}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>{% trans "Latest Articles" %}</h2>
+  <ul>
+    {% for a in latest_articles %}
+      <li><a href="{% url 'app:article_detail' a.pk %}">{{ a.title }}</a> — {{ a.created_at }}</li>
+    {% empty %}
+      <li>{% trans "No articles." %}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
