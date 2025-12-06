@@ -12,3 +12,6 @@ wheels/
 # db
 db.sqlite3
 
+# notes
+notes.txt
+command.txt
