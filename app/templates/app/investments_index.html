@@ -4,7 +4,11 @@
   <h2>Investments by Country</h2>
   <ul>
     {% for c in countries %}
-      <li><a href="{% url 'app:country_detail' c.slug %}">{{ c.name }}</a></li>
+      {% if c.slug %}
+        <li><a href="{% url 'app:country_detail' c.slug %}">{{ c.name }}</a></li>
+      {% else %}
+        <li>{{ c.name }}</li>
+      {% endif %}
     {% empty %}
       <li>No countries available.</li>
     {% endfor %}

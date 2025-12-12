@@ -120,7 +120,7 @@ LANGUAGES = [
     ("fr", "Français"),
     ("de", "Deutsch"),
     ("ar", "العربية"),
-    ("zh", "中文"),
+    ("zh-hans", "中文"),
 ]
 
 # Directorio donde se guardarán los archivos de traducción (.po)
@@ -142,7 +142,7 @@ MODELTRANSLATION_LANGUAGES = (
     "fr",
     "de",
     "ar",
-    "zh",
+    "zh-hans",
 )  # Idiomas soportados
 
 TIME_ZONE = "UTC"

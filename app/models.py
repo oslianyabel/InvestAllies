@@ -2,6 +2,7 @@ from enum import StrEnum
 from typing import Any
 
 from ckeditor.fields import RichTextField
+from django.conf import settings
 from django.db import models
 from django.utils.text import slugify
 
@@ -32,14 +33,53 @@ class SlugMixin:
             counter += 1
         return candidate
 
+    def _ensure_unique_slug_for_lang(self, base: str, lang: str) -> str:
+        """Ensure unique slug for a given language (e.g. slug_es)."""
+        Model = self.__class__
+        # Normalize language code to a valid python attribute suffix
+        lang_attr = lang.replace("-", "_")
+        field_name = f"{self.slug_field_name}_{lang_attr}"
+        candidate = base
+        counter = 1
+        lookup = {field_name: candidate}
+        pk = getattr(self, "pk", None)
+        while Model.objects.filter(**lookup).exclude(pk=pk).exists():  # type: ignore
+            candidate = f"{base}-{counter}"
+            lookup = {field_name: candidate}
+            counter += 1
+        return candidate
+
     def save(self, *args, **kwargs):
         # Only set slug if it's empty and source field exists
+        # Default / base slug
         current_slug = getattr(self, self.slug_field_name, None)
         source = getattr(self, self.slug_source_field, None)
         if (current_slug is None or current_slug == "") and source:
             base = self._generate_base_slug(str(source))
             unique = self._ensure_unique_slug(base)
             setattr(self, self.slug_field_name, unique)
+
+        # Per-language slugs (for modeltranslation fields)
+        # Use settings.LANGUAGES to iterate supported language codes
+        lang_codes = [
+            code for code, _ in getattr(settings, "LANGUAGES", (("en", "English"),))
+        ]
+        for code in lang_codes:
+            # attribute suffix must use underscores (e.g. zh-hans -> zh_hans)
+            code_attr = code.replace("-", "_")
+            slug_field_lang = f"{self.slug_field_name}_{code_attr}"
+            source_field_lang = f"{self.slug_source_field}_{code_attr}"
+            # Only attempt to set if the attribute exists on the model instance
+            if not hasattr(self, slug_field_lang):
+                continue
+            current_slug_lang = getattr(self, slug_field_lang, None)
+            source_lang = getattr(self, source_field_lang, None)
+            # If there is no translated slug but there is a translated source, generate
+            if (current_slug_lang is None or current_slug_lang == "") and source_lang:
+                base = self._generate_base_slug(str(source_lang))
+                base = base[:240]
+                unique = self._ensure_unique_slug_for_lang(base, code)
+                setattr(self, slug_field_lang, unique)
         return super().save(*args, **kwargs)  # type: ignore
 
 

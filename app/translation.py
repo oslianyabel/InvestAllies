@@ -12,22 +12,22 @@ from .models import (
 
 @register(Country)
 class CountryTranslationOptions(TranslationOptions):
-    fields = ("name",)
+    fields = ("name", "slug")
 
 
 @register(Service)
 class ServiceTranslationOptions(TranslationOptions):
-    fields = ("title", "description")
+    fields = ("title", "description", "slug")
 
 
 @register(ArticleCategory)
 class ArticleCategoryTranslationOptions(TranslationOptions):
-    fields = ("name",)
+    fields = ("name", "slug")
 
 
 @register(Article)
 class ArticleTranslationOptions(TranslationOptions):
-    fields = ("title", "content")
+    fields = ("title", "content", "slug")
 
 
 @register(InvestmentObject)
@@ -37,4 +37,4 @@ class InvestmentObjectTranslationOptions(TranslationOptions):
 
 @register(LandingPage)
 class LandingPageTranslationOptions(TranslationOptions):
-    fields = ("title", "content")
+    fields = ("title", "content", "slug")

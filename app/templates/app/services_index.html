@@ -5,7 +5,11 @@
   <h2>{% trans "Services" %}</h2>
   <ul>
     {% for s in services %}
-      <li><a href="{% url 'app:service_detail' s.slug %}">{{ s.title }}</a></li>
+      {% if s.slug %}
+        <li><a href="{% url 'app:service_detail' s.slug %}">{{ s.title }}</a></li>
+      {% else %}
+        <li>{{ s.title }}</li>
+      {% endif %}
     {% empty %}
       <li>{% trans "No services." %}</li>
     {% endfor %}

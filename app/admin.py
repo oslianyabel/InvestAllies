@@ -2,6 +2,16 @@ from django.contrib import admin
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
+try:
+    # Ensure translation registration runs before admin classes are instantiated
+    from . import translation  # noqa: F401
+except ImportError:
+    # If translations can't be imported in some environments, proceed and
+    # let modeltranslation raise a clear error later when required.
+    pass
+
+from modeltranslation.admin import TranslationAdmin
+
 from .models import (
     Article,
     ArticleCategory,
@@ -65,7 +75,7 @@ class FuelPriceResource(resources.ModelResource):
 
 
 @admin.register(Country)
-class CountryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+class CountryAdmin(TranslationAdmin, ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = CountryResource
     list_display = ("name", "slug", "active")
     search_fields = ("name", "slug")
@@ -73,7 +83,7 @@ class CountryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 
 @admin.register(Service)
-class ServiceAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+class ServiceAdmin(TranslationAdmin, ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = ServiceResource
     list_display = ("title", "slug", "active")
     search_fields = ("title", "slug")
@@ -81,14 +91,14 @@ class ServiceAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 
 @admin.register(ArticleCategory)
-class ArticleCategoryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+class ArticleCategoryAdmin(TranslationAdmin, ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = ArticleCategoryResource
     list_display = ("name", "slug")
     search_fields = ("name", "slug")
 
 
 @admin.register(Article)
-class ArticleAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+class ArticleAdmin(TranslationAdmin, ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = ArticleResource
     list_display = ("title", "category", "country", "publish", "created_at")
     search_fields = ("title", "content")
@@ -105,7 +115,7 @@ class InvestmentObjectAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 
 @admin.register(LandingPage)
-class LandingPageAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+class LandingPageAdmin(TranslationAdmin, ImportExportModelAdmin, admin.ModelAdmin):
     resource_class = LandingPageResource
     list_display = ("slug", "title", "service", "publish")
     search_fields = ("slug", "title")
