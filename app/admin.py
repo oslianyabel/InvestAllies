@@ -104,6 +104,36 @@ class ArticleAdmin(TranslationAdmin, ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ("title", "content")
     list_filter = ("publish", "category", "country")
     date_hierarchy = "created_at"
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": (
+                    "title",
+                    "slug",
+                    "content",
+                    "category",
+                    "country",
+                    "publish",
+                    "cover_image",
+                )
+            },
+        ),
+        (
+            "SEO",
+            {
+                "classes": ("collapse",),
+                "fields": (
+                    "meta_title",
+                    "meta_description",
+                    "meta_keywords",
+                    "og_title",
+                    "og_description",
+                    "og_image",
+                ),
+            },
+        ),
+    )
 
 
 @admin.register(InvestmentObject)
@@ -120,6 +150,23 @@ class LandingPageAdmin(TranslationAdmin, ImportExportModelAdmin, admin.ModelAdmi
     list_display = ("slug", "title", "service", "publish")
     search_fields = ("slug", "title")
     list_filter = ("publish",)
+    fieldsets = (
+        (None, {"fields": ("title", "slug", "service", "content", "publish")}),
+        (
+            "SEO",
+            {
+                "classes": ("collapse",),
+                "fields": (
+                    "meta_title",
+                    "meta_description",
+                    "meta_keywords",
+                    "og_title",
+                    "og_description",
+                    "og_image",
+                ),
+            },
+        ),
+    )
 
 
 @admin.register(Lead)

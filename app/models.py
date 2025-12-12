@@ -126,6 +126,13 @@ class Article(SlugMixin, models.Model):
     )  # Artículos sobre un país
     publish = models.BooleanField(default=True)
     cover_image = models.ImageField(upload_to="articles/", null=True, blank=True)
+    # SEO fields
+    meta_title = models.CharField(max_length=70, blank=True)
+    meta_description = models.CharField(max_length=320, blank=True)
+    meta_keywords = models.CharField(max_length=255, blank=True)
+    og_title = models.CharField(max_length=100, blank=True)
+    og_description = models.TextField(blank=True)
+    og_image = models.ImageField(upload_to="og_images/", null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -169,6 +176,13 @@ class LandingPage(SlugMixin, models.Model):
         Service, on_delete=models.SET_NULL, null=True, blank=True
     )
     publish = models.BooleanField(default=True)
+    # SEO fields
+    meta_title = models.CharField(max_length=70, blank=True)
+    meta_description = models.CharField(max_length=320, blank=True)
+    meta_keywords = models.CharField(max_length=255, blank=True)
+    og_title = models.CharField(max_length=100, blank=True)
+    og_description = models.TextField(blank=True)
+    og_image = models.ImageField(upload_to="og_images/", null=True, blank=True)
 
     def __str__(self):
         return self.title

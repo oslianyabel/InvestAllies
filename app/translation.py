@@ -27,7 +27,15 @@ class ArticleCategoryTranslationOptions(TranslationOptions):
 
 @register(Article)
 class ArticleTranslationOptions(TranslationOptions):
-    fields = ("title", "content", "slug")
+    fields = (
+        "title",
+        "content",
+        "slug",
+        "meta_title",
+        "meta_description",
+        "og_title",
+        "og_description",
+    )
 
 
 @register(InvestmentObject)
@@ -37,4 +45,12 @@ class InvestmentObjectTranslationOptions(TranslationOptions):
 
 @register(LandingPage)
 class LandingPageTranslationOptions(TranslationOptions):
-    fields = ("title", "content", "slug")
+    fields = (
+        "title",
+        "content",
+        "slug",
+        "meta_title",
+        "meta_description",
+        "og_title",
+        "og_description",
+    )
