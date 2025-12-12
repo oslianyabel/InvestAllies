@@ -1,5 +1,17 @@
 {% extends 'app/base.html' %}
 
+{% block title %}{{ landing.meta_title|default:landing.title }}{% endblock %}
+{% block meta %}
+  <meta name="description" content="{{ landing.meta_description|default:landing.content|striptags|truncatechars:160 }}">
+  <meta name="keywords" content="{{ landing.meta_keywords }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ landing.og_title|default:landing.meta_title|default:landing.title }}">
+  <meta property="og:description" content="{{ landing.og_description|default:landing.meta_description|default:landing.content|striptags|truncatechars:200 }}">
+  {% if landing.og_image %}
+    <meta property="og:image" content="{{ landing.og_image.url }}">
+  {% endif %}
+{% endblock %}
+
 {% block content %}
   <div class="hero">
     <h2>{{ landing.title }}</h2>

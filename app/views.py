@@ -1,8 +1,10 @@
 import logging
 from typing import Any, Dict
 
-from django.http import HttpRequest, HttpResponse, JsonResponse
+from django.http import HttpRequest, HttpResponse, JsonResponse, Http404
 from django.shortcuts import get_object_or_404, render
+from django.conf import settings
+from django.db.models import Q
 
 from .models import (
     Article,
@@ -45,7 +47,7 @@ def investments_index(request: HttpRequest) -> HttpResponse:
 
 def country_detail(request: HttpRequest, country_slug: str) -> HttpResponse:
     logger.info(f"country_detail called country_slug={country_slug}")
-    country = get_object_or_404(Country, slug=country_slug, active=True)
+    country = _get_by_slug_or_404(Country, country_slug, {"active": True})
     articles = Article.objects.filter(country=country, publish=True).order_by(
         "-created_at"
     )
@@ -59,7 +61,7 @@ def country_detail(request: HttpRequest, country_slug: str) -> HttpResponse:
 
 def country_articles(request: HttpRequest, country_slug: str) -> HttpResponse:
     logger.info(f"country_articles called country_slug={country_slug}")
-    country = get_object_or_404(Country, slug=country_slug, active=True)
+    country = _get_by_slug_or_404(Country, country_slug, {"active": True})
     articles = Article.objects.filter(country=country, publish=True).order_by(
         "-created_at"
     )
@@ -70,9 +72,9 @@ def country_articles(request: HttpRequest, country_slug: str) -> HttpResponse:
     )
 
 
-def article_detail(request: HttpRequest, pk: int) -> HttpResponse:
-    logger.info(f"article_detail called pk={pk}")
-    article = get_object_or_404(Article, pk=pk, publish=True)
+def article_detail(request: HttpRequest, slug: str) -> HttpResponse:
+    logger.info(f"article_detail called slug={slug}")
+    article = _get_by_slug_or_404(Article, slug, {"publish": True})
     return render(request, "app/article_detail.html", {"article": article})
 
 
@@ -189,14 +191,46 @@ def services_index(request: HttpRequest) -> HttpResponse:
 
 def service_detail(request: HttpRequest, slug: str) -> HttpResponse:
     logger.info(f"service_detail called slug={slug}")
-    service = get_object_or_404(Service, slug=slug, active=True)
+    service = _get_by_slug_or_404(Service, slug, {"active": True})
     return render(request, "app/service_detail.html", {"service": service})
 
 
 def landing_page(request: HttpRequest, slug: str) -> HttpResponse:
     logger.info(f"landing_page called slug={slug}")
-    landing = get_object_or_404(LandingPage, slug=slug, publish=True)
+    landing = _get_by_slug_or_404(LandingPage, slug, {"publish": True})
     return render(request, "app/landing_page.html", {"landing": landing})
+
+
+def _get_by_slug_or_404(model, slug: str, extra_filters: dict | None = None):
+    """Try to resolve an instance by slug across translated slug fields.
+
+    - Tries the current language slug first, then the base `slug`, then other
+      translated slug fields. Raises Http404 if nothing matches.
+    """
+    extra_filters = extra_filters or {}
+    lang_codes = getattr(settings, "MODELTRANSLATION_LANGUAGES", [])
+    # Build candidate field names (normalize hyphens -> underscores)
+    candidates = ["slug"]
+    for code in lang_codes:
+        attr = code.replace("-", "_")
+        candidates.append(f"slug_{attr}")
+
+    # Determine which fields actually exist on the model to avoid FieldError
+    existing = {f.name for f in model._meta.get_fields() if hasattr(f, "name")}
+
+    q = Q()
+    for field in candidates:
+        if field in existing:
+            q |= Q(**{field: slug})
+
+    if not q:
+        raise Http404("Not found")
+
+    qs = model.objects.filter(**extra_filters).filter(q)
+    obj = qs.first()
+    if not obj:
+        raise Http404("Not found")
+    return obj
 
 
 def search(request: HttpRequest) -> HttpResponse:

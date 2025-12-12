@@ -22,7 +22,7 @@ urlpatterns = [
         views.country_objects,
         name="country_objects",
     ),
-    path("objects/<slug:slug>/", views.object_detail, name="object_detail"),
+    path("objects/<int:pk>/", views.object_detail, name="object_detail"),
     # Gold
     path("gold/", views.gold_index, name="gold_index"),
     path("gold/price/", views.gold_price, name="gold_price"),

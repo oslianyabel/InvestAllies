@@ -1,5 +1,19 @@
 {% extends 'app/base.html' %}
 
+{% block title %}{{ article.meta_title|default:article.title }}{% endblock %}
+{% block meta %}
+  <meta name="description" content="{{ article.meta_description|default:article.content|striptags|truncatechars:160 }}">
+  <meta name="keywords" content="{{ article.meta_keywords }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ article.og_title|default:article.meta_title|default:article.title }}">
+  <meta property="og:description" content="{{ article.og_description|default:article.meta_description|default:article.content|striptags|truncatechars:200 }}">
+  {% if article.og_image %}
+    <meta property="og:image" content="{{ article.og_image.url }}">
+  {% elif article.cover_image %}
+    <meta property="og:image" content="{{ article.cover_image.url }}">
+  {% endif %}
+{% endblock %}
+
 {% block content %}
   <article>
     <h2>{{ article.title }}</h2>
