@@ -104,12 +104,6 @@ def gold_index(request: HttpRequest) -> HttpResponse:
     )
 
 
-def gold_price(request: HttpRequest) -> HttpResponse:
-    logger.info("gold_price called")
-    latest = MetalPrice.objects.filter(metal="gold").first()
-    return render(request, "app/gold_price.html", {"price": latest})
-
-
 def gold_calculator(request: HttpRequest) -> HttpResponse:
     logger.info("gold_calculator called")
     return render(request, "app/gold_calculator.html", {})
@@ -133,12 +127,6 @@ def fuel_index(request: HttpRequest) -> HttpResponse:
     return render(request, "app/fuel_index.html", {"price": latest})
 
 
-def fuel_price(request: HttpRequest) -> HttpResponse:
-    logger.info("fuel_price called")
-    latest = FuelPrice.objects.first()
-    return render(request, "app/fuel_price.html", {"price": latest})
-
-
 def fuel_calculator(request: HttpRequest) -> HttpResponse:
     logger.info("fuel_calculator called")
     return render(request, "app/fuel_calculator.html", {})
@@ -148,12 +136,6 @@ def fuel_articles(request: HttpRequest) -> HttpResponse:
     logger.info("fuel_articles called")
     articles = Article.objects.filter(category__slug="fuel", publish=True)
     return render(request, "app/fuel_articles.html", {"articles": articles})
-
-
-def fuel_offers(request: HttpRequest) -> HttpResponse:
-    logger.info("fuel_offers called")
-    offers = []
-    return render(request, "app/fuel_offers.html", {"offers": offers})
 
 
 def offshore_index(request: HttpRequest) -> HttpResponse:

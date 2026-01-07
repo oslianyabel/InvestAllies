@@ -25,16 +25,13 @@ urlpatterns = [
     path("objects/<int:pk>/", views.object_detail, name="object_detail"),
     # Gold
     path("gold/", views.gold_index, name="gold_index"),
-    path("gold/price/", views.gold_price, name="gold_price"),
     path("gold/calculator/", views.gold_calculator, name="gold_calculator"),
     path("gold/articles/", views.gold_articles, name="gold_articles"),
     path("gold/buy/", views.gold_buy, name="gold_buy"),
     # Fuel
     path("fuel/", views.fuel_index, name="fuel_index"),
-    path("fuel/price/", views.fuel_price, name="fuel_price"),
     path("fuel/calculator/", views.fuel_calculator, name="fuel_calculator"),
     path("fuel/articles/", views.fuel_articles, name="fuel_articles"),
-    path("fuel/offers/", views.fuel_offers, name="fuel_offers"),
     # Offshore
     path("offshore/", views.offshore_index, name="offshore_index"),
     path(

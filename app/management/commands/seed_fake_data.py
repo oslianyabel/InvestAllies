@@ -1,3 +1,4 @@
+# uv run python manage.py seed_fake_data --countries 8 --services 10 --articles 40 --objects 20 --socials 6
 from __future__ import annotations
 
 import random
