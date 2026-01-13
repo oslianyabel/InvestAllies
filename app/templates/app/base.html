@@ -26,9 +26,22 @@
     </div>
 
     <div id="navbar_lan">
-      <img src="{% static 'svg/lang.svg' %}" alt="languajes" id="navbar_lang_globe">
-      <p>ES</p>
-      <img src="{% static 'svg/arrow_down.svg' %}" alt="arrow" id="navbar_lang_arrow">
+      <button id="navbar_lang_btn" type="button">
+        <img src="{% static 'svg/lang.svg' %}" alt="languajes" id="navbar_lang_globe">
+        <p id="navbar_lang_current">ES</p>
+        <img src="{% static 'svg/arrow_down.svg' %}" alt="arrow" id="navbar_lang_arrow">
+      </button>
+
+      <nav id="language_menu" class="language_menu_closed">
+        <ul class="language_menu_list">
+          <li><a href="?lang=en">English</a></li>
+          <li><a href="?lang=ar">العربية</a></li>
+          <li><a href="?lang=de">Deutsch</a></li>
+          <li><a href="?lang=fr">Français</a></li>
+          <li><a href="?lang=ru">Русский</a></li>
+          <li><a href="?lang=zh">中文</a></li>
+        </ul>
+      </nav>
     </div>
 
     <nav id="mobile_menu" class="mobile_menu_closed">
