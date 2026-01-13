@@ -1,0 +1,88 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}InvestAllies{% endblock %}</title>
+
+  {% block meta %}{% endblock %}
+
+  <link rel="stylesheet" href="{% static 'app/css/base4.css' %}">
+  {% block extracss %}{% endblock %}
+</head>
+
+<body>
+  <header id="navbar">
+    <div class="navbar_menu">
+      <img src="{% static 'svg/menu.svg' %}" alt="menu" id="navbar_menu_icon">
+    </div>
+
+    <div id="navbar_center">
+      <img src="{% static 'svg/logo.svg' %}" alt="logo" id="navbar_center_logo">
+      <h1 id="navbar_center_title">INVEST ALLIES</h1>
+    </div>
+
+    <div id="navbar_lan">
+      <img src="{% static 'svg/lang.svg' %}" alt="languajes" id="navbar_lang_globe">
+      <p>ES</p>
+      <img src="{% static 'svg/arrow_down.svg' %}" alt="arrow" id="navbar_lang_arrow">
+    </div>
+  </header>
+
+  <section id="body">
+    {% block body %}{% endblock %}
+  </section>
+
+  <footer>
+    <section id="footer_cta">
+
+    </section>
+
+    <section id="footer">
+      <div id="footer_title">
+        <img src="{% static 'svg/logo.svg' %}" alt="logo" id="footer_logo">
+        <h1 id="footer_title">INVEST ALLIES</h1>
+      </div>
+
+      <div id="footer_container">
+        <div class="accordion">
+          <p>Inversión por País</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+        </div>
+        <div class="accordion">
+          <p>Oro & Fuel</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+        </div>
+        <div class="accordion">
+          <p>Offshore y Legal</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+        </div>
+        <div class="accordion">
+          <p>Servicios</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+        </div>
+      </div>
+
+      <div id="footer_policies">
+        <p>Terms of use</p>
+        <p>Privacy</p>
+        <p>Terms of use</p>
+      </div>
+
+      <div id="footer_social_net">
+        <div id="footer_social_net_container">
+          <img src="{% static 'svg/facebook.svg' %}" alt="facebook">
+          <img src="{% static 'svg/twitter.svg' %}" alt="twitter">
+          <img src="{% static 'svg/youtube.svg' %}" alt="youtube">
+          <img src="{% static 'svg/linkedin.svg' %}" alt="linkedin">
+        </div>
+        <p>@2026 InvestAllies. Todos los derechos reservados</p>
+      </div>
+    </section>
+  </footer>
+</body>
+
+</html>

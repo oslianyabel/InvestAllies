@@ -1,0 +1,105 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extracss %}
+  <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+{% endblock %}
+
+{% block body %}
+  <section id="hero">
+    <img src="{% static 'img/hero.jpeg' %}" alt="hero" id="hero_img">
+  </section>
+  
+  <section id="about_us">
+    <div id="about_us_container1">
+      <div id="about_us_container1_text_container">
+        <p>Información clara y confiable para invertir en mercados internacionales</p>
+      </div>
+      <img src="{% static 'img/about_us.png' %}" alt="about_us">
+    </div>
+  
+    <div id="about_us_container2">
+      <img src="{% static 'img/about_us2.jpg' %}" alt="about_us" id="about_us_img2">
+    </div>
+  
+    <div id="about_us_container3">
+      <h2>Confianza, experiencia y transparencia</h2>
+      <p>
+        <b>Confianza, experiencia y transparencia</b>
+        Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir con
+        claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas
+      </p>
+    </div>
+  </section>
+  
+  <section id="investment">
+    <div id="investment_title_container">
+      <div id="investment_title">
+        <h1>DESTINOS DE INVERSIÓN</h1>
+        <img src="{% static 'svg/decor-arrow.svg' %}" alt="decorative arrow" id="investment_title_arrow_icon">
+        <img src="{% static 'svg/location.svg' %}" alt="location icon" id="investment_title_location_icon">
+      </div>
+  
+      <div id="investment_paragraph">
+        <p>Invierte donde tu capital genera más valor. Accede a oportunidades de inversión seleccionadas en mercados en
+          expansión y
+          regiones con alto potencial de crecimiento. Analizamos riesgos, rentabilidades y barreras de entrada para que
+          puedas
+          tomar decisiones informadas</p>
+      </div>
+    </div>
+  
+    <div id="investment_destinations">
+      <div class="investment_destinations_row">
+        <div class="investment_destinations_row_card">
+          <img src="{% static 'img/spain.jpg' %}" alt="spain" class="investment_destinations_row_card_img">
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="investment_destinations_row_card_ver_mas">
+        </div>
+        <div class="investment_destinations_row_card">
+          <img src="{% static 'img/dubai.png' %}" alt="dubai" class="investment_destinations_row_card_img">
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="investment_destinations_row_card_ver_mas">
+        </div>
+      </div>
+  
+      <div class="investment_destinations_row">
+        <div class="investment_destinations_row_card">
+          <img src="{% static 'img/marruecos.jpg' %}" alt="marruecos" class="investment_destinations_row_card_img">
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="investment_destinations_row_card_ver_mas">
+        </div>
+        <div class="investment_destinations_row_card">
+          <img src="{% static 'img/mali.png' %}" alt="mali" class="investment_destinations_row_card_img">
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="investment_destinations_row_card_ver_mas">
+        </div>
+      </div>
+  
+      <div class="investment_destinations_row">
+        <div class="investment_destinations_row_card">
+          <img src="{% static 'img/bali.png' %}" alt="bali" class="investment_destinations_row_card_img">
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="investment_destinations_row_card_ver_mas">
+        </div>
+        <div class="investment_destinations_row_card">
+          <img src="{% static 'img/zanzibar.jpg' %}" alt="zanzibar" class="investment_destinations_row_card_img">
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="investment_destinations_row_card_ver_mas">
+        </div>
+      </div>
+    </div>
+  
+  </section>
+  
+  <section id="articles">
+  
+  </section>
+  
+  <section id="carousel"></section>
+  
+  <section id="gold_and_fuel"></section>
+  
+  <section id="offshore"></section>
+  
+  <section id="service"></section>
+  
+  <section id="legal"></section>
+  
+  <section id="form"></section>
+{% endblock %}
