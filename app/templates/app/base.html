@@ -14,16 +14,16 @@
   {% block extracss %}{% endblock %}
 </head>
 
-<body>
+<body id="top">
   <header id="navbar">
     <div class="navbar_menu">
       <img src="{% static 'svg/menu.svg' %}" alt="menu" id="navbar_menu_icon">
     </div>
 
-    <div id="navbar_center">
+    <a id="navbar_center" href="#top">
       <img src="{% static 'svg/logo.svg' %}" alt="logo" id="navbar_center_logo">
       <h1 id="navbar_center_title">INVEST ALLIES</h1>
-    </div>
+    </a>
 
     <div id="navbar_lan">
       <button id="navbar_lang_btn" type="button">
@@ -76,27 +76,46 @@
     </section>
 
     <section id="footer">
-      <div id="footer_title">
+      <a id="footer_title" href="#top">
         <img src="{% static 'svg/logo.svg' %}" alt="logo" id="footer_logo">
         <h1 id="footer_title">INVEST ALLIES</h1>
-      </div>
+      </a>
 
       <div id="footer_container">
         <div class="accordion">
           <p>Inversión por País</p>
           <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
         </div>
+        <div class="accordion_content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+
         <div class="accordion">
           <p>Oro & Fuel</p>
           <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
         </div>
+        <div class="accordion_content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+
         <div class="accordion">
           <p>Offshore y Legal</p>
           <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
         </div>
+        <div class="accordion_content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
+        </div>
+
         <div class="accordion">
           <p>Servicios</p>
           <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+        </div>
+        <div class="accordion_content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua.</p>
         </div>
       </div>
 

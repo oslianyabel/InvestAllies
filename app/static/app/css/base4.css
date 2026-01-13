@@ -47,7 +47,12 @@ body {
 }
 
 #navbar_center {
+    display: flex;
+    align-items: center;
     gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .navbar_menu_icon-icon {
@@ -195,22 +200,51 @@ body {
 }
 
 #footer_title {
+    display: flex;
+    gap: 10px;
     font-size: 18px;
     font-weight: 400;
     font-family: 'Playfair Display SC';
     color: var(--gold-yelow);
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .accordion {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.accordion:hover {
+    opacity: 0.8;
 }
 
 .accordion p {
     font-size: 16px;
     font-weight: 500;
     font-family: "Poppins";
+}
+
+.accordion_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion_content.open {
+    max-height: 500px;
+}
+
+.accordion_content p {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins";
+    padding: 10px 0;
+    margin: 0;
+    color: #EDEDED;
 }
 
 #footer_policies {

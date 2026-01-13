@@ -52,5 +52,18 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
         });
     }
+
+    // Accordion toggle
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(function(accordion) {
+        accordion.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const content = this.nextElementSibling;
+            if (content && content.classList.contains('accordion_content')) {
+                content.classList.toggle('open');
+            }
+        });
+    });
 });
+
 
