@@ -26,11 +26,17 @@ body {
 
 /* navbar */
 #navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-primary);
     padding: 0 40px;
+    height: 70px;
+    z-index: 1000;
 }
 
 .navbar_menu,
@@ -95,6 +101,7 @@ body {
     flex-direction: column;
     gap: 14px;
     background-color: var(--color-primary);
+    margin-top: 70px;
 }
 
 
@@ -168,11 +175,94 @@ body {
     gap: 30px;
 }
 
+/* Mobile Menu */
+#mobile_menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 999;
+}
 
+#mobile_menu.mobile_menu_open {
+    max-height: 900px;
+}
+
+.mobile_menu_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile_menu_item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile_menu_item a {
+    display: block;
+    padding: 16px 32px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.mobile_menu_item a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile_menu_submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile_menu_submenu.open {
+    max-height: 300px;
+}
+
+.mobile_menu_submenu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile_menu_submenu a {
+    display: block;
+    padding: 12px 32px 12px 48px;
+    color: #D4D4D4;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.mobile_menu_submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#navbar_menu_icon {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
 
 /* Estilos para Tablets en adelante */
 @media (min-width: 768px) {
     #navbar_center {
         display: flex;
+    }
+
+    #mobile_menu {
+        display: none;
     }
 }

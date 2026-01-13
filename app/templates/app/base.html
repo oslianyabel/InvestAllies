@@ -30,6 +30,27 @@
       <p>ES</p>
       <img src="{% static 'svg/arrow_down.svg' %}" alt="arrow" id="navbar_lang_arrow">
     </div>
+
+    <nav id="mobile_menu" class="mobile_menu_closed">
+      <ul class="mobile_menu_list">
+        <li class="mobile_menu_item"><a href="#inicio">Inicio</a></li>
+        <li class="mobile_menu_item"><a href="#oro">Oro Físico</a></li>
+        <li class="mobile_menu_item"><a href="#fuel">Fuel</a></li>
+        <li class="mobile_menu_item"><a href="#offshore">Offshore</a></li>
+        <li class="mobile_menu_item"><a href="#legal">Legal & Bancario</a></li>
+        <li class="mobile_menu_item mobile_menu_submenu_toggle">
+          <a href="#inversion-pais">Inversión por País</a>
+          <ul class="mobile_menu_submenu">
+            <li><a href="#inversion-españa">España</a></li>
+            <li><a href="#inversion-dubai">Dubai</a></li>
+            <li><a href="#inversion-marruecos">Marruecos</a></li>
+            <li><a href="#inversion-bali">Bali</a></li>
+            <li><a href="#inversion-mali">Mali</a></li>
+            <li><a href="#inversion-zanzibar">Zanzibar</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <section id="body">
@@ -83,6 +104,8 @@
       </div>
     </section>
   </footer>
+
+  <script src="{% static 'app/js/mobile_menu.js' %}"></script>
 </body>
 
 </html>

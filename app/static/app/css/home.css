@@ -156,3 +156,85 @@
     bottom: 10px;
     right: 10px;
 }
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    #hero_img {
+        height: 420px;
+        object-fit: cover;
+    }
+
+    #about_us {
+        flex-direction: row;
+        padding: 40px 80px;
+        gap: 40px;
+        align-items: center;
+    }
+
+    #about_us_container1 {
+        height: 260px;
+        gap: 30px;
+    }
+
+    #about_us_container1_text_container {
+        width: 320px;
+        padding: 20px;
+    }
+
+    #about_us_container2 img {
+        height: 320px;
+        object-fit: cover;
+    }
+
+    #about_us_container3 {
+        padding: 32px;
+        border-radius: 16px;
+    }
+
+    #investment {
+        padding: 48px 80px;
+        gap: 20px;
+    }
+
+    #investment_title h1 {
+        font-size: 32px;
+    }
+
+    #investment_paragraph p {
+        max-width: 900px;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    #investment_destinations {
+        gap: 20px;
+    }
+
+    .investment_destinations_row {
+        gap: 20px;
+    }
+
+    .investment_destinations_row_card {
+        flex: 1 1 260px;
+        min-width: 220px;
+        height: 220px;
+        position: relative;
+    }
+
+    .investment_destinations_row_card_img {
+        border-radius: 20px;
+        transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .investment_destinations_row_card:hover .investment_destinations_row_card_img {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .investment_destinations_row_card_ver_mas {
+        bottom: 16px;
+        right: 16px;
+        width: 36px;
+        height: 36px;
+    }
+}
