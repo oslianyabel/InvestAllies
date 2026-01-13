@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const submenu = document.querySelector('.mobile_menu_submenu');
     const langBtn = document.getElementById('navbar_lang_btn');
     const langMenu = document.getElementById('language_menu');
+    const desktopSubmenuToggle = document.querySelector('.desktop_menu_submenu_toggle');
+    const desktopSubmenu = document.querySelector('.desktop_menu_submenu');
 
     if (!menuIcon || !mobileMenu) return;
 
@@ -34,12 +36,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (desktopSubmenuToggle && desktopSubmenu) {
+        desktopSubmenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            desktopSubmenu.classList.toggle('open');
+        });
+
+        desktopSubmenuToggle.addEventListener('mouseenter', function() {
+            desktopSubmenu.classList.add('open');
+        });
+
+        desktopSubmenuToggle.addEventListener('mouseleave', function() {
+            desktopSubmenu.classList.remove('open');
+        });
+    }
+
     document.addEventListener('click', function() {
         if (mobileMenu.classList.contains('mobile_menu_open')) {
             mobileMenu.classList.remove('mobile_menu_open');
         }
         if (langMenu && langMenu.classList.contains('language_menu_open')) {
             langMenu.classList.remove('language_menu_open');
+        }
+        if (desktopSubmenu && desktopSubmenu.classList.contains('open')) {
+            desktopSubmenu.classList.remove('open');
         }
     });
 
@@ -49,6 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (langMenu) {
         langMenu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+
+    if (desktopSubmenu) {
+        desktopSubmenu.addEventListener('click', function(e) {
             e.stopPropagation();
         });
     }
@@ -65,5 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
