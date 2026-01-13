@@ -24,6 +24,53 @@ body {
     overscroll-behavior-y: contain;
 }
 
+/* Desktop Topbar */
+#desktop_topbar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: var(--color-primary);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 999;
+}
+
+#desktop_topbar_left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#desktop_topbar_left a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+#desktop_topbar_left a:hover {
+    color: var(--gold-yelow);
+}
+
+.topbar_divider {
+    width: 1px;
+    height: 20px;
+    background-color: var(--gold-yelow);
+}
+
+#desktop_topbar_right {
+    color: var(--gold-yelow);
+    font-family: 'Playfair Display SC';
+    font-weight: 700;
+    font-size: 14px;
+}
+
 /* navbar */
 #navbar {
     position: fixed;
@@ -443,6 +490,19 @@ body {
 
 /* Estilos para Tablets en adelante */
 @media (min-width: 1024px) {
+    #desktop_topbar {
+        display: flex;
+    }
+
+    #navbar {
+        top: 40px;
+        margin-top: 0;
+    }
+
+    #body {
+        margin-top: 110px;
+    }
+
     #desktop_menu {
         display: flex;
         align-items: center;

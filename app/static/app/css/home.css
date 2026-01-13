@@ -160,7 +160,7 @@
 /* Desktop styles */
 @media (min-width: 1024px) {
     #hero_img {
-        height: 420px;
+        height: 600px;
         object-fit: cover;
     }
 
