@@ -232,9 +232,9 @@
     }
 
     .investment_destinations_row_card_ver_mas {
-        bottom: 16px;
+        bottom: 0;
         right: 16px;
-        width: 36px;
-        height: 36px;
+        width: 150px;
+        height: 60px;
     }
 }
