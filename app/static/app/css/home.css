@@ -6,11 +6,18 @@
 
 /* About Section */
 .about {
+    background-color: var(--color-primary);
+}
+
+.about__mobile {
     display: flex;
     flex-direction: column;
     gap: 40px;
     padding: 14px 32px;
-    background-color: var(--color-primary);
+}
+
+.about__desktop {
+    display: none;
 }
 
 .about__group {
@@ -22,8 +29,20 @@
     margin: 0;
 }
 
+.about__mobile .about__group:nth-child(2) {
+    height: auto;
+    justify-content: center;
+}
+
 .about__image {
     object-fit: cover;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.about__mobile .about__group:nth-child(2) .about__image {
+    max-height: 300px;
 }
 
 .about__text-box {
@@ -53,6 +72,47 @@
     color: #F7F7F7;
     font-family: "Poppins";
     margin-bottom: 0;
+}
+
+.about__desktop-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about__desktop-text {
+    flex: 1;
+}
+
+.about__desktop-title {
+    color: var(--gold-yelow);
+    font-family: 'Playfair Display SC';
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 20px 0;
+}
+
+.about__desktop-description {
+    color: #FFFFFF;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.about__desktop-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.about__desktop-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 16px;
 }
 
 /* Investment Section */
@@ -151,31 +211,75 @@
         object-fit: cover;
     }
 
-    .about {
-        flex-direction: row;
-        padding: 40px 80px;
-        gap: 40px;
+    .about__mobile {
+        display: none;
+    }
+
+    .about__desktop {
+        display: flex;
+        gap: 10px;
         align-items: center;
+        justify-content: space-between;
     }
 
-    .about__group {
-        height: 260px;
-        gap: 30px;
+    .about__desktop-column-left {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 48%;
     }
 
-    .about__text-box {
-        width: 320px;
+    .about__desktop-column-left-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .about__desktop-column-left-top-item {
+        width: 45%;
+    }
+
+    .about__desktop-column-left-top p {
+        color: #000000;
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: 500;
+        background-color: #8CB79B;
+        border-radius: 30px;
         padding: 20px;
     }
 
-    .about__image {
-        height: 320px;
+    .about__desktop-column-left-top-item img {
         object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
-    .about__featured {
-        padding: 32px;
-        border-radius: 16px;
+    .about__desktop-column-left-down {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    .about__desktop-column-left-right {
+        width: 48%;
+        background-color: #26584D;
+        padding: 60px 20px;
+        border-radius: 20px;
+    }
+
+    .about__desktop-column-left-right h2 {
+        color: #F0DA9B;
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: 40px;
+    }
+
+    .about__desktop-column-left-right p {
+        color: #F7F7F7;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 24px;
     }
 
     .investment {

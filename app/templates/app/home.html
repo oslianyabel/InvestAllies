@@ -12,24 +12,52 @@
 </section>
 
 <section class="about">
-  <div class="about__group">
-    <div class="about__text-box">
-      <p>Información clara y confiable para invertir en mercados internacionales</p>
+  <!-- Mobile version -->
+  <div class="about__mobile">
+    <div class="about__group">
+      <div class="about__text-box">
+        <p>Información clara y confiable para invertir en mercados internacionales</p>
+      </div>
+      <img src="{% static 'img/about_us.png' %}" alt="about_us" class="about__image">
     </div>
-    <img src="{% static 'img/about_us.png' %}" alt="about_us" class="about__image">
+
+    <div class="about__group">
+      <img src="{% static 'img/about_us2.jpg' %}" alt="about_us" class="about__image">
+    </div>
+
+    <div class="about__featured">
+      <h2 class="about__featured-title">Confianza, experiencia y transparencia</h2>
+      <p class="about__featured-text">
+        <b>Confianza, experiencia y transparencia</b>
+        Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir con
+        claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas
+      </p>
+    </div>
   </div>
 
-  <div class="about__group">
-    <img src="{% static 'img/about_us2.jpg' %}" alt="about_us" class="about__image">
-  </div>
+  <!-- Desktop version -->
+  <div class="about__desktop">
+    <div class="about__desktop-column-left">
+      <div class="about__desktop-column-left-top">
+        <p class="about__desktop-column-left-top-item">
+          Información clara y confiable para invertir en mercados internacionales
+        </p>
+        <div class="about__desktop-column-left-top-item">
+          <img src="{% static 'img/about_us2.jpg' %}" alt="about_us">
+        </div>
+      </div>
 
-  <div class="about__featured">
-    <h2 class="about__featured-title">Confianza, experiencia y transparencia</h2>
-    <p class="about__featured-text">
-      <b>Confianza, experiencia y transparencia</b>
-      Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir con
-      claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas
-    </p>
+      <img class="about__desktop-column-left-down" src="{% static 'img/about_us.jpg' %}" alt="about_us">
+    </div>
+
+    <div class="about__desktop-column-left-right">
+      <h2>Confianza, experiencia y transparencia</h2>
+      <p>
+        Confianza, experiencia y transparencia.
+        Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir con
+        claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas.
+      </p>
+    </div>
   </div>
 </section>
 
