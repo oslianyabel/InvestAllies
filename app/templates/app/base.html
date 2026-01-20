@@ -15,151 +15,163 @@
 </head>
 
 <body id="top">
-  <div id="desktop_topbar">
-    <div id="desktop_topbar_left">
-      <a href="#calculadora-oro">Calculadora de Oro</a>
-      <div class="topbar_divider"></div>
-      <a href="#calculadora-combustible">Calculadora de Combustible</a>
+  <div class="topbar">
+    <div class="topbar__left">
+      <a href="#calculadora-oro" class="topbar__link">Calculadora de Oro</a>
+      <div class="topbar__divider"></div>
+      <a href="#calculadora-combustible" class="topbar__link">Calculadora de Combustible</a>
     </div>
-    <div id="desktop_topbar_right">
+    <div class="topbar__right">
       <span>INVEST ALLIES</span>
     </div>
   </div>
 
-  <header id="navbar">
-    <div class="navbar_menu">
-      <img src="{% static 'svg/menu.svg' %}" alt="menu" id="navbar_menu_icon">
+  <header class="navbar">
+    <div class="navbar__menu">
+      <img src="{% static 'svg/menu.svg' %}" alt="menu" class="navbar__menu-btn">
     </div>
 
-    <a id="navbar_center" href="#top">
-      <img src="{% static 'svg/logo.svg' %}" alt="logo" id="navbar_center_logo">
-      <h1 id="navbar_center_title">INVEST ALLIES</h1>
+    <a class="navbar__center" href="#top">
+      <img src="{% static 'svg/logo.svg' %}" alt="logo" class="navbar__center-logo">
+      <h1 class="navbar__center-title">INVEST ALLIES</h1>
     </a>
 
-    <nav id="desktop_menu">
-      <ul class="desktop_menu_list">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#oro">Oro Físico</a></li>
-        <li><a href="#fuel">Fuel</a></li>
-        <li><a href="#offshore">Offshore</a></li>
-        <li><a href="#legal">Legal & Bancario</a></li>
-        <li class="desktop_menu_submenu_toggle">
-          <a href="#inversion-pais">Inversión por País</a>
-          <ul class="desktop_menu_submenu">
-            <li><a href="#inversion-españa">España</a></li>
-            <li><a href="#inversion-dubai">Dubai</a></li>
-            <li><a href="#inversion-marruecos">Marruecos</a></li>
-            <li><a href="#inversion-bali">Bali</a></li>
-            <li><a href="#inversion-mali">Mali</a></li>
-            <li><a href="#inversion-zanzibar">Zanzibar</a></li>
+    <nav class="desktop-menu">
+      <ul class="desktop-menu__list">
+        <li class="desktop-menu__item"><a href="#inicio" class="desktop-menu__link">Inicio</a></li>
+        <li class="desktop-menu__item"><a href="#oro" class="desktop-menu__link">Oro Físico</a></li>
+        <li class="desktop-menu__item"><a href="#fuel" class="desktop-menu__link">Fuel</a></li>
+        <li class="desktop-menu__item"><a href="#offshore" class="desktop-menu__link">Offshore</a></li>
+        <li class="desktop-menu__item"><a href="#legal" class="desktop-menu__link">Legal & Bancario</a></li>
+        <li class="desktop-menu__item desktop-menu__toggle">
+          <a href="#inversion-pais" class="desktop-menu__link">Inversión por País</a>
+          <ul class="desktop-menu__submenu">
+            <li class="desktop-menu__submenu-item"><a href="#inversion-españa"
+                class="desktop-menu__submenu-link">España</a></li>
+            <li class="desktop-menu__submenu-item"><a href="#inversion-dubai"
+                class="desktop-menu__submenu-link">Dubai</a></li>
+            <li class="desktop-menu__submenu-item"><a href="#inversion-marruecos"
+                class="desktop-menu__submenu-link">Marruecos</a></li>
+            <li class="desktop-menu__submenu-item"><a href="#inversion-bali" class="desktop-menu__submenu-link">Bali</a>
+            </li>
+            <li class="desktop-menu__submenu-item"><a href="#inversion-mali" class="desktop-menu__submenu-link">Mali</a>
+            </li>
+            <li class="desktop-menu__submenu-item"><a href="#inversion-zanzibar"
+                class="desktop-menu__submenu-link">Zanzibar</a></li>
           </ul>
         </li>
       </ul>
     </nav>
 
-    <div id="navbar_lan">
-      <button id="navbar_lang_btn" type="button">
-        <img src="{% static 'svg/lang.svg' %}" alt="languajes" id="navbar_lang_globe">
-        <p id="navbar_lang_current">ES</p>
-        <img src="{% static 'svg/arrow_down.svg' %}" alt="arrow" id="navbar_lang_arrow">
+    <div class="navbar__language">
+      <button class="navbar__language-btn" type="button">
+        <img src="{% static 'svg/lang.svg' %}" alt="languajes" class="navbar__language-icon">
+        <p class="navbar__language-current">ES</p>
+        <img src="{% static 'svg/arrow_down.svg' %}" alt="arrow" class="navbar__language-arrow">
       </button>
 
-      <nav id="language_menu" class="language_menu_closed">
-        <ul class="language_menu_list">
-          <li><a href="?lang=en">English</a></li>
-          <li><a href="?lang=ar">العربية</a></li>
-          <li><a href="?lang=de">Deutsch</a></li>
-          <li><a href="?lang=fr">Français</a></li>
-          <li><a href="?lang=ru">Русский</a></li>
-          <li><a href="?lang=zh">中文</a></li>
+      <nav class="language-menu">
+        <ul class="language-menu__list">
+          <li class="language-menu__item"><a href="?lang=en" class="language-menu__link">English</a></li>
+          <li class="language-menu__item"><a href="?lang=ar" class="language-menu__link">العربية</a></li>
+          <li class="language-menu__item"><a href="?lang=de" class="language-menu__link">Deutsch</a></li>
+          <li class="language-menu__item"><a href="?lang=fr" class="language-menu__link">Français</a></li>
+          <li class="language-menu__item"><a href="?lang=ru" class="language-menu__link">Русский</a></li>
+          <li class="language-menu__item"><a href="?lang=zh" class="language-menu__link">中文</a></li>
         </ul>
       </nav>
     </div>
 
-    <nav id="mobile_menu" class="mobile_menu_closed">
-      <ul class="mobile_menu_list">
-        <li class="mobile_menu_item"><a href="#inicio">Inicio</a></li>
-        <li class="mobile_menu_item"><a href="#oro">Oro Físico</a></li>
-        <li class="mobile_menu_item"><a href="#fuel">Fuel</a></li>
-        <li class="mobile_menu_item"><a href="#offshore">Offshore</a></li>
-        <li class="mobile_menu_item"><a href="#legal">Legal & Bancario</a></li>
-        <li class="mobile_menu_item mobile_menu_submenu_toggle">
-          <a href="#inversion-pais">Inversión por País</a>
-          <ul class="mobile_menu_submenu">
-            <li><a href="#inversion-españa">España</a></li>
-            <li><a href="#inversion-dubai">Dubai</a></li>
-            <li><a href="#inversion-marruecos">Marruecos</a></li>
-            <li><a href="#inversion-bali">Bali</a></li>
-            <li><a href="#inversion-mali">Mali</a></li>
-            <li><a href="#inversion-zanzibar">Zanzibar</a></li>
+    <nav class="mobile-menu">
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a href="#inicio" class="mobile-menu__link">Inicio</a></li>
+        <li class="mobile-menu__item"><a href="#oro" class="mobile-menu__link">Oro Físico</a></li>
+        <li class="mobile-menu__item"><a href="#fuel" class="mobile-menu__link">Fuel</a></li>
+        <li class="mobile-menu__item"><a href="#offshore" class="mobile-menu__link">Offshore</a></li>
+        <li class="mobile-menu__item"><a href="#legal" class="mobile-menu__link">Legal & Bancario</a></li>
+        <li class="mobile-menu__item">
+          <a href="#inversion-pais" class="mobile-menu__link">Inversión por País</a>
+          <ul class="mobile-menu__submenu">
+            <li class="mobile-menu__submenu-item"><a href="#inversion-españa"
+                class="mobile-menu__submenu-link">España</a></li>
+            <li class="mobile-menu__submenu-item"><a href="#inversion-dubai" class="mobile-menu__submenu-link">Dubai</a>
+            </li>
+            <li class="mobile-menu__submenu-item"><a href="#inversion-marruecos"
+                class="mobile-menu__submenu-link">Marruecos</a></li>
+            <li class="mobile-menu__submenu-item"><a href="#inversion-bali" class="mobile-menu__submenu-link">Bali</a>
+            </li>
+            <li class="mobile-menu__submenu-item"><a href="#inversion-mali" class="mobile-menu__submenu-link">Mali</a>
+            </li>
+            <li class="mobile-menu__submenu-item"><a href="#inversion-zanzibar"
+                class="mobile-menu__submenu-link">Zanzibar</a></li>
           </ul>
         </li>
       </ul>
     </nav>
   </header>
 
-  <section id="body">
+  <section class="page">
     {% block body %}{% endblock %}
   </section>
 
   <footer>
-    <section id="footer_desktop">
+    <section class="footer--desktop">
       <!-- Row 1 -->
-      <div id="footer_desktop_row1">
-        <a id="footer_desktop_logo" href="#top">
+      <div class="footer__top">
+        <a class="footer__logo-link" href="#top">
           <img src="{% static 'svg/logo.svg' %}" alt="logo">
           <h1>INVEST ALLIES</h1>
         </a>
-        <div id="footer_desktop_search">
-          <input type="text" placeholder="Buscar...">
-          <button type="submit">🔍</button>
+        <div class="footer__search">
+          <input type="text" placeholder="Buscar..." class="footer__search-input">
+          <button type="submit" class="footer__search-btn">🔍</button>
         </div>
       </div>
 
       <!-- Row 2 -->
-      <div id="footer_desktop_row2">
-        <div class="footer_desktop_column">
-          <h3>Inversión por País</h3>
-          <ul>
-            <li><a href="#inversion-españa">España</a></li>
-            <li><a href="#inversion-dubai">Dubai</a></li>
-            <li><a href="#inversion-marruecos">Marruecos</a></li>
-            <li><a href="#inversion-mali">Mali</a></li>
-            <li><a href="#inversion-bali">Bali</a></li>
-            <li><a href="#inversion-zanzibar">Zanzibar</a></li>
+      <div class="footer__middle">
+        <div class="footer__column">
+          <h3 class="footer__column-title">Inversión por País</h3>
+          <ul class="footer__column-list">
+            <li><a href="#inversion-españa" class="footer__column-link">España</a></li>
+            <li><a href="#inversion-dubai" class="footer__column-link">Dubai</a></li>
+            <li><a href="#inversion-marruecos" class="footer__column-link">Marruecos</a></li>
+            <li><a href="#inversion-mali" class="footer__column-link">Mali</a></li>
+            <li><a href="#inversion-bali" class="footer__column-link">Bali</a></li>
+            <li><a href="#inversion-zanzibar" class="footer__column-link">Zanzibar</a></li>
           </ul>
         </div>
 
-        <div class="footer_desktop_column">
-          <h3>Oro y Energía</h3>
-          <ul>
-            <li><a href="#oro-fisico">Oro Físico</a></li>
-            <li><a href="#calculadora-lbma">Calculadora LBMA</a></li>
-            <li><a href="#calculadora-fuel">Calculadora FUEL</a></li>
+        <div class="footer__column">
+          <h3 class="footer__column-title">Oro y Energía</h3>
+          <ul class="footer__column-list">
+            <li><a href="#oro-fisico" class="footer__column-link">Oro Físico</a></li>
+            <li><a href="#calculadora-lbma" class="footer__column-link">Calculadora LBMA</a></li>
+            <li><a href="#calculadora-fuel" class="footer__column-link">Calculadora FUEL</a></li>
           </ul>
         </div>
 
-        <div class="footer_desktop_column">
-          <h3>Offshore y Legal</h3>
-          <ul>
-            <li><a href="#zonas-offshore">Zonas Offshore</a></li>
-            <li><a href="#legal-inversiones">Legal para Inversiones</a></li>
-            <li><a href="#bancario-internacional">Bancario Internacional</a></li>
+        <div class="footer__column">
+          <h3 class="footer__column-title">Offshore y Legal</h3>
+          <ul class="footer__column-list">
+            <li><a href="#zonas-offshore" class="footer__column-link">Zonas Offshore</a></li>
+            <li><a href="#legal-inversiones" class="footer__column-link">Legal para Inversiones</a></li>
+            <li><a href="#bancario-internacional" class="footer__column-link">Bancario Internacional</a></li>
           </ul>
         </div>
 
-        <div class="footer_desktop_column">
-          <h3>Servicios</h3>
-          <ul>
-            <li><a href="#consultoria">Consultoría</a></li>
-            <li><a href="#legal-inversiones2">Legal para Inversiones</a></li>
-            <li><a href="#creacion-empresas">Creación de Empresas</a></li>
+        <div class="footer__column">
+          <h3 class="footer__column-title">Servicios</h3>
+          <ul class="footer__column-list">
+            <li><a href="#consultoria" class="footer__column-link">Consultoría</a></li>
+            <li><a href="#legal-inversiones2" class="footer__column-link">Legal para Inversiones</a></li>
+            <li><a href="#creacion-empresas" class="footer__column-link">Creación de Empresas</a></li>
           </ul>
         </div>
 
-        <div class="footer_desktop_column">
-          <h3>Síguenos en Nuestras Redes Sociales</h3>
-          <div id="footer_desktop_social">
+        <div class="footer__column">
+          <h3 class="footer__column-title">Síguenos en Nuestras Redes Sociales</h3>
+          <div class="footer__social-links">
             <a href="#facebook"><img src="{% static 'svg/facebook.svg' %}" alt="facebook"></a>
             <a href="#twitter"><img src="{% static 'svg/twitter.svg' %}" alt="twitter"></a>
             <a href="#youtube"><img src="{% static 'svg/youtube.svg' %}" alt="youtube"></a>
@@ -169,74 +181,78 @@
       </div>
 
       <!-- Row 3 -->
-      <div id="footer_desktop_row3">
-        <p id="footer_desktop_copyright">@2026 InvestAllies. Todos los derechos reservados</p>
-        <div id="footer_desktop_links">
-          <a href="#politica-uso">Política de Uso</a>
-          <a href="#terminos-condiciones">Términos y Condiciones</a>
-          <a href="#nosotros">Nosotros</a>
+      <div class="footer__bottom">
+        <p class="footer__copyright">@2026 InvestAllies. Todos los derechos reservados</p>
+        <div class="footer__links">
+          <a href="#politica-uso" class="footer__link">Política de Uso</a>
+          <a href="#terminos-condiciones" class="footer__link">Términos y Condiciones</a>
+          <a href="#nosotros" class="footer__link">Nosotros</a>
         </div>
       </div>
     </section>
 
-    <section id="footer">
-      <a id="footer_title" href="#top">
-        <img src="{% static 'svg/logo.svg' %}" alt="logo" id="footer_logo">
-        <h1 id="footer_title">INVEST ALLIES</h1>
+    <section class="footer">
+      <a class="footer__title" href="#top">
+        <img src="{% static 'svg/logo.svg' %}" alt="logo" class="footer__logo">
+        <h1>INVEST ALLIES</h1>
       </a>
 
-      <div id="footer_container">
+      <div>
         <div class="accordion">
-          <p>Inversión por País</p>
-          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+          <p class="accordion__title">Inversión por País</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer__dropdown-icon">
         </div>
-        <div class="accordion_content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+        <div class="accordion__content">
+          <p class="accordion__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et
             dolore magna aliqua.</p>
         </div>
 
         <div class="accordion">
-          <p>Oro & Fuel</p>
-          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+          <p class="accordion__title">Oro & Fuel</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer__dropdown-icon">
         </div>
-        <div class="accordion_content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+        <div class="accordion__content">
+          <p class="accordion__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et
             dolore magna aliqua.</p>
         </div>
 
         <div class="accordion">
-          <p>Offshore y Legal</p>
-          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+          <p class="accordion__title">Offshore y Legal</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer__dropdown-icon">
         </div>
-        <div class="accordion_content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+        <div class="accordion__content">
+          <p class="accordion__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et
             dolore magna aliqua.</p>
         </div>
 
         <div class="accordion">
-          <p>Servicios</p>
-          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer_container_dropdown_icon">
+          <p class="accordion__title">Servicios</p>
+          <img src="{% static 'svg/Drop-Down-Icon.svg' %}" alt="" class="footer__dropdown-icon">
         </div>
-        <div class="accordion_content">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+        <div class="accordion__content">
+          <p class="accordion__content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et
             dolore magna aliqua.</p>
         </div>
       </div>
 
-      <div id="footer_policies">
-        <p>Terms of use</p>
-        <p>Privacy</p>
-        <p>Terms of use</p>
+      <div class="footer__policies">
+        <p class="footer__policies-text">Terms of use</p>
+        <p class="footer__policies-text">Privacy</p>
+        <p class="footer__policies-text">Terms of use</p>
       </div>
 
-      <div id="footer_social_net">
-        <div id="footer_social_net_container">
+      <div class="footer__social">
+        <div class="footer__social-container">
           <img src="{% static 'svg/facebook.svg' %}" alt="facebook">
           <img src="{% static 'svg/twitter.svg' %}" alt="twitter">
           <img src="{% static 'svg/youtube.svg' %}" alt="youtube">
           <img src="{% static 'svg/linkedin.svg' %}" alt="linkedin">
         </div>
-        <p>@2026 InvestAllies. Todos los derechos reservados</p>
+        <p class="footer__text">@2026 InvestAllies. Todos los derechos reservados</p>
       </div>
     </section>
   </footer>

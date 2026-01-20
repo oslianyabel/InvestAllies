@@ -1,11 +1,11 @@
-/* hero */
-#hero_img {
+/* Hero Section */
+.hero__image {
     width: 100%;
     height: 100%;
 }
 
-/* about_us_container */
-#about_us {
+/* About Section */
+.about {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -13,7 +13,7 @@
     background-color: var(--color-primary);
 }
 
-#about_us_container1 {
+.about__group {
     display: flex;
     justify-content: space-between;
     height: 200px;
@@ -22,53 +22,41 @@
     margin: 0;
 }
 
-#about_us img {
+.about__image {
     object-fit: cover;
 }
 
-#about_us_container1_text_container {
+.about__text-box {
     padding: 10px;
     background-color: #8CB79B;
     border-radius: 20px;
     width: 160px;
 }
 
-#about_us_container1_text_container p {
+.about__text-box p {
     color: #000000;
 }
 
-/* about_us_container2 */
-#about_us_container2 {
-    margin: 0;
-    padding: 0;
-}
-
-#about_us_container2 img {
-    object-fit: cover;
-    width: 100%;
-}
-
-/*about_us_container3*/
-#about_us_container3 {
+.about__featured {
     background-color: #26584D;
     border-radius: 12px;
     padding: 20px;
     margin: 0;
 }
 
-#about_us_container3 h2 {
+.about__featured-title {
     color: #F0DA9B;
     margin-top: 0;
 }
 
-#about_us_container3 p {
+.about__featured-text {
     color: #F7F7F7;
     font-family: "Poppins";
     margin-bottom: 0;
 }
 
-/* investment */
-#investment {
+/* Investment Section */
+.investment {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -77,8 +65,7 @@
     background-color: var(--color-primary);
 }
 
-/* investment_title_container */
-#investment_title_container {
+.investment__header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,7 +73,7 @@
     padding: 0;
 }
 
-#investment_title {
+.investment__title {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -94,7 +81,7 @@
     padding: 0;
 }
 
-#investment_title h1 {
+.investment__title-text {
     color: var(--gold-yelow);
     font-family: 'Playfair Display SC';
     font-weight: 700;
@@ -102,17 +89,17 @@
     margin: 0;
 }
 
-#investment_title_arrow_icon {
+.investment__title-arrow {
     width: 40px;
     height: 60px;
 }
 
-#investment_title_location_icon {
+.investment__title-icon {
     width: 70px;
     height: 82px;
 }
 
-#investment_paragraph p {
+.investment__description {
     color: #FFFFFF;
     font-family: "Poppins";
     font-weight: 400;
@@ -120,8 +107,8 @@
     padding: 0;
 }
 
-/* investment_destinations */
-#investment_destinations {
+/* Investment Destinations */
+.investment__destinations {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,27 +118,27 @@
     width: 100%;
 }
 
-.investment_destinations_row {
+.destinations__row {
     display: flex;
     justify-content: space-between;
     gap: 5px;
     width: 100%;
 }
 
-.investment_destinations_row_card {
+.destination-card {
     width: 180px;
     height: 160px;
     position: relative;
 }
 
-.investment_destinations_row_card_img {
+.destination-card__image {
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 16px;
 }
 
-.investment_destinations_row_card_ver_mas {
+.destination-card__button {
     position: absolute;
     bottom: 10px;
     right: 10px;
@@ -159,79 +146,79 @@
 
 /* Desktop styles */
 @media (min-width: 1024px) {
-    #hero_img {
+    .hero__image {
         height: 600px;
         object-fit: cover;
     }
 
-    #about_us {
+    .about {
         flex-direction: row;
         padding: 40px 80px;
         gap: 40px;
         align-items: center;
     }
 
-    #about_us_container1 {
+    .about__group {
         height: 260px;
         gap: 30px;
     }
 
-    #about_us_container1_text_container {
+    .about__text-box {
         width: 320px;
         padding: 20px;
     }
 
-    #about_us_container2 img {
+    .about__image {
         height: 320px;
         object-fit: cover;
     }
 
-    #about_us_container3 {
+    .about__featured {
         padding: 32px;
         border-radius: 16px;
     }
 
-    #investment {
+    .investment {
         padding: 48px 80px;
         gap: 20px;
     }
 
-    #investment_title h1 {
+    .investment__title-text {
         font-size: 32px;
     }
 
-    #investment_paragraph p {
+    .investment__description {
         max-width: 900px;
         text-align: center;
         margin-top: 8px;
     }
 
-    #investment_destinations {
+    .investment__destinations {
         gap: 20px;
     }
 
-    .investment_destinations_row {
+    .destinations__row {
         gap: 20px;
     }
 
-    .investment_destinations_row_card {
+    .destination-card {
         flex: 1 1 260px;
         min-width: 220px;
         height: 220px;
         position: relative;
     }
 
-    .investment_destinations_row_card_img {
+    .destination-card__image {
         border-radius: 20px;
         transition: transform .25s ease, box-shadow .25s ease;
     }
 
-    .investment_destinations_row_card:hover .investment_destinations_row_card_img {
+    .destination-card:hover .destination-card__image {
         transform: translateY(-6px) scale(1.02);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
-    .investment_destinations_row_card_ver_mas {
+    .destination-card__button {
         bottom: 0;
         right: 16px;
         width: 150px;

@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.getElementById('navbar_menu_icon');
-    const mobileMenu = document.getElementById('mobile_menu');
-    const submenuToggle = document.querySelector('.mobile_menu_submenu_toggle');
-    const submenu = document.querySelector('.mobile_menu_submenu');
-    const langBtn = document.getElementById('navbar_lang_btn');
-    const langMenu = document.getElementById('language_menu');
-    const desktopSubmenuToggle = document.querySelector('.desktop_menu_submenu_toggle');
-    const desktopSubmenu = document.querySelector('.desktop_menu_submenu');
+    const menuIcon = document.querySelector('.navbar__menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const submenuToggle = document.querySelector('.mobile-menu__item');
+    const submenu = document.querySelector('.mobile-menu__submenu');
+    const langBtn = document.querySelector('.navbar__language-btn');
+    const langMenu = document.querySelector('.language-menu');
+    const desktopSubmenuToggle = document.querySelector('.desktop-menu__toggle');
+    const desktopSubmenu = document.querySelector('.desktop-menu__submenu');
 
     if (!menuIcon || !mobileMenu) return;
 
     menuIcon.addEventListener('click', function(e) {
         e.stopPropagation();
-        mobileMenu.classList.toggle('mobile_menu_open');
-        if (langMenu.classList.contains('language_menu_open')) {
-            langMenu.classList.remove('language_menu_open');
+        mobileMenu.classList.toggle('mobile-menu--open');
+        if (langMenu.classList.contains('language-menu--open')) {
+            langMenu.classList.remove('language-menu--open');
         }
     });
 
@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
         submenuToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            submenu.classList.toggle('open');
+            submenu.classList.toggle('mobile-menu__submenu--open');
         });
     }
 
     if (langBtn && langMenu) {
         langBtn.addEventListener('click', function(e) {
             e.stopPropagation();
-            langMenu.classList.toggle('language_menu_open');
-            if (mobileMenu.classList.contains('mobile_menu_open')) {
-                mobileMenu.classList.remove('mobile_menu_open');
+            langMenu.classList.toggle('language-menu--open');
+            if (mobileMenu.classList.contains('mobile-menu--open')) {
+                mobileMenu.classList.remove('mobile-menu--open');
             }
         });
     }
@@ -40,27 +40,27 @@ document.addEventListener('DOMContentLoaded', function() {
         desktopSubmenuToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            desktopSubmenu.classList.toggle('open');
+            desktopSubmenu.classList.toggle('desktop-menu__submenu--open');
         });
 
         desktopSubmenuToggle.addEventListener('mouseenter', function() {
-            desktopSubmenu.classList.add('open');
+            desktopSubmenu.classList.add('desktop-menu__submenu--open');
         });
 
         desktopSubmenuToggle.addEventListener('mouseleave', function() {
-            desktopSubmenu.classList.remove('open');
+            desktopSubmenu.classList.remove('desktop-menu__submenu--open');
         });
     }
 
     document.addEventListener('click', function() {
-        if (mobileMenu.classList.contains('mobile_menu_open')) {
-            mobileMenu.classList.remove('mobile_menu_open');
+        if (mobileMenu.classList.contains('mobile-menu--open')) {
+            mobileMenu.classList.remove('mobile-menu--open');
         }
-        if (langMenu && langMenu.classList.contains('language_menu_open')) {
-            langMenu.classList.remove('language_menu_open');
+        if (langMenu && langMenu.classList.contains('language-menu--open')) {
+            langMenu.classList.remove('language-menu--open');
         }
-        if (desktopSubmenu && desktopSubmenu.classList.contains('open')) {
-            desktopSubmenu.classList.remove('open');
+        if (desktopSubmenu && desktopSubmenu.classList.contains('desktop-menu__submenu--open')) {
+            desktopSubmenu.classList.remove('desktop-menu__submenu--open');
         }
     });
 
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
         accordion.addEventListener('click', function(e) {
             e.stopPropagation();
             const content = this.nextElementSibling;
-            if (content && content.classList.contains('accordion_content')) {
-                content.classList.toggle('open');
+            if (content && content.classList.contains('accordion__content')) {
+                content.classList.toggle('accordion__content--open');
             }
         });
     });
