@@ -178,6 +178,14 @@
     width: 100%;
 }
 
+.investment__destinations--mobile {
+    display: flex;
+}
+
+.investment__destinations--desktop {
+    display: none;
+}
+
 .destinations__row {
     display: flex;
     justify-content: space-between;
@@ -202,6 +210,16 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
+}
+
+.destination-card__label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    font-family: "Poppins";
+    font-size: 20px;
+    color: #F7F7F7;
+    z-index: 10;
 }
 
 /* Desktop styles */
@@ -301,13 +319,22 @@
         gap: 20px;
     }
 
+    .investment__destinations--mobile {
+        display: none;
+    }
+
+    .investment__destinations--desktop {
+        display: flex;
+    }
+
     .destinations__row {
-        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
     }
 
     .destination-card {
-        flex: 1 1 260px;
-        min-width: 220px;
+        width: 100%;
         height: 220px;
         position: relative;
     }
