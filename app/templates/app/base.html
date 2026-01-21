@@ -109,7 +109,7 @@
       </ul>
     </nav>
   </header>
-  
+
   <div class="m-top-container">
     {% block body %}{% endblock %}
   </div>
@@ -258,6 +258,7 @@
   </footer>
 
   <script src="{% static 'app/js/mobile_menu.js' %}"></script>
+  {% block extrajs %}{% endblock %}
 </body>
 
 </html>

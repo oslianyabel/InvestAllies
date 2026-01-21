@@ -280,6 +280,7 @@
         gap: 10px;
         align-items: center;
         justify-content: space-between;
+        align-items: self-start;
         padding: 0;
         margin: 0;
     }
@@ -327,7 +328,7 @@
     .about__desktop-column-left-right {
         width: 48%;
         background-color: #26584D;
-        padding: 60px 20px;
+        padding: 80px 30px;
         border-radius: 20px;
     }
 
@@ -429,10 +430,58 @@
 
     /* articles-desktop-carousel*/
     .articles-desktop-carousel {
-        padding: 60px 0;
+        padding: 60px 120px;
         margin: 0;
         display: flex;
         gap: 20px;
+        position: relative;
+    }
+
+    .articles-desktop-carousel__button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: 2px solid var(--gold-yelow);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 5;
+    }
+
+    .articles-desktop-carousel__button:hover {
+        background-color: var(--gold-yelow);
+    }
+
+    .articles-desktop-carousel__button:hover img {
+        filter: brightness(0);
+    }
+
+    .articles-desktop-carousel__button img {
+        width: 24px;
+        height: 24px;
+        transition: filter 0.3s ease;
+    }
+
+    .articles-desktop-carousel__button--left {
+        left: 20px;
+    }
+
+    .articles-desktop-carousel__button--left img {
+        transform: rotate(90deg);
+    }
+
+    .articles-desktop-carousel__button--right {
+        right: 20px;
+    }
+
+    .articles-desktop-carousel__button--right img {
+        transform: rotate(-90deg);
     }
 
     .articles-desktop-carousel-post {
@@ -452,6 +501,7 @@
     .articles-desktop-carousel-post-content-text {
         display: flex;
         flex-direction: column;
+        gap: 12px;
     }
 
     .articles-desktop-carousel-post-content-text-author {

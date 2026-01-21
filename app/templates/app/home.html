@@ -177,6 +177,10 @@
     </div>
 
     <div class="articles-desktop-carousel">
+      <button class="articles-desktop-carousel__button articles-desktop-carousel__button--left"
+        aria-label="Desplazar izquierda">
+        <img src="{% static 'svg/arrow_down.svg' %}" alt="flecha izquierda">
+      </button>
 
       <div class="articles-desktop-carousel-post">
         <img class="articles-desktop-carousel-post-main_image" src="{% static 'img/post1.jpg' %}" alt="">
@@ -244,26 +248,52 @@
         </div>
       </div>
 
+      <div class="articles-desktop-carousel-post">
+        <img class="articles-desktop-carousel-post-main_image" src="{% static 'img/post3.jpg' %}" alt="">
+        <div class="articles-desktop-carousel-post-content">
+          <div class="articles-desktop-carousel-post-content-text">
+            <h2 class="articles-desktop-carousel-post-content-text-author">Sunday , 1 Jan 2023</h2>
+            <div class="articles-desktop-carousel-post-content-text-heading">
+              <p>Lorem Ipsum</p>
+              <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow icon">
+            </div>
+            <p class="articles-desktop-carousel-post-content-text-text">Like to know the secrets of transforming a 2-14
+              team into a 3x Super Bowl winning Dynasty?
+            </p>
+          </div>
+
+          <div class="articles-desktop-carousel-post-content-categories">
+            <p class="articles-desktop-carousel-post-content-categories-badge">Leadership</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Management</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Presentation</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="articles-desktop-carousel__button articles-desktop-carousel__button--right"
+        aria-label="Desplazar derecha">
+        <img src="{% static 'svg/arrow_down.svg' %}" alt="flecha derecha">
+      </button>
+    </div>
+
+    <section class="articles-mobile">
+
+    </section>
+
+    <section class="gold_and_fuel-desktop"></section>
+    <section class="gold_and_fuel-mobile"></section>
+
+    <section class="offshore-desktop"></section>
+    <section class="offshore-mobile"></section>
+
+    <section class="service-desktop"></section>
+    <section class="service-mobile"></section>
+
+    <section class="legal-desktop"></section>
+    <section class="legal-mobile"></section>
+
+    <section class="form-desktop"></section>
+    <section class="form-mobile"></section>
+
   </section>
-
-  <section class="articles-mobile">
-
-  </section>
-
-  <section class="gold_and_fuel-desktop"></section>
-  <section class="gold_and_fuel-mobile"></section>
-
-  <section class="offshore-desktop"></section>
-  <section class="offshore-mobile"></section>
-
-  <section class="service-desktop"></section>
-  <section class="service-mobile"></section>
-
-  <section class="legal-desktop"></section>
-  <section class="legal-mobile"></section>
-
-  <section class="form-desktop"></section>
-  <section class="form-mobile"></section>
-
-</section>
-{% endblock %}
+  {% endblock %}
