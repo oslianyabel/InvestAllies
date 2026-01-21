@@ -7,172 +7,263 @@
 {% endblock %}
 
 {% block body %}
-<section class="hero">
-  <img src="{% static 'img/hero.jpeg' %}" alt="hero" class="hero__image">
-</section>
+<div class="hero__image">
+  <img src="{% static 'img/hero.jpeg' %}" alt="hero">
+</div>
 
-<section class="about">
-  <!-- Mobile version -->
-  <div class="about__mobile">
-    <div class="about__group">
-      <div class="about__text-box">
-        <p>Información clara y confiable para invertir en mercados internacionales</p>
+<section class="page">
+
+  <section class="about">
+    <!-- Mobile version -->
+    <div class="about__mobile">
+      <div class="about__group">
+        <div class="about__text-box">
+          <p>Información clara y confiable para invertir en mercados internacionales</p>
+        </div>
+        <img src="{% static 'img/about_us.png' %}" alt="about_us" class="about__image">
       </div>
-      <img src="{% static 'img/about_us.png' %}" alt="about_us" class="about__image">
-    </div>
 
-    <div class="about__group">
-      <img src="{% static 'img/about_us2.jpg' %}" alt="about_us" class="about__image">
-    </div>
+      <div class="about__group">
+        <img src="{% static 'img/about_us2.jpg' %}" alt="about_us" class="about__image">
+      </div>
 
-    <div class="about__featured">
-      <h2 class="about__featured-title">Confianza, experiencia y transparencia</h2>
-      <p class="about__featured-text">
-        <b>Confianza, experiencia y transparencia</b>
-        Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir con
-        claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas
-      </p>
-    </div>
-  </div>
-
-  <!-- Desktop version -->
-  <div class="about__desktop">
-    <div class="about__desktop-column-left">
-      <div class="about__desktop-column-left-top">
-        <p class="about__desktop-column-left-top-item">
-          Información clara y confiable para invertir en mercados internacionales
+      <div class="about__featured">
+        <h2 class="about__featured-title">Confianza, experiencia y transparencia</h2>
+        <p class="about__featured-text">
+          <b>Confianza, experiencia y transparencia</b>
+          Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir
+          con
+          claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas
         </p>
-        <div class="about__desktop-column-left-top-item">
-          <img src="{% static 'img/about_us2.jpg' %}" alt="about_us">
+      </div>
+    </div>
+
+    <!-- Desktop version -->
+    <div class="about__desktop">
+      <div class="about__desktop-column-left">
+        <div class="about__desktop-column-left-top">
+          <p class="about__desktop-column-left-top-item">
+            Información clara y confiable para invertir en mercados internacionales
+          </p>
+          <div class="about__desktop-column-left-top-item">
+            <img src="{% static 'img/about_us2.jpg' %}" alt="about_us">
+          </div>
+        </div>
+
+        <img class="about__desktop-column-left-down" src="{% static 'img/about_us.jpg' %}" alt="about_us">
+      </div>
+
+      <div class="about__desktop-column-left-right">
+        <h2>Confianza, experiencia y transparencia</h2>
+        <p>
+          Confianza, experiencia y transparencia.
+          Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir
+          con
+          claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="investment">
+    <div class="investment__header">
+      <div class="investment__title">
+        <h1 class="investment__title-text">DESTINOS DE INVERSIÓN</h1>
+        <img src="{% static 'svg/decor-arrow.svg' %}" alt="decorative arrow" class="investment__title-arrow">
+        <img src="{% static 'svg/location.svg' %}" alt="location icon" class="investment__title-icon">
+      </div>
+
+      <div>
+        <p class="investment__description">Invierte donde tu capital genera más valor. Accede a oportunidades de
+          inversión
+          seleccionadas en mercados en
+          expansión y
+          regiones con alto potencial de crecimiento. Analizamos riesgos, rentabilidades y barreras de entrada para que
+          puedas
+          tomar decisiones informadas</p>
+      </div>
+    </div>
+
+    <div class="investment__destinations investment__destinations--mobile">
+      <div class="destinations__row">
+        <div class="destination-card">
+          <img src="{% static 'img/spain.jpg' %}" alt="spain" class="destination-card__image">
+          <span class="destination-card__label">España</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+        <div class="destination-card">
+          <img src="{% static 'img/dubai.png' %}" alt="dubai" class="destination-card__image">
+          <span class="destination-card__label">Dubai</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
         </div>
       </div>
 
-      <img class="about__desktop-column-left-down" src="{% static 'img/about_us.jpg' %}" alt="about_us">
+      <div class="destinations__row">
+        <div class="destination-card">
+          <img src="{% static 'img/marruecos.jpg' %}" alt="marruecos" class="destination-card__image">
+          <span class="destination-card__label">Marruecos</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+        <div class="destination-card">
+          <img src="{% static 'img/mali.png' %}" alt="mali" class="destination-card__image">
+          <span class="destination-card__label">Mali</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+      </div>
+
+      <div class="destinations__row">
+        <div class="destination-card">
+          <img src="{% static 'img/bali.png' %}" alt="bali" class="destination-card__image">
+          <span class="destination-card__label">Bali</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+        <div class="destination-card">
+          <img src="{% static 'img/zanzibar.jpg' %}" alt="zanzibar" class="destination-card__image">
+          <span class="destination-card__label">Zanzibar</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+      </div>
     </div>
 
-    <div class="about__desktop-column-left-right">
-      <h2>Confianza, experiencia y transparencia</h2>
-      <p>
-        Confianza, experiencia y transparencia.
-        Somos un equipo internacional especializado en inversiones globales. Nuestro objetivo es ayudarte a invertir con
-        claridad, seguridad y estrategias sólidas, basadas en análisis reales y oportunidades verificadas.
+    <div class="investment__destinations investment__destinations--desktop">
+      <div class="destinations__row">
+        <div class="destination-card">
+          <img src="{% static 'img/spain.jpg' %}" alt="spain" class="destination-card__image">
+          <span class="destination-card__label">España</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+        <div class="destination-card">
+          <img src="{% static 'img/dubai.png' %}" alt="dubai" class="destination-card__image">
+          <span class="destination-card__label">Dubai</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+        <div class="destination-card">
+          <img src="{% static 'img/marruecos.jpg' %}" alt="marruecos" class="destination-card__image">
+          <span class="destination-card__label">Marruecos</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+      </div>
+
+      <div class="destinations__row">
+        <div class="destination-card">
+          <img src="{% static 'img/mali.png' %}" alt="mali" class="destination-card__image">
+          <span class="destination-card__label">Mali</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+        <div class="destination-card">
+          <img src="{% static 'img/bali.png' %}" alt="bali" class="destination-card__image">
+          <span class="destination-card__label">Bali</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+        <div class="destination-card">
+          <img src="{% static 'img/zanzibar.jpg' %}" alt="zanzibar" class="destination-card__image">
+          <span class="destination-card__label">Zanzibar</span>
+          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="articles-desktop">
+    <div class="articles-desktop-title">
+      <h1>Articulos destacados</h1>
+      <p>Invierte donde tu capital genera más valor. Accede a oeleccionamos la información más relevante y los artículos
+        que
+        están marcando la pauta en el mundo financiero. Descubre las oportunidades ocultas en renta fija, el análisis de
+        las
+        últimas políticas fiscales y las noticias que realmente afectan tus inversiones.
       </p>
     </div>
-  </div>
-</section>
 
-<section class="investment">
-  <div class="investment__header">
-    <div class="investment__title">
-      <h1 class="investment__title-text">DESTINOS DE INVERSIÓN</h1>
-      <img src="{% static 'svg/decor-arrow.svg' %}" alt="decorative arrow" class="investment__title-arrow">
-      <img src="{% static 'svg/location.svg' %}" alt="location icon" class="investment__title-icon">
-    </div>
+    <div class="articles-desktop-carousel">
 
-    <div>
-      <p class="investment__description">Invierte donde tu capital genera más valor. Accede a oportunidades de inversión
-        seleccionadas en mercados en
-        expansión y
-        regiones con alto potencial de crecimiento. Analizamos riesgos, rentabilidades y barreras de entrada para que
-        puedas
-        tomar decisiones informadas</p>
-    </div>
-  </div>
+      <div class="articles-desktop-carousel-post">
+        <img class="articles-desktop-carousel-post-main_image" src="{% static 'img/post1.jpg' %}" alt="">
+        <div class="articles-desktop-carousel-post-content">
+          <div class="articles-desktop-carousel-post-content-text">
+            <h2 class="articles-desktop-carousel-post-content-text-author">Sunday , 1 Jan 2023</h2>
+            <div class="articles-desktop-carousel-post-content-text-heading">
+              <p>Lorem Ipsum</p>
+              <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow icon">
+            </div>
+            <p class="articles-desktop-carousel-post-content-text-text">Like to know the secrets of transforming a 2-14
+              team into a 3x Super Bowl winning Dynasty?
+            </p>
+          </div>
 
-  <div class="investment__destinations investment__destinations--mobile">
-    <div class="destinations__row">
-      <div class="destination-card">
-        <img src="{% static 'img/spain.jpg' %}" alt="spain" class="destination-card__image">
-        <span class="destination-card__label">España</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <div class="articles-desktop-carousel-post-content-categories">
+            <p class="articles-desktop-carousel-post-content-categories-badge">Leadership</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Management</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Presentation</p>
+          </div>
+        </div>
       </div>
-      <div class="destination-card">
-        <img src="{% static 'img/dubai.png' %}" alt="dubai" class="destination-card__image">
-        <span class="destination-card__label">Dubai</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-    </div>
 
-    <div class="destinations__row">
-      <div class="destination-card">
-        <img src="{% static 'img/marruecos.jpg' %}" alt="marruecos" class="destination-card__image">
-        <span class="destination-card__label">Marruecos</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-      <div class="destination-card">
-        <img src="{% static 'img/mali.png' %}" alt="mali" class="destination-card__image">
-        <span class="destination-card__label">Mali</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-    </div>
+      <div class="articles-desktop-carousel-post">
+        <img class="articles-desktop-carousel-post-main_image" src="{% static 'img/post2.jpg' %}" alt="">
+        <div class="articles-desktop-carousel-post-content">
+          <div class="articles-desktop-carousel-post-content-text">
+            <h2 class="articles-desktop-carousel-post-content-text-author">Sunday , 1 Jan 2023</h2>
+            <div class="articles-desktop-carousel-post-content-text-heading">
+              <p>Lorem Ipsum</p>
+              <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow icon">
+            </div>
+            <p class="articles-desktop-carousel-post-content-text-text">Like to know the secrets of transforming a 2-14
+              team into a 3x Super Bowl winning Dynasty?
+            </p>
+          </div>
 
-    <div class="destinations__row">
-      <div class="destination-card">
-        <img src="{% static 'img/bali.png' %}" alt="bali" class="destination-card__image">
-        <span class="destination-card__label">Bali</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <div class="articles-desktop-carousel-post-content-categories">
+            <p class="articles-desktop-carousel-post-content-categories-badge">Leadership</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Management</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Presentation</p>
+          </div>
+        </div>
       </div>
-      <div class="destination-card">
-        <img src="{% static 'img/zanzibar.jpg' %}" alt="zanzibar" class="destination-card__image">
-        <span class="destination-card__label">Zanzibar</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-    </div>
-  </div>
 
-  <div class="investment__destinations investment__destinations--desktop">
-    <div class="destinations__row">
-      <div class="destination-card">
-        <img src="{% static 'img/spain.jpg' %}" alt="spain" class="destination-card__image">
-        <span class="destination-card__label">España</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-      <div class="destination-card">
-        <img src="{% static 'img/dubai.png' %}" alt="dubai" class="destination-card__image">
-        <span class="destination-card__label">Dubai</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-      <div class="destination-card">
-        <img src="{% static 'img/marruecos.jpg' %}" alt="marruecos" class="destination-card__image">
-        <span class="destination-card__label">Marruecos</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-    </div>
+      <div class="articles-desktop-carousel-post">
+        <img class="articles-desktop-carousel-post-main_image" src="{% static 'img/post3.jpg' %}" alt="">
+        <div class="articles-desktop-carousel-post-content">
+          <div class="articles-desktop-carousel-post-content-text">
+            <h2 class="articles-desktop-carousel-post-content-text-author">Sunday , 1 Jan 2023</h2>
+            <div class="articles-desktop-carousel-post-content-text-heading">
+              <p>Lorem Ipsum</p>
+              <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow icon">
+            </div>
+            <p class="articles-desktop-carousel-post-content-text-text">Like to know the secrets of transforming a 2-14
+              team into a 3x Super Bowl winning Dynasty?
+            </p>
+          </div>
 
-    <div class="destinations__row">
-      <div class="destination-card">
-        <img src="{% static 'img/mali.png' %}" alt="mali" class="destination-card__image">
-        <span class="destination-card__label">Mali</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <div class="articles-desktop-carousel-post-content-categories">
+            <p class="articles-desktop-carousel-post-content-categories-badge">Leadership</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Management</p>
+            <p class="articles-desktop-carousel-post-content-categories-badge">Presentation</p>
+          </div>
+        </div>
       </div>
-      <div class="destination-card">
-        <img src="{% static 'img/bali.png' %}" alt="bali" class="destination-card__image">
-        <span class="destination-card__label">Bali</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-      <div class="destination-card">
-        <img src="{% static 'img/zanzibar.jpg' %}" alt="zanzibar" class="destination-card__image">
-        <span class="destination-card__label">Zanzibar</span>
-        <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
-      </div>
-    </div>
-  </div>
+
+  </section>
+
+  <section class="articles-mobile">
+
+  </section>
+
+  <section class="gold_and_fuel-desktop"></section>
+  <section class="gold_and_fuel-mobile"></section>
+
+  <section class="offshore-desktop"></section>
+  <section class="offshore-mobile"></section>
+
+  <section class="service-desktop"></section>
+  <section class="service-mobile"></section>
+
+  <section class="legal-desktop"></section>
+  <section class="legal-mobile"></section>
+
+  <section class="form-desktop"></section>
+  <section class="form-mobile"></section>
 
 </section>
-
-<section id="articles">
-
-</section>
-
-<section id="carousel"></section>
-
-<section id="gold_and_fuel"></section>
-
-<section id="offshore"></section>
-
-<section id="service"></section>
-
-<section id="legal"></section>
-
-<section id="form"></section>
 {% endblock %}

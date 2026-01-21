@@ -1,5 +1,26 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: var(--color-primary);
+    padding: 14px 32px 0;
+    margin: 0;
+    background-color: var(--color-primary)
+}
+
+@media (min-width: 1024px) {
+    .page {
+        padding: 14px 50px 0;
+    }
+}
+
 /* Hero Section */
 .hero__image {
+    height: 60vh;
+}
+
+.hero__image img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }
@@ -13,10 +34,38 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 14px 32px;
+    padding: 14px 0;
 }
 
 .about__desktop {
+    display: none;
+}
+
+.articles-desktop {
+    display: none;
+}
+
+.carousel-desktop {
+    display: none;
+}
+
+.gold_and_fuel-desktop {
+    display: none;
+}
+
+.offshore-desktop {
+    display: none;
+}
+
+.service-desktop {
+    display: none;
+}
+
+.legal-desktop {
+    display: none;
+}
+
+.form-desktop {
     display: none;
 }
 
@@ -35,10 +84,10 @@
 }
 
 .about__image {
+    border-radius: 30px;
     object-fit: cover;
     width: 100%;
     max-width: 100%;
-    height: auto;
 }
 
 .about__mobile .about__group:nth-child(2) .about__image {
@@ -120,7 +169,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 32px;
+    padding: 0;
+    margin: 0;
     gap: 10px;
     background-color: var(--color-primary);
 }
@@ -129,16 +179,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 0;
 }
 
 .investment__title {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin: 0;
-    padding: 0;
 }
 
 .investment__title-text {
@@ -163,8 +209,6 @@
     color: #FFFFFF;
     font-family: "Poppins";
     font-weight: 400;
-    margin: 0;
-    padding: 0;
 }
 
 /* Investment Destinations */
@@ -173,8 +217,6 @@
     flex-direction: column;
     align-items: center;
     gap: 14px;
-    margin: 0;
-    padding: 0;
     width: 100%;
 }
 
@@ -224,7 +266,7 @@
 
 /* Desktop styles */
 @media (min-width: 1024px) {
-    .hero__image {
+    .hero__image img {
         height: 600px;
         object-fit: cover;
     }
@@ -238,6 +280,8 @@
         gap: 10px;
         align-items: center;
         justify-content: space-between;
+        padding: 0;
+        margin: 0;
     }
 
     .about__desktop-column-left {
@@ -267,6 +311,7 @@
     }
 
     .about__desktop-column-left-top-item img {
+        border-radius: 30px;
         object-fit: cover;
         width: 100%;
         height: 100%;
@@ -301,7 +346,7 @@
     }
 
     .investment {
-        padding: 48px 80px;
+        padding: 48px 0;
         gap: 20px;
     }
 
@@ -354,5 +399,141 @@
         right: 16px;
         width: 150px;
         height: 60px;
+    }
+
+    /* articles-desktop */
+
+    .articles-desktop {
+        display: block;
+    }
+
+    .articles-desktop-title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .articles-desktop-title h1 {
+        color: var(--gold-yelow);
+        font-size: 48px;
+        font-weight: 700;
+        font-family: "Playfair Display SC";
+    }
+
+    .articles-desktop-title p {
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Poppins";
+    }
+
+    /* articles-desktop-carousel*/
+    .articles-desktop-carousel {
+        padding: 60px 0;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .articles-desktop-carousel-post {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .articles-desktop-carousel-post-main_image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .articles-desktop-carousel-post-content,
+    .articles-desktop-carousel-post-content-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .articles-desktop-carousel-post-content-text-author {
+        color: var(--gold-yelow);
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .articles-desktop-carousel-post-content-text-heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+
+    .articles-desktop-carousel-post-content-text-heading img {
+        height: 24px;
+        width: 24px;
+    }
+
+    .articles-desktop-carousel-post-content-text-heading p {
+        color: #FFFFFF;
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .articles-desktop-carousel-post-content-text-text {
+        color: #C6C6CC;
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .articles-desktop-carousel-post-content-categories {
+        display: flex;
+        gap: 10px;
+    }
+
+    .articles-desktop-carousel-post-content-categories-badge {
+        border-radius: 16px;
+        padding: 0 5px;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #F9F5FF;
+    }
+
+    .articles-desktop-carousel-post-content-categories *:nth-child(1) {
+        color: #6941C6;
+    }
+
+    .articles-desktop-carousel-post-content-categories *:nth-child(2) {
+        color: #363F72;
+    }
+
+    .articles-desktop-carousel-post-content-categories *:nth-child(3) {
+        color: #C11574;
+    }
+
+    .carousel-desktop {
+        display: block;
+    }
+
+    .gold_and_fuel-desktop {
+        display: block;
+    }
+
+    .offshore-desktop {
+        display: block;
+    }
+
+    .service-desktop {
+        display: block;
+    }
+
+    .legal-desktop {
+        display: block;
+    }
+
+    .form-desktop {
+        display: block;
     }
 }
