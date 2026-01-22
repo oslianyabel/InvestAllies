@@ -437,6 +437,16 @@
         position: relative;
     }
 
+    /* wrapper that contains posts; keeps layout stable and enables sliding */
+    .articles-desktop-carousel__wrapper {
+        display: flex;
+        gap: 20px;
+        align-items: stretch;
+        width: 100%;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
     .articles-desktop-carousel__button {
         position: absolute;
         top: 50%;
@@ -485,10 +495,16 @@
     }
 
     .articles-desktop-carousel-post {
-        flex-grow: 1;
+        flex: 0 0 calc((100% - (2 * 20px)) / 3);
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    /* ensure posts don't render outside the wrapper when sliding */
+    .articles-desktop-carousel-post {
+        min-width: 0;
+        max-width: calc((100% - (2 * 20px)) / 3);
     }
 
     .articles-desktop-carousel-post-main_image {
