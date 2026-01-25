@@ -832,9 +832,303 @@
         line-height: 1 !important;
     }
 
+    .gold_and_fuel-desktop {
+        display: flex !important;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .gold-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 70px 15px;
+        background-color: #2A2819;
+        border: solid 1px #FDCA3C;
+        border-radius: 30px;
+        width: 590px;
+    }
+
+    .gold-desktop-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .gold-desktop-title h1 {
+        color: #EDEDED;
+        font-family: "Poppins";
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .gold-desktop-title img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gold-desktop-price {
+        background-color: #121210;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px #E9D01140;
+        gap: 5px;
+    }
+
+    .gold-desktop-price-title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .gold-desktop-price-title p {
+        color: #EDEDED;
+        font-size: 20px;
+        font-family: "Poppins";
+        font-weight: 600;
+    }
+
+    .gold-desktop-price-title-live {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .gold-desktop-price-title-live img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .gold-desktop-price-title-live p {
+        color: #C6C6CC;
+        font-size: 16px;
+        font-family: "Poppins";
+        font-weight: 400;
+    }
+
+    .gold-desktop-price-price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .gold-desktop-price-price p {
+        color: #FFCB3C;
+        font-family: "Poppins";
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .gold-desktop-price-price-percentaje {
+        display: flex;
+        gap: 1px;
+        padding: 3px 5px;
+        border-radius: 6px;
+        background-color: #84EA5433;
+    }
+
+    .gold-desktop-price-price-percentaje p {
+        color: #34C759;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .gold-desktop-price-price-percentaje img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .gold-desktop-description {
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 400;
+        color: #C6C6CC;
+    }
+
     .opportunities-desktop-carousel-card-bottom-profitability-account-button img {
         width: 18px;
         height: 18px;
+    }
+
+    .gold-desktop-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .gold-desktop-cta-btn {
+        width: 202px;
+        height: 48px;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 800;
+        color: #000000;
+        border-radius: 18px;
+        background: linear-gradient(#DA8207, #DD9318, #FFCB3C, #FFCB3C, #E39C1E, #FBC63A);
+        padding: 5px 20px;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .gold-desktop-cta-btn:hover,
+    .gold-desktop-cta-btn:focus-visible {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .gold-desktop-cta-btn:active {
+        transform: translateY(-2px);
+    }
+
+    /* Fuel */
+    .fuel-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 70px 15px;
+        background-color: #424848;
+        border: solid 1px #FDCA3C;
+        border-radius: 30px;
+        width: 590px;
+    }
+
+    .fuel-desktop-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 10px;
+    }
+
+    .fuel-desktop-title h1 {
+        color: #EDEDED;
+        font-family: "Poppins";
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .fuel-desktop-title img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .fuel-desktop-price {
+        background-color: #121210;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px #3E90C399;
+        gap: 5px;
+    }
+
+    .fuel-desktop-price-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .fuel-desktop-price-title p {
+        color: #EDEDED;
+        font-size: 20px;
+        font-family: "Poppins";
+        font-weight: 600;
+    }
+
+    .fuel-desktop-price-title-live {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .fuel-desktop-price-title-live img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .fuel-desktop-price-title-live p {
+        color: #C6C6CC;
+        font-size: 16px;
+        font-family: "Poppins";
+        font-weight: 400;
+    }
+
+    .fuel-desktop-price-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .fuel-desktop-price-price p {
+        color: #7FC3FA;
+        font-family: "Poppins";
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    .fuel-desktop-price-price-percentaje {
+        display: flex;
+        gap: 1px;
+        padding: 3px 5px;
+        border-radius: 6px;
+        background-color: #B4AFAF33;
+    }
+
+    .fuel-desktop-price-price-percentaje p {
+        color: #FF383C;
+        font-family: "Poppins";
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .fuel-desktop-price-price-percentaje img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .fuel-desktop-description {
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 400;
+        color: #C6C6CC;
+    }
+
+    .fuel-desktop-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .fuel-desktop-cta-btn {
+        width: 202px;
+        height: 48px;
+        font-size: 16px;
+        font-family: Inter;
+        font-weight: 800;
+        color: #000000;
+        border-radius: 18px;
+        background: linear-gradient(#5DA5D8, #6DC2ED, #9CC6E0, #6DC6ED, #1E8AE3, #50ADDB);
+        padding: 5px 20px;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    }
+
+    .fuel-desktop-cta-btn:hover,
+    .fuel-desktop-cta-btn:focus-visible {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+        filter: brightness(1.02);
+    }
+
+    .fuel-desktop-cta-btn:active {
+        transform: translateY(-2px);
     }
 
     .gold_and_fuel-desktop {
