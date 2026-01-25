@@ -208,6 +208,113 @@ document.addEventListener('DOMContentLoaded', function() {
             moveLeft(); // right button shows next (shift left visually)
         });
     })();
+
+    // Opportunities desktop carousel (same behavior as articles)
+    (function setupOpportunitiesCarousel() {
+        const mq = window.matchMedia('(min-width: 1024px)');
+        if (!mq.matches) return;
+
+        const container = document.querySelector('.opportunities-desktop-carousel');
+        if (!container) return;
+
+        const existingWrapper = container.querySelector('.opportunities-desktop-carousel__wrapper');
+        const cards = Array.from(container.querySelectorAll('.opportunities-desktop-carousel-card'));
+        if (cards.length === 0) return;
+
+        // create wrapper if missing
+        const wrapper = existingWrapper || document.createElement('div');
+        if (!existingWrapper) wrapper.className = 'opportunities-desktop-carousel__wrapper';
+
+        // move cards into wrapper (if not already)
+        if (!existingWrapper) {
+            cards.forEach(card => wrapper.appendChild(card));
+            // insert wrapper into container
+            container.appendChild(wrapper);
+        }
+
+        // ensure container clips overflow
+        container.style.overflow = 'hidden';
+
+        // create nav buttons if missing (reuse articles button styles)
+        let leftBtn = container.querySelector('.articles-desktop-carousel__button--left.opportunities-nav');
+        let rightBtn = container.querySelector('.articles-desktop-carousel__button--right.opportunities-nav');
+
+        function createButton(side) {
+            const btn = document.createElement('button');
+            btn.className = `articles-desktop-carousel__button articles-desktop-carousel__button--${side} opportunities-nav`;
+            btn.setAttribute('aria-label', side === 'left' ? 'Desplazar izquierda' : 'Desplazar derecha');
+            return btn;
+        }
+
+        if (!leftBtn) {
+            leftBtn = createButton('left');
+            container.insertBefore(leftBtn, wrapper);
+        }
+        if (!rightBtn) {
+            rightBtn = createButton('right');
+            container.appendChild(rightBtn);
+        }
+
+        let isAnimating = false;
+
+        function getStep() {
+            const first = wrapper.querySelector('.opportunities-desktop-carousel-card');
+            if (!first) return 0;
+            const rect = first.getBoundingClientRect();
+            const style = getComputedStyle(wrapper);
+            const gap = parseFloat(style.gap) || 0;
+            return Math.round(rect.width + gap);
+        }
+
+        function moveLeft() {
+            if (isAnimating) return;
+            isAnimating = true;
+            const step = getStep();
+            wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+            wrapper.style.transform = `translateX(-${step}px)`;
+
+            function onEnd() {
+                wrapper.removeEventListener('transitionend', onEnd);
+                const first = wrapper.firstElementChild;
+                if (first) wrapper.appendChild(first);
+                wrapper.style.transition = 'none';
+                wrapper.style.transform = 'translateX(0)';
+                wrapper.offsetHeight; // force reflow
+                wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+                isAnimating = false;
+            }
+
+            wrapper.addEventListener('transitionend', onEnd);
+        }
+
+        function moveRight() {
+            if (isAnimating) return;
+            isAnimating = true;
+            const step = getStep();
+            const last = wrapper.lastElementChild;
+            if (!last) { isAnimating = false; return; }
+            wrapper.style.transition = 'none';
+            wrapper.insertBefore(last, wrapper.firstElementChild);
+            wrapper.style.transform = `translateX(-${step}px)`;
+            wrapper.offsetHeight;
+            wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+            wrapper.style.transform = 'translateX(0)';
+
+            function onEnd() {
+                wrapper.removeEventListener('transitionend', onEnd);
+                wrapper.style.transition = 'none';
+                wrapper.style.transform = 'translateX(0)';
+                wrapper.offsetHeight;
+                wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+                isAnimating = false;
+            }
+
+            wrapper.addEventListener('transitionend', onEnd);
+        }
+
+        leftBtn.addEventListener('click', function(e) { e.stopPropagation(); moveRight(); });
+        rightBtn.addEventListener('click', function(e) { e.stopPropagation(); moveLeft(); });
+    })();
 });
 
 
