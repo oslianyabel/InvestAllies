@@ -2,10 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    background-color: var(--color-primary);
+    background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B);
     padding: 14px 32px 0;
     margin: 0;
-    background-color: var(--color-primary)
 }
 
 @media (min-width: 1024px) {
@@ -26,10 +25,6 @@
 }
 
 /* About Section */
-.about {
-    background-color: var(--color-primary);
-}
-
 .about__mobile {
     display: flex;
     flex-direction: column;
@@ -172,7 +167,6 @@
     padding: 0;
     margin: 0;
     gap: 10px;
-    background-color: var(--color-primary);
 }
 
 .investment__header {
