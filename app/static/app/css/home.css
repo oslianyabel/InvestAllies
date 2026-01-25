@@ -577,6 +577,219 @@
         display: block;
     }
 
+    .opportunities-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .opportunities-desktop-title {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .opportunities-desktop-title h1 {
+        color: #D8AF6C;
+        font-family: "Playfair Display SC";
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .opportunities-desktop-title h2 {
+        color: #EDEDED;
+        font-family: "Playfair Display SC";
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .opportunities-desktop-title p {
+        color: #EDEDED;
+        font-family: "Poppins";
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .opportunities-desktop-carousel {
+        display: flex;
+        gap: 10px;
+    }
+
+    .opportunities-desktop-carousel-card {
+        display: flex;
+        flex-direction: column;
+        width: 392px;
+        height: 629px;
+        border-radius: 20px;
+    }
+
+    .opportunities-desktop-carousel-card-top {
+        height: 50%;
+    }
+
+    .opportunities-desktop-carousel-card-top img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .opportunities-desktop-carousel-card-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #1A3732;
+        padding: 5px 20px 30px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-text h2 {
+        color: #FFFFFF;
+        font-size: 24px;
+        font-family: "Playfair Display SC";
+        font-weight: 700;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-text p {
+        color: #FFFFFF;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 300;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container {
+        display: flex;
+        background-color: #234842;
+        padding: 5px 10px;
+        border-radius: 12px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-risk {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0 5px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-risk p {
+        color: #C6C6CC;
+        font-size: 12px;
+        font-weight: 500;
+        font-family: "Poppins";
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-risk-type {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-risk-type img {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-risk-type p {
+        color: #EDEDED;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 500;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage p {
+        color: #C6C6CC;
+        font-size: 12px;
+        font-family: "Poppins";
+        font-weight: 500;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage-container {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage-container h3 {
+        color: #EAC966;
+        font-size: 24px;
+        font-family: "Poppins";
+        font-weight: 500;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage-container span {
+        color: #EAC966;
+        font-size: 12px;
+        font-family: "Poppins";
+        font-weight: 500;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-account {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-account-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-account-container h3 {
+        color: #B4B4BF;
+        font-size: 14px;
+        font-family: "Poppins";
+        font-weight: 500;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-account-container p {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-family: "Poppins";
+        font-weight: 700;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-account-button {
+        background-color: #E5BE4A;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        border-radius: 20px;
+        padding: 6px 17px;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-account-button p {
+        color: #000000;
+        font-size: 14px;
+        font-family: "Inter";
+        font-weight: 700;
+        line-height: 1 !important;
+    }
+
+    .opportunities-desktop-carousel-card-bottom-profitability-account-button img {
+        width: 18px;
+        height: 18px;
+    }
+
     .gold_and_fuel-desktop {
         display: block;
     }
