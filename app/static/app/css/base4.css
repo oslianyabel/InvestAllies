@@ -239,6 +239,7 @@ body {
 }
 
 .footer__text {
+    margin-top: 10px;
     color: #EDEDED;
 }
 
@@ -258,12 +259,19 @@ body {
     height: 60px;
 }
 
+.footer__content {
+    display: flex;
+    flex-direction: column;
+}
+
 .accordion {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     transition: opacity 0.2s ease;
+    padding: 15px 5px;
+    border-bottom: 1px solid #ffff;
 }
 
 .accordion:hover {
@@ -274,6 +282,7 @@ body {
     font-size: 16px;
     font-weight: 500;
     font-family: "Poppins";
+    color: #FFFFFF;
 }
 
 .accordion__content {
@@ -299,12 +308,14 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
+    margin: 10px 0;
 }
 
 .footer__policies-text {
     font-size: 14px;
     font-weight: 500;
     font-family: "Inter";
+    color: #FFFFFF;
 }
 
 .footer__dropdown-icon {
