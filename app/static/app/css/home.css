@@ -1131,8 +1131,157 @@
         transform: translateY(-2px);
     }
 
-    .gold_and_fuel-desktop {
-        display: block;
+    .more_info-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .more_info-desktop-offshore {
+        background-color: #E8E2B7;
+        padding: 20px 25px;
+        display: flex;
+        gap: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 10px #202624;
+    }
+
+    .more_info-desktop-offshore img {
+        border-radius: 30px;
+        width: 256px;
+        height: 267px;
+    }
+
+    .more_info-desktop-offshore-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .more_info-desktop-offshore-content h2 {
+        color: #1D1D1D;
+        font-family: "Playfair Display SC";
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .more_info-desktop-offshore-content h3 {
+        color: #000000;
+        font-family: "Poppins";
+        font-size: 20px;
+        font-weight: 800;
+    }
+
+    .more_info-desktop-offshore-content p {
+        color: #1D1D1D;
+        font-family: "Poppins";
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .more_info-desktop-offshore-content-btn {
+        border-radius: 20px;
+        width: 216px;
+        height: 48px;
+        background-color: #E5BE4A;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        margin-top: 20px;
+        border: 0;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+        box-shadow: 0 5px 5px #B8B86399;
+    }
+
+    #offshore-btn {
+        width: 308px;
+    }
+
+    .more_info-desktop-offshore-content-btn p {
+        color: #000000;
+        font-family: "Poppins";
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .more_info-desktop-offshore-content-btn img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .more_info-desktop-offshore-content-btn:hover,
+    .more_info-desktop-offshore-content-btn:focus-visible {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        filter: brightness(0.98);
+    }
+
+    .more_info-desktop-offshore-content-btn:active {
+        transform: translateY(-2px);
+    }
+
+    .more_info-desktop-offshore-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .more_info-desktop-services {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .more_info-desktop-services-calculator {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        gap: 20px;
+        padding: 10px 20px 20px;
+        border-radius: 30px;
+        background-color: #245448;
+        box-shadow: 0 5px 10px #0B0D0D;
+    }
+
+    .more_info-desktop-services-calculator-content {
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .more_info-desktop-services-calculator-content-point {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: "Poppins";
+        padding: 5px;
+    }
+
+    .more_info-desktop-services-calculator-description {
+        color: #F7F7F7;
+        font-size: 28px;
+        font-weight: 700;
+        font-family: "Playfair Display SC";
+    }
+
+    .more_info-desktop-services-calculator-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .more_info-desktop-services-calculator-title h2 {
+        color: #FFFFFF;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: "Poppins";
+    }
+
+    .more_info-desktop-services-calculator-title img {
+        width: 74px;
+        height: 74px;
+        border-radius: 32px;
     }
 
     .offshore-desktop {
