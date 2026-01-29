@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.querySelector('.navbar__menu-btn');
     const mobileMenu = document.querySelector('.mobile-menu');
     const submenuToggle = document.querySelector('.mobile-menu__item');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!menuIcon || !mobileMenu) return;
 
-    menuIcon.addEventListener('click', function(e) {
+    menuIcon.addEventListener('click', function (e) {
         e.stopPropagation();
         mobileMenu.classList.toggle('mobile-menu--open');
         if (langMenu.classList.contains('language-menu--open')) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     if (submenuToggle && submenu) {
-        submenuToggle.addEventListener('click', function(e) {
+        submenuToggle.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             submenu.classList.toggle('mobile-menu__submenu--open');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (langBtn && langMenu) {
-        langBtn.addEventListener('click', function(e) {
+        langBtn.addEventListener('click', function (e) {
             e.stopPropagation();
             langMenu.classList.toggle('language-menu--open');
             if (mobileMenu.classList.contains('mobile-menu--open')) {
@@ -37,22 +37,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (desktopSubmenuToggle && desktopSubmenu) {
-        desktopSubmenuToggle.addEventListener('click', function(e) {
+        desktopSubmenuToggle.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
             desktopSubmenu.classList.toggle('desktop-menu__submenu--open');
         });
 
-        desktopSubmenuToggle.addEventListener('mouseenter', function() {
+        desktopSubmenuToggle.addEventListener('mouseenter', function () {
             desktopSubmenu.classList.add('desktop-menu__submenu--open');
         });
 
-        desktopSubmenuToggle.addEventListener('mouseleave', function() {
+        desktopSubmenuToggle.addEventListener('mouseleave', function () {
             desktopSubmenu.classList.remove('desktop-menu__submenu--open');
         });
     }
 
-    document.addEventListener('click', function() {
+    document.addEventListener('click', function () {
         if (mobileMenu.classList.contains('mobile-menu--open')) {
             mobileMenu.classList.remove('mobile-menu--open');
         }
@@ -64,26 +64,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    mobileMenu.addEventListener('click', function(e) {
+    mobileMenu.addEventListener('click', function (e) {
         e.stopPropagation();
     });
 
     if (langMenu) {
-        langMenu.addEventListener('click', function(e) {
+        langMenu.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     }
 
     if (desktopSubmenu) {
-        desktopSubmenu.addEventListener('click', function(e) {
+        desktopSubmenu.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     }
 
     // Accordion toggle
     const accordions = document.querySelectorAll('.accordion');
-    accordions.forEach(function(accordion) {
-        accordion.addEventListener('click', function(e) {
+    accordions.forEach(function (accordion) {
+        accordion.addEventListener('click', function (e) {
             e.stopPropagation();
             const content = this.nextElementSibling;
             if (content && content.classList.contains('accordion__content')) {
@@ -92,26 +92,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Desktop articles carousel (infinite circular sliding)
-    (function setupDesktopArticlesCarousel() {
-        const mq = window.matchMedia('(min-width: 1024px)');
-        if (!mq.matches) return;
-
-        const container = document.querySelector('.articles-desktop-carousel');
+    // Articles carousel (infinite circular sliding)
+    (function setupArticlesCarousel() {
+        const container = document.querySelector('.articles-carousel');
         if (!container) return;
 
-        const leftBtn = container.querySelector('.articles-desktop-carousel__button--left');
-        const rightBtn = container.querySelector('.articles-desktop-carousel__button--right');
-        const posts = Array.from(container.querySelectorAll('.articles-desktop-carousel-post'));
+        const leftBtn = container.querySelector('.articles-carousel__button--left');
+        const rightBtn = container.querySelector('.articles-carousel__button--right');
+        const posts = Array.from(container.querySelectorAll('.articles-carousel-post'));
         if (!leftBtn || !rightBtn || posts.length === 0) return;
 
         // Create wrapper for posts to control transform animations
         const wrapper = document.createElement('div');
-        wrapper.className = 'articles-desktop-carousel__wrapper';
+        wrapper.className = 'articles-carousel__wrapper';
         wrapper.style.display = 'flex';
         const computedGap = getComputedStyle(container).gap || '20px';
         wrapper.style.gap = computedGap;
-        wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+        wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
         wrapper.style.willChange = 'transform';
 
         // Move post nodes into wrapper preserving order
@@ -130,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let isAnimating = false;
 
         function getStep() {
-            const firstPost = wrapper.querySelector('.articles-desktop-carousel-post');
+            const firstPost = wrapper.querySelector('.articles-carousel-post');
             if (!firstPost) return 0;
             const postRect = firstPost.getBoundingClientRect();
             const gapPx = parseFloat(computedGap) || 0;
@@ -142,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
             isAnimating = true;
             const step = getStep();
             // animate left: transform from 0 -> -step, then move first to end
-            wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+            wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
             wrapper.style.transform = `translateX(-${step}px)`;
 
             function onEnd() {
@@ -156,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // force reflow then restore transition
                 // eslint-disable-next-line no-unused-expressions
                 wrapper.offsetHeight;
-                wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+                wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
                 isAnimating = false;
             }
 
@@ -181,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // eslint-disable-next-line no-unused-expressions
             wrapper.offsetHeight;
             // animate to 0
-            wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+            wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
             wrapper.style.transform = 'translateX(0)';
 
             function onEnd() {
@@ -191,39 +188,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 wrapper.style.transform = 'translateX(0)';
                 // eslint-disable-next-line no-unused-expressions
                 wrapper.offsetHeight;
-                wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+                wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
                 isAnimating = false;
             }
 
             wrapper.addEventListener('transitionend', onEnd);
         }
 
-        leftBtn.addEventListener('click', function(e) {
+        leftBtn.addEventListener('click', function (e) {
             e.stopPropagation();
             moveRight(); // left button shows previous (shift right visually)
         });
 
-        rightBtn.addEventListener('click', function(e) {
+        rightBtn.addEventListener('click', function (e) {
             e.stopPropagation();
             moveLeft(); // right button shows next (shift left visually)
         });
     })();
 
-    // Opportunities desktop carousel (same behavior as articles)
+    // Opportunities carousel (same behavior as articles)
     (function setupOpportunitiesCarousel() {
-        const mq = window.matchMedia('(min-width: 1024px)');
-        if (!mq.matches) return;
-
-        const container = document.querySelector('.opportunities-desktop-carousel');
+        const container = document.querySelector('.opportunities-carousel');
         if (!container) return;
 
-        const existingWrapper = container.querySelector('.opportunities-desktop-carousel__wrapper');
-        const cards = Array.from(container.querySelectorAll('.opportunities-desktop-carousel-card'));
+        const existingWrapper = container.querySelector('.opportunities-carousel__wrapper');
+        const cards = Array.from(container.querySelectorAll('.opportunities-carousel-card'));
         if (cards.length === 0) return;
 
         // create wrapper if missing
         const wrapper = existingWrapper || document.createElement('div');
-        if (!existingWrapper) wrapper.className = 'opportunities-desktop-carousel__wrapper';
+        if (!existingWrapper) wrapper.className = 'opportunities-carousel__wrapper';
 
         // move cards into wrapper (if not already)
         if (!existingWrapper) {
@@ -236,12 +230,12 @@ document.addEventListener('DOMContentLoaded', function() {
         container.style.overflow = 'hidden';
 
         // create nav buttons if missing (reuse articles button styles)
-        let leftBtn = container.querySelector('.articles-desktop-carousel__button--left.opportunities-nav');
-        let rightBtn = container.querySelector('.articles-desktop-carousel__button--right.opportunities-nav');
+        let leftBtn = container.querySelector('.articles-carousel__button--left.opportunities-nav');
+        let rightBtn = container.querySelector('.articles-carousel__button--right.opportunities-nav');
 
         function createButton(side) {
             const btn = document.createElement('button');
-            btn.className = `articles-desktop-carousel__button articles-desktop-carousel__button--${side} opportunities-nav`;
+            btn.className = `articles-carousel__button articles-carousel__button--${side} opportunities-nav`;
             btn.setAttribute('aria-label', side === 'left' ? 'Desplazar izquierda' : 'Desplazar derecha');
             return btn;
         }
@@ -258,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let isAnimating = false;
 
         function getStep() {
-            const first = wrapper.querySelector('.opportunities-desktop-carousel-card');
+            const first = wrapper.querySelector('.opportunities-carousel-card');
             if (!first) return 0;
             const rect = first.getBoundingClientRect();
             const style = getComputedStyle(wrapper);
@@ -270,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (isAnimating) return;
             isAnimating = true;
             const step = getStep();
-            wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+            wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
             wrapper.style.transform = `translateX(-${step}px)`;
 
             function onEnd() {
@@ -280,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 wrapper.style.transition = 'none';
                 wrapper.style.transform = 'translateX(0)';
                 wrapper.offsetHeight; // force reflow
-                wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+                wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
                 isAnimating = false;
             }
 
@@ -297,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
             wrapper.insertBefore(last, wrapper.firstElementChild);
             wrapper.style.transform = `translateX(-${step}px)`;
             wrapper.offsetHeight;
-            wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+            wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
             wrapper.style.transform = 'translateX(0)';
 
             function onEnd() {
@@ -305,15 +299,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 wrapper.style.transition = 'none';
                 wrapper.style.transform = 'translateX(0)';
                 wrapper.offsetHeight;
-                wrapper.style.transition = 'transform 0.6s cubic-bezier(.22,.9,.32,1)';
+                wrapper.style.transition = 'transform 0.5s cubic-bezier(0.45, 0, 0.55, 1)';
                 isAnimating = false;
             }
 
             wrapper.addEventListener('transitionend', onEnd);
         }
 
-        leftBtn.addEventListener('click', function(e) { e.stopPropagation(); moveRight(); });
-        rightBtn.addEventListener('click', function(e) { e.stopPropagation(); moveLeft(); });
+        leftBtn.addEventListener('click', function (e) { e.stopPropagation(); moveRight(); });
+        rightBtn.addEventListener('click', function (e) { e.stopPropagation(); moveLeft(); });
     })();
 });
 

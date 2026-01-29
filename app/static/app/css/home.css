@@ -1,16 +1,10 @@
 .page {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 40px;
     background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B);
     padding: 14px 32px 0;
     margin: 0;
-}
-
-@media (min-width: 1024px) {
-    .page {
-        padding: 14px 50px 0;
-    }
 }
 
 /* Hero Section */
@@ -33,34 +27,6 @@
 }
 
 .about__desktop {
-    display: none;
-}
-
-.articles-desktop {
-    display: none;
-}
-
-.carousel-desktop {
-    display: none;
-}
-
-.gold_and_fuel-desktop {
-    display: none;
-}
-
-.offshore-desktop {
-    display: none;
-}
-
-.service-desktop {
-    display: none;
-}
-
-.legal-desktop {
-    display: none;
-}
-
-.form-desktop {
     display: none;
 }
 
@@ -224,12 +190,12 @@
 
 .destinations__row {
     display: flex;
-    justify-content: space-between;
     gap: 5px;
     width: 100%;
 }
 
 .destination-card {
+    flex-grow: 1;
     width: 180px;
     height: 160px;
     position: relative;
@@ -258,8 +224,896 @@
     z-index: 10;
 }
 
+/* articles */
+.articles-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.articles-title h1 {
+    color: var(--gold-yelow);
+    font-size: 48px;
+    font-weight: 700;
+    font-family: "Playfair Display SC";
+}
+
+.articles-title p {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
+/* articles-carousel*/
+.articles-carousel {
+    padding: 20px 40px;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+/* wrapper that contains posts; keeps layout stable and enables sliding */
+.articles-carousel__wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.articles-carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #3B7062;
+    border: none;
+    border-radius: 28px;
+    height: 70px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    z-index: 5;
+}
+
+.articles-carousel__button:hover {
+    filter: brightness(0.9);
+}
+
+/* hide inline imgs (we use CSS background svgs) */
+.articles-carousel__button img {
+    display: none;
+}
+
+.articles-carousel__button--left {
+    left: 20px;
+    background-image: url('/static/svg/left_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+}
+
+.articles-carousel__button--right {
+    right: 20px;
+    background-image: url('/static/svg/right_arrow_withe.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+}
+
+.articles-carousel-post {
+    flex: 0 0 calc((100% - 20px) / 2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ensure posts don't render outside the wrapper when sliding */
+.articles-carousel-post {
+    min-width: 0;
+    max-width: calc((100% - 20px) / 2);
+}
+
+.articles-carousel-post-main_image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.articles-carousel-post-content,
+.articles-carousel-post-content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.articles-carousel-post-content-text-author {
+    color: var(--gold-yelow);
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.articles-carousel-post-content-text-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.articles-carousel-post-content-text-heading img {
+    height: 24px;
+    width: 24px;
+}
+
+.articles-carousel-post-content-text-heading p {
+    color: #FFFFFF;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.articles-carousel-post-content-text-text {
+    color: #C6C6CC;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.articles-carousel-post-content-categories {
+    display: flex;
+    gap: 10px;
+}
+
+.articles-carousel-post-content-categories-badge {
+    border-radius: 16px;
+    padding: 0 5px;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #F9F5FF;
+}
+
+.articles-carousel-post-content-categories *:nth-child(1) {
+    color: #6941C6;
+}
+
+.articles-carousel-post-content-categories *:nth-child(2) {
+    color: #363F72;
+}
+
+.articles-carousel-post-content-categories *:nth-child(3) {
+    color: #C11574;
+}
+
+/* opportunities carousel styles: show 3 cards and enable wrapper clipping */
+.opportunities-carousel {
+    position: relative;
+    display: block;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.opportunities-carousel__wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+
+.opportunities-carousel-card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.opportunities {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.opportunities-title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.opportunities-title h1 {
+    color: #D8AF6C;
+    font-family: "Playfair Display SC";
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.opportunities-title h2 {
+    color: #EDEDED;
+    font-family: "Playfair Display SC";
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.opportunities-title p {
+    color: #EDEDED;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.opportunities-carousel {
+    display: flex;
+    gap: 10px;
+}
+
+.opportunities-carousel-card {
+    display: flex;
+    flex-direction: column;
+    width: 430px;
+    height: 618px;
+    border-radius: 20px;
+}
+
+.opportunities-carousel-card-top {
+    height: 65%;
+    position: relative;
+}
+
+.opportunities-carousel-card-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.opportunities-carousel-card-top-location {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #01010180;
+    width: 122px;
+    height: 33px;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.opportunities-carousel-card-top-location p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.opportunities-carousel-card-top-location img {
+    width: 20px;
+    height: 20px;
+}
+
+.opportunities-carousel-card-bottom {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #1A3732;
+    padding: 5px 20px 30px;
+    border-radius: 0 0 20px 20px;
+}
+
+.opportunities-carousel-card-bottom-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.opportunities-carousel-card-bottom-text h2 {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-family: "Playfair Display SC";
+    font-weight: 700;
+}
+
+.opportunities-carousel-card-bottom-text p {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: 300;
+}
+
+.opportunities-carousel-card-bottom-profitability {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opportunities-carousel-card-bottom-profitability-container {
+    display: flex;
+    background-color: #234842;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-risk {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 5px;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-risk p {
+    color: #C6C6CC;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.opportunities-carousel-card-bottom-profitability-container-risk-type {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-risk-type img {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-risk-type p {
+    color: #EDEDED;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-percentage {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-percentage p {
+    color: #C6C6CC;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-percentage-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-percentage-container h3 {
+    color: #EAC966;
+    font-size: 24px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.opportunities-carousel-card-bottom-profitability-container-percentage-container span {
+    color: #EAC966;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.opportunities-carousel-card-bottom-profitability-account {
+    display: flex;
+    justify-content: space-between;
+}
+
+.opportunities-carousel-card-bottom-profitability-account-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.opportunities-carousel-card-bottom-profitability-account-container h3 {
+    color: #B4B4BF;
+    font-size: 14px;
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.opportunities-carousel-card-bottom-profitability-account-container p {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 700;
+}
+
+.opportunities-carousel-card-bottom-profitability-account-button {
+    background-color: #E5BE4A;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border-radius: 20px;
+    padding: 6px 17px;
+    box-shadow: 0 6px 6px #B8B86399;
+}
+
+.opportunities-carousel-card-bottom-profitability-account-button p {
+    color: #000000;
+    font-size: 14px;
+    font-family: "Inter";
+    font-weight: 700;
+    line-height: 1 !important;
+}
+
+.gold_and_fuel {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.gold {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 70px 15px;
+    background-color: #2A2819;
+    border: solid 1px #FDCA3C;
+    border-radius: 30px;
+}
+
+.gold-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.gold-title h1 {
+    color: #EDEDED;
+    font-family: "Poppins";
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.gold-title img {
+    width: 50px;
+    height: 50px;
+}
+
+.gold-price {
+    background-color: #121210;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px #E9D01140;
+    gap: 5px;
+}
+
+.gold-price-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.gold-price-title p {
+    color: #EDEDED;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.gold-price-title-live {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.gold-price-title-live img {
+    width: 25px;
+    height: 25px;
+}
+
+.gold-price-title-live p {
+    color: #C6C6CC;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+.gold-price-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gold-price-price p {
+    color: #FFCB3C;
+    font-family: "Poppins";
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.gold-price-price-percentaje {
+    display: flex;
+    gap: 1px;
+    padding: 3px 5px;
+    border-radius: 6px;
+    background-color: #84EA5433;
+}
+
+.gold-price-price-percentaje p {
+    color: #34C759;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.gold-price-price-percentaje img {
+    width: 16px;
+    height: 16px;
+}
+
+.gold-description {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    color: #C6C6CC;
+}
+
+.opportunities-carousel-card-bottom-profitability-account-button img {
+    width: 18px;
+    height: 18px;
+}
+
+.gold-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.gold-cta-btn {
+    width: 202px;
+    height: 48px;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 800;
+    color: #000000;
+    border-radius: 18px;
+    background: linear-gradient(#DA8207, #DD9318, #FFCB3C, #FFCB3C, #E39C1E, #FBC63A);
+    padding: 5px 20px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.gold-cta-btn:hover,
+.gold-cta-btn:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.gold-cta-btn:active {
+    transform: translateY(-2px);
+}
+
+/* Fuel */
+.fuel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 70px 15px;
+    background-color: #424848;
+    border: solid 1px #FDCA3C;
+    border-radius: 30px;
+}
+
+.fuel-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.fuel-title h1 {
+    color: #EDEDED;
+    font-family: "Poppins";
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.fuel-title img {
+    width: 50px;
+    height: 50px;
+}
+
+.fuel-price {
+    background-color: #121210;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px #3E90C399;
+    gap: 5px;
+}
+
+.fuel-price-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.fuel-price-title p {
+    color: #EDEDED;
+    font-size: 20px;
+    font-family: "Poppins";
+    font-weight: 600;
+}
+
+.fuel-price-title-live {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.fuel-price-title-live img {
+    width: 25px;
+    height: 25px;
+}
+
+.fuel-price-title-live p {
+    color: #C6C6CC;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: 400;
+}
+
+.fuel-price-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.fuel-price-price p {
+    color: #7FC3FA;
+    font-family: "Poppins";
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.fuel-price-price-percentaje {
+    display: flex;
+    gap: 1px;
+    padding: 3px 5px;
+    border-radius: 6px;
+    background-color: #B4AFAF33;
+}
+
+.fuel-price-price-percentaje p {
+    color: #FF383C;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.fuel-price-price-percentaje img {
+    width: 16px;
+    height: 16px;
+}
+
+.fuel-description {
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 400;
+    color: #C6C6CC;
+}
+
+.fuel-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.fuel-cta-btn {
+    width: 202px;
+    height: 48px;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 800;
+    color: #000000;
+    border-radius: 18px;
+    background: linear-gradient(#5DA5D8, #6DC2ED, #9CC6E0, #6DC6ED, #1E8AE3, #50ADDB);
+    padding: 5px 20px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.fuel-cta-btn:hover,
+.fuel-cta-btn:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
+    filter: brightness(1.02);
+}
+
+.fuel-cta-btn:active {
+    transform: translateY(-2px);
+}
+
+.more_info {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.more_info-offshore {
+    background-color: #E8E2B7;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px #202624;
+}
+
+.more_info-offshore-main_img {
+    border-radius: 30px;
+    object-fit: scale-down;
+    width: 100%;
+    height: 150px;
+}
+
+.more_info-offshore-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.more_info-offshore-content h2 {
+    color: #1D1D1D;
+    font-family: "Playfair Display SC";
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.more_info-offshore-content h3 {
+    color: #000000;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.more_info-offshore-content p {
+    color: #1D1D1D;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.more_info-offshore-content-btn {
+    border-radius: 20px;
+    width: 216px;
+    height: 48px;
+    background-color: #E5BE4A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border: 0;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+    box-shadow: 0 5px 5px #B8B86399;
+}
+
+#offshore-btn {
+    width: 308px;
+}
+
+.more_info-offshore-content-btn p {
+    color: #000000;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.more_info-offshore-content-btn img {
+    width: 26px;
+    height: 26px;
+}
+
+.more_info-offshore-content-btn:hover,
+.more_info-offshore-content-btn:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    filter: brightness(0.98);
+}
+
+.more_info-offshore-content-btn:active {
+    transform: translateY(-2px);
+}
+
+.more_info-offshore-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.more_info-services {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.more_info-services-calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 20px 20px;
+    border-radius: 30px;
+    background-color: #245448;
+    box-shadow: 0 5px 10px #0B0D0D;
+}
+
+.more_info-services-calculator-content {
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.more_info-services-calculator-content-point {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Poppins";
+    padding: 5px;
+}
+
+.more_info-services-calculator-description {
+    color: #F7F7F7;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Playfair Display SC";
+}
+
+.more_info-services-calculator-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.more_info-services-calculator-title h2 {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.more_info-services-calculator-title img {
+    width: 74px;
+    height: 74px;
+    border-radius: 32px;
+}
+
 /* Desktop styles */
 @media (min-width: 1024px) {
+    .page {
+        padding: 14px 50px 0;
+    }
+
     .hero__image img {
         height: 600px;
         object-fit: cover;
@@ -396,907 +1250,92 @@
         height: 60px;
     }
 
-    /* articles-desktop */
-
-    .articles-desktop {
-        display: block;
-    }
-
-    .articles-desktop-title {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .articles-desktop-title h1 {
-        color: var(--gold-yelow);
-        font-size: 48px;
-        font-weight: 700;
-        font-family: "Playfair Display SC";
-    }
-
-    .articles-desktop-title p {
-        color: #FFFFFF;
-        font-size: 20px;
-        font-weight: 400;
-        font-family: "Poppins";
-    }
-
-    /* articles-desktop-carousel*/
-    .articles-desktop-carousel {
-        padding: 60px 120px;
-        margin: 0;
-        display: flex;
-        gap: 20px;
-        position: relative;
-    }
-
-    /* wrapper that contains posts; keeps layout stable and enables sliding */
-    .articles-desktop-carousel__wrapper {
-        display: flex;
-        gap: 20px;
-        align-items: stretch;
-        width: 100%;
-        overflow: hidden;
-        box-sizing: border-box;
-    }
-
-    .articles-desktop-carousel__button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #3B7062;
-        border: none;
-        border-radius: 28px;
-        height: 70px;
-        padding: 0 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: background-color 0.2s ease, transform 0.2s ease;
-        z-index: 5;
-    }
-
-    .articles-desktop-carousel__button:hover {
-        filter: brightness(0.9);
-    }
-
-    /* hide inline imgs (we use CSS background svgs) */
-    .articles-desktop-carousel__button img {
-        display: none;
-    }
-
-    .articles-desktop-carousel__button--left {
-        left: 20px;
-        background-image: url('/static/svg/left_arrow.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 18px 18px;
-    }
-
-    .articles-desktop-carousel__button--right {
-        right: 20px;
-        background-image: url('/static/svg/right_arrow_withe.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 18px 18px;
-    }
-
-    .articles-desktop-carousel-post {
-        flex: 0 0 calc((100% - (2 * 20px)) / 3);
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* ensure posts don't render outside the wrapper when sliding */
-    .articles-desktop-carousel-post {
-        min-width: 0;
-        max-width: calc((100% - (2 * 20px)) / 3);
-    }
-
-    .articles-desktop-carousel-post-main_image {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-    .articles-desktop-carousel-post-content,
-    .articles-desktop-carousel-post-content-text {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .articles-desktop-carousel-post-content-text-author {
-        color: var(--gold-yelow);
-        font-family: "Poppins";
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .articles-desktop-carousel-post-content-text-heading {
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        margin: 0;
-    }
-
-    .articles-desktop-carousel-post-content-text-heading img {
-        height: 24px;
-        width: 24px;
-    }
-
-    .articles-desktop-carousel-post-content-text-heading p {
-        color: #FFFFFF;
-        font-family: "Poppins";
-        font-size: 24px;
-        font-weight: 600;
-    }
-
-    .articles-desktop-carousel-post-content-text-text {
-        color: #C6C6CC;
-        font-family: "Poppins";
-        font-size: 16px;
-        font-weight: 400;
-    }
-
-    .articles-desktop-carousel-post-content-categories {
-        display: flex;
-        gap: 10px;
-    }
-
-    .articles-desktop-carousel-post-content-categories-badge {
-        border-radius: 16px;
-        padding: 0 5px;
-        font-family: "Poppins";
-        font-size: 14px;
-        font-weight: 500;
-        background-color: #F9F5FF;
-    }
-
-    .articles-desktop-carousel-post-content-categories *:nth-child(1) {
-        color: #6941C6;
-    }
-
-    .articles-desktop-carousel-post-content-categories *:nth-child(2) {
-        color: #363F72;
-    }
-
-    .articles-desktop-carousel-post-content-categories *:nth-child(3) {
-        color: #C11574;
-    }
-
-    .carousel-desktop {
-        display: block;
-    }
-
-    /* opportunities-desktop carousel styles: show 3 cards and enable wrapper clipping */
-    .opportunities-desktop-carousel {
-        position: relative;
-        display: block;
-        padding: 0 100px;
-        box-sizing: border-box;
-    }
-
-    .opportunities-desktop-carousel__wrapper {
-        display: flex;
-        gap: 20px;
-        width: 100%;
-        overflow: hidden;
-        align-items: stretch;
-        box-sizing: border-box;
-    }
-
-    .opportunities-desktop-carousel-card {
-        flex: 0 0 calc((100% - (2 * 20px)) / 3);
-        box-sizing: border-box;
-        min-width: 0;
-        max-width: calc((100% - (2 * 20px)) / 3);
-    }
-
-    .opportunities-desktop {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .opportunities-desktop-title {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .opportunities-desktop-title h1 {
-        color: #D8AF6C;
-        font-family: "Playfair Display SC";
-        font-size: 48px;
-        font-weight: 700;
-    }
-
-    .opportunities-desktop-title h2 {
-        color: #EDEDED;
-        font-family: "Playfair Display SC";
-        font-size: 28px;
-        font-weight: 700;
-    }
-
-    .opportunities-desktop-title p {
-        color: #EDEDED;
-        font-family: "Poppins";
-        font-size: 20px;
-        font-weight: 400;
-    }
-
-    .opportunities-desktop-carousel {
-        display: flex;
-        gap: 10px;
-    }
-
-    .opportunities-desktop-carousel-card {
-        display: flex;
-        flex-direction: column;
-        width: 392px;
-        height: 629px;
-        border-radius: 20px;
-    }
-
-    .opportunities-desktop-carousel-card-top {
-        height: 50%;
-        position: relative;
-    }
-
-    .opportunities-desktop-carousel-card-top img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px 20px 0 0;
-    }
-
-    .opportunities-desktop-carousel-card-top-location {
-        position: absolute;
-        top: 32px;
-        left: 32px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background-color: #01010180;
-        width: 122px;
-        height: 33px;
-        border-radius: 8px;
-        padding: 5px 10px;
-    }
-
-    .opportunities-desktop-carousel-card-top-location p {
-        color: #FFFFFF;
-        font-size: 16px;
-        font-family: "Poppins";
-        font-weight: 500;
-    }
-
-    .opportunities-desktop-carousel-card-top-location img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #1A3732;
-        padding: 5px 20px 30px;
-        border-radius: 0 0 20px 20px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-text {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-text h2 {
-        color: #FFFFFF;
-        font-size: 24px;
-        font-family: "Playfair Display SC";
-        font-weight: 700;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-text p {
-        color: #FFFFFF;
-        font-size: 14px;
-        font-family: "Poppins";
-        font-weight: 300;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container {
-        display: flex;
-        background-color: #234842;
-        padding: 5px 10px;
-        border-radius: 12px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-risk {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        padding: 0 5px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-risk p {
-        color: #C6C6CC;
-        font-size: 12px;
-        font-weight: 500;
-        font-family: "Poppins";
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-risk-type {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-risk-type img {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-risk-type p {
-        color: #EDEDED;
-        font-size: 14px;
-        font-family: "Poppins";
-        font-weight: 500;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage p {
-        color: #C6C6CC;
-        font-size: 12px;
-        font-family: "Poppins";
-        font-weight: 500;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage-container {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage-container h3 {
-        color: #EAC966;
-        font-size: 24px;
-        font-family: "Poppins";
-        font-weight: 500;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-container-percentage-container span {
-        color: #EAC966;
-        font-size: 12px;
-        font-family: "Poppins";
-        font-weight: 500;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-account {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-account-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-account-container h3 {
-        color: #B4B4BF;
-        font-size: 14px;
-        font-family: "Poppins";
-        font-weight: 500;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-account-container p {
-        color: #FFFFFF;
-        font-size: 18px;
-        font-family: "Poppins";
-        font-weight: 700;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-account-button {
-        background-color: #E5BE4A;
-        display: flex;
-        gap: 5px;
-        align-items: center;
-        border-radius: 20px;
-        padding: 6px 17px;
-        box-shadow: 0 6px 6px #B8B86399;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-account-button p {
-        color: #000000;
-        font-size: 14px;
-        font-family: "Inter";
-        font-weight: 700;
-        line-height: 1 !important;
-    }
-
-    .gold_and_fuel-desktop {
-        display: flex !important;
+    /* articles */
+    .gold_and_fuel {
+        flex-direction: row;
         justify-content: center;
         gap: 80px;
     }
 
-    .gold-desktop {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        padding: 70px 15px;
-        background-color: #2A2819;
-        border: solid 1px #FDCA3C;
-        border-radius: 30px;
-        width: 590px;
-    }
-
-    .gold-desktop-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding-left: 10px;
-    }
-
-    .gold-desktop-title h1 {
-        color: #EDEDED;
-        font-family: "Poppins";
-        font-size: 36px;
-        font-weight: 700;
-    }
-
-    .gold-desktop-title img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .gold-desktop-price {
-        background-color: #121210;
-        border-radius: 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 10px 30px #E9D01140;
-        gap: 5px;
-    }
-
-    .gold-desktop-price-title {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding: 0 10px;
-    }
-
-    .gold-desktop-price-title p {
-        color: #EDEDED;
-        font-size: 20px;
-        font-family: "Poppins";
-        font-weight: 600;
-    }
-
-    .gold-desktop-price-title-live {
-        display: flex;
-        align-items: center;
-        gap: 2px;
-    }
-
-    .gold-desktop-price-title-live img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .gold-desktop-price-title-live p {
-        color: #C6C6CC;
-        font-size: 16px;
-        font-family: "Poppins";
-        font-weight: 400;
-    }
-
-    .gold-desktop-price-price {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .gold-desktop-price-price p {
-        color: #FFCB3C;
-        font-family: "Poppins";
-        font-size: 36px;
-        font-weight: 700;
-    }
-
-    .gold-desktop-price-price-percentaje {
-        display: flex;
-        gap: 1px;
-        padding: 3px 5px;
-        border-radius: 6px;
-        background-color: #84EA5433;
-    }
-
-    .gold-desktop-price-price-percentaje p {
-        color: #34C759;
-        font-family: "Poppins";
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    .gold-desktop-price-price-percentaje img {
-        width: 16px;
-        height: 16px;
-    }
-
-    .gold-desktop-description {
-        font-family: "Poppins";
-        font-size: 16px;
-        font-weight: 400;
-        color: #C6C6CC;
-    }
-
-    .opportunities-desktop-carousel-card-bottom-profitability-account-button img {
-        width: 18px;
-        height: 18px;
-    }
-
-    .gold-desktop-cta {
-        display: flex;
+    /* more info */
+    .more_info-services {
+        flex-direction: row;
         justify-content: center;
-        margin-top: 20px;
-        gap: 10px;
-    }
-
-    .gold-desktop-cta-btn {
-        width: 202px;
-        height: 48px;
-        font-size: 16px;
-        font-family: Inter;
-        font-weight: 800;
-        color: #000000;
-        border-radius: 18px;
-        background: linear-gradient(#DA8207, #DD9318, #FFCB3C, #FFCB3C, #E39C1E, #FBC63A);
-        padding: 5px 20px;
-        transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .gold-desktop-cta-btn:hover,
-    .gold-desktop-cta-btn:focus-visible {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    .gold-desktop-cta-btn:active {
-        transform: translateY(-2px);
-    }
-
-    /* Fuel */
-    .fuel-desktop {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        padding: 70px 15px;
-        background-color: #424848;
-        border: solid 1px #FDCA3C;
-        border-radius: 30px;
-        width: 590px;
-    }
-
-    .fuel-desktop-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding-left: 10px;
-    }
-
-    .fuel-desktop-title h1 {
-        color: #EDEDED;
-        font-family: "Poppins";
-        font-size: 36px;
-        font-weight: 700;
-    }
-
-    .fuel-desktop-title img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .fuel-desktop-price {
-        background-color: #121210;
-        border-radius: 20px;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 10px 30px #3E90C399;
-        gap: 5px;
-    }
-
-    .fuel-desktop-price-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         gap: 20px;
-        padding: 0 10px;
     }
 
-    .fuel-desktop-price-title p {
-        color: #EDEDED;
-        font-size: 20px;
-        font-family: "Poppins";
-        font-weight: 600;
+    .more_info-services-calculator {
+        width: 50%;
     }
 
-    .fuel-desktop-price-title-live {
-        display: flex;
-        align-items: center;
-        gap: 2px;
+    .more_info-offshore {
+        flex-direction: row;
     }
 
-    .fuel-desktop-price-title-live img {
-        width: 25px;
-        height: 25px;
-    }
-
-    .fuel-desktop-price-title-live p {
-        color: #C6C6CC;
-        font-size: 16px;
-        font-family: "Poppins";
-        font-weight: 400;
-    }
-
-    .fuel-desktop-price-price {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .fuel-desktop-price-price p {
-        color: #7FC3FA;
-        font-family: "Poppins";
-        font-size: 36px;
-        font-weight: 700;
-    }
-
-    .fuel-desktop-price-price-percentaje {
-        display: flex;
-        gap: 1px;
-        padding: 3px 5px;
-        border-radius: 6px;
-        background-color: #B4AFAF33;
-    }
-
-    .fuel-desktop-price-price-percentaje p {
-        color: #FF383C;
-        font-family: "Poppins";
-        font-size: 14px;
-        font-weight: 500;
-    }
-
-    .fuel-desktop-price-price-percentaje img {
-        width: 16px;
-        height: 16px;
-    }
-
-    .fuel-desktop-description {
-        font-family: "Poppins";
-        font-size: 16px;
-        font-weight: 400;
-        color: #C6C6CC;
-    }
-
-    .fuel-desktop-cta {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        gap: 10px;
-    }
-
-    .fuel-desktop-cta-btn {
-        width: 202px;
-        height: 48px;
-        font-size: 16px;
-        font-family: Inter;
-        font-weight: 800;
-        color: #000000;
-        border-radius: 18px;
-        background: linear-gradient(#5DA5D8, #6DC2ED, #9CC6E0, #6DC6ED, #1E8AE3, #50ADDB);
-        padding: 5px 20px;
-        transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
-    }
-
-    .fuel-desktop-cta-btn:hover,
-    .fuel-desktop-cta-btn:focus-visible {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.14);
-        filter: brightness(1.02);
-    }
-
-    .fuel-desktop-cta-btn:active {
-        transform: translateY(-2px);
-    }
-
-    .more_info-desktop {
-        display: flex;
-        flex-direction: column;
-        gap: 60px;
-    }
-
-    .more_info-desktop-offshore {
-        background-color: #E8E2B7;
-        padding: 20px 25px;
-        display: flex;
-        gap: 30px;
-        border-radius: 20px;
-        box-shadow: 0 10px 10px #202624;
-    }
-
-    .more_info-desktop-offshore img {
-        border-radius: 30px;
+    .more_info-offshore-main_img {
         width: 256px;
         height: 267px;
     }
 
-    .more_info-desktop-offshore-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .opportunities-carousel-card {
+        width: 392px;
+        height: 618px;
     }
 
-    .more_info-desktop-offshore-content h2 {
-        color: #1D1D1D;
-        font-family: "Playfair Display SC";
-        font-size: 32px;
-        font-weight: 700;
+    .articles-carousel {
+        padding: 60px 120px;
     }
 
-    .more_info-desktop-offshore-content h3 {
-        color: #000000;
-        font-family: "Poppins";
-        font-size: 20px;
-        font-weight: 800;
+    .articles-carousel-post {
+        flex: 0 0 calc((100% - 40px) / 3);
+        max-width: calc((100% - 40px) / 3);
     }
 
-    .more_info-desktop-offshore-content p {
-        color: #1D1D1D;
-        font-family: "Poppins";
-        font-size: 18px;
-        font-weight: 400;
+    .opportunities-carousel {
+        padding: 0 100px;
     }
 
-    .more_info-desktop-offshore-content-btn {
-        border-radius: 20px;
-        width: 216px;
-        height: 48px;
-        background-color: #E5BE4A;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-        margin-top: 20px;
-        border: 0;
-        transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
-        box-shadow: 0 5px 5px #B8B86399;
+    .opportunities-carousel-card {
+        flex: 0 0 calc((100% - 40px) / 3);
+        max-width: calc((100% - 40px) / 3);
     }
 
-    #offshore-btn {
-        width: 308px;
+    /* Hover Effects for Desktop */
+    .articles-carousel-post,
+    .opportunities-carousel-card,
+    .gold,
+    .fuel,
+    .more_info-offshore,
+    .more_info-services-calculator {
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease;
     }
 
-    .more_info-desktop-offshore-content-btn p {
-        color: #000000;
-        font-family: "Poppins";
-        font-size: 18px;
-        font-weight: 700;
+    .articles-carousel-post:hover,
+    .opportunities-carousel-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
     }
 
-    .more_info-desktop-offshore-content-btn img {
-        width: 26px;
-        height: 26px;
+    .gold:hover,
+    .fuel:hover {
+        transform: translateY(-8px);
+        border-color: #E5BE4A;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     }
 
-    .more_info-desktop-offshore-content-btn:hover,
-    .more_info-desktop-offshore-content-btn:focus-visible {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-        filter: brightness(0.98);
+    .more_info-offshore:hover,
+    .more_info-services-calculator:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
-    .more_info-desktop-offshore-content-btn:active {
-        transform: translateY(-2px);
+    .opportunities-carousel-card-bottom-profitability-account-button {
+        transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .more_info-desktop-offshore-content {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .more_info-desktop-services {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .more_info-desktop-services-calculator {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 50%;
-        gap: 20px;
-        padding: 10px 20px 20px;
-        border-radius: 30px;
-        background-color: #245448;
-        box-shadow: 0 5px 10px #0B0D0D;
-    }
-
-    .more_info-desktop-services-calculator-content {
-        margin-left: 10px;
-        padding: 10px;
-    }
-
-    .more_info-desktop-services-calculator-content-point {
-        color: #FFFFFF;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: "Poppins";
-        padding: 5px;
-    }
-
-    .more_info-desktop-services-calculator-description {
-        color: #F7F7F7;
-        font-size: 28px;
-        font-weight: 700;
-        font-family: "Playfair Display SC";
-    }
-
-    .more_info-desktop-services-calculator-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .more_info-desktop-services-calculator-title h2 {
-        color: #FFFFFF;
-        font-size: 20px;
-        font-weight: 500;
-        font-family: "Poppins";
-    }
-
-    .more_info-desktop-services-calculator-title img {
-        width: 74px;
-        height: 74px;
-        border-radius: 32px;
-    }
-
-    .offshore-desktop {
-        display: block;
-    }
-
-    .service-desktop {
-        display: block;
-    }
-
-    .legal-desktop {
-        display: block;
-    }
-
-    .form-desktop {
-        display: block;
+    .opportunities-carousel-card-bottom-profitability-account-button:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        box-shadow: 0 8px 15px rgba(229, 190, 74, 0.4);
     }
 }
