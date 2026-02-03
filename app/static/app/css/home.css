@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Playfair+Display+SC:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 .page {
     display: flex;
     flex-direction: column;
@@ -10,12 +12,141 @@
 /* Hero Section */
 .hero__image {
     height: 60vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #0D1917;
+    padding: 20px 60px;
+}
+
+.hero__image-title {
+    font-family: "Playfair Display SC";
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #E5BE4A;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    margin-bottom: 60px;
+    padding: 0 40px;
+}
+
+.hero__image-1,
+.hero__image-2,
+.hero__image-3,
+.hero__image-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.hero__image-1 {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero__image-description {
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(100%);
+    margin-bottom: 40px;
+}
+
+.hero__image-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.hero__image-buttons-btn {
+    background-color: #DDC086;
+    border-radius: 0.7px;
+    padding: 5px 8px;
+    font-family: "Poppins";
+    font-size: 10px;
+    font-weight: 700;
+    color: #33333A;
+    border: 0;
+    box-shadow: 0 4px 12px var(--gold-yelow);
 }
 
 .hero__image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+/* Hero Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes oscillate {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(1px);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    75% {
+        transform: translateX(-1px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animation classes applied via JS */
+.hero__image-title.oscillating {
+    opacity: 1;
+    animation: oscillate 2s step-end 1;
+    animation-fill-mode: forwards;
+}
+
+.hero__image-description.slide-in,
+.hero__image-buttons.slide-in {
+    animation: slideInFromRight 0.8s ease-out forwards;
 }
 
 /* About Section */
@@ -1108,6 +1239,25 @@
 
 /* Desktop styles */
 @media (min-width: 1024px) {
+    .hero__image {
+        padding: 40px 120px;
+    }
+
+    .hero__image-title {
+        font-size: 48px;
+    }
+
+    .hero__image-description {
+        font-size: 24px;
+    }
+
+    .hero__image-buttons-btn {
+        border-radius: 5px;
+        font-size: 20px;
+        width: 254px;
+        height: 44px;
+    }
+
     .page {
         padding: 14px 50px 0;
     }
