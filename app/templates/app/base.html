@@ -65,19 +65,25 @@
 
     <div class="navbar__language">
       <button class="navbar__language-btn" type="button">
-        <img src="{% static 'svg/lang.svg' %}" alt="languajes" class="navbar__language-icon">
+        <img src="{% static 'svg/lang.svg' %}" alt="idiomas" class="navbar__language-icon">
         <p class="navbar__language-current">ES</p>
-        <img src="{% static 'svg/arrow_down.svg' %}" alt="arrow" class="navbar__language-arrow">
+        <img src="{% static 'svg/arrow_down.svg' %}" alt="flecha" class="navbar__language-arrow">
       </button>
 
       <nav class="language-menu">
         <ul class="language-menu__list">
-          <li class="language-menu__item"><img src="{% static 'img/eeuu.jpg' %}" alt=""><a href="?lang=en" class="language-menu__link">English</a></li>
-          <li class="language-menu__item"><img src="{% static 'img/arabe.jpg' %}" alt=""><a href="?lang=ar" class="language-menu__link">العربية</a></li>
-          <li class="language-menu__item"><img src="{% static 'img/germany.jpg' %}" alt=""><a href="?lang=de" class="language-menu__link">Deutsch</a></li>
-          <li class="language-menu__item"><img src="{% static 'img/france.jpg' %}" alt=""><a href="?lang=fr" class="language-menu__link">Français</a></li>
-          <li class="language-menu__item"><img src="{% static 'img/rusia.jpg' %}" alt=""><a href="?lang=ru" class="language-menu__link">Русский</a></li>
-          <li class="language-menu__item"><img src="{% static 'img/china.jpg' %}" alt=""><a href="?lang=zh" class="language-menu__link">中文</a></li>
+          <li class="language-menu__item"><img src="{% static 'img/eeuu.jpg' %}" alt=""><a href="?lang=en"
+              class="language-menu__link">English</a></li>
+          <li class="language-menu__item"><img src="{% static 'img/arabe.jpg' %}" alt=""><a href="?lang=ar"
+              class="language-menu__link">العربية</a></li>
+          <li class="language-menu__item"><img src="{% static 'img/germany.jpg' %}" alt=""><a href="?lang=de"
+              class="language-menu__link">Deutsch</a></li>
+          <li class="language-menu__item"><img src="{% static 'img/france.jpg' %}" alt=""><a href="?lang=fr"
+              class="language-menu__link">Français</a></li>
+          <li class="language-menu__item"><img src="{% static 'img/rusia.jpg' %}" alt=""><a href="?lang=ru"
+              class="language-menu__link">Русский</a></li>
+          <li class="language-menu__item"><img src="{% static 'img/china.jpg' %}" alt=""><a href="?lang=zh"
+              class="language-menu__link">中文</a></li>
         </ul>
       </nav>
     </div>
@@ -123,8 +129,11 @@
           <h1>INVEST ALLIES</h1>
         </a>
         <div class="footer__search">
-          <input type="text" placeholder="Buscar..." class="footer__search-input">
-          <button type="submit" class="footer__search-btn">🔍</button>
+          <div class="footer__search-input">
+            <img src="{% static 'svg/search.svg' %}" alt="search icon">
+            <input type="text" placeholder="Búsqueda...">
+          </div>
+          <button type="submit">Buscar</button>
         </div>
       </div>
 
@@ -175,7 +184,6 @@
             <a href="#facebook"><img src="{% static 'svg/facebook.svg' %}" alt="facebook"></a>
             <a href="#twitter"><img src="{% static 'svg/twitter.svg' %}" alt="twitter"></a>
             <a href="#youtube"><img src="{% static 'svg/youtube.svg' %}" alt="youtube"></a>
-            <a href="#linkedin"><img src="{% static 'svg/linkedin.svg' %}" alt="linkedin"></a>
           </div>
         </div>
       </div>
@@ -240,9 +248,9 @@
       </div>
 
       <div class="footer__policies">
-        <p class="footer__policies-text">Terms of use</p>
-        <p class="footer__policies-text">Privacy</p>
-        <p class="footer__policies-text">Terms of use</p>
+        <p class="footer__policies-text">Términos de uso</p>
+        <p class="footer__policies-text">Privacidad</p>
+        <p class="footer__policies-text">Cookies</p>
       </div>
 
       <div class="footer__social">

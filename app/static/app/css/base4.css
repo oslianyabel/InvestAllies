@@ -357,6 +357,7 @@ language-menu__item img {
     flex-direction: column;
     gap: 0;
     padding: 40px 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     background-color: var(--footer-background);
 }
 
@@ -396,37 +397,48 @@ language-menu__item img {
 
 .footer__search {
     display: flex;
-    gap: 8px;
+    border: none;
+    justify-content: space-between;
+    background-color: #FFFFFF;
 }
 
 .footer__search-input {
-    padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    padding-left: 12px;
+}
+
+.footer__search img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.footer__search input {
+    padding: 8px 12px 8px 0;
+    border: none;
+    background-color: transparent;
     font-family: "Poppins";
-    font-size: 12px;
-    min-width: 200px;
+    font-size: 16px;
+    font-weight: 400;
 }
 
-.footer__search-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.footer__search-btn {
-    padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
+.footer__search button {
+    background-color: #E5BE4A;
+    color: #062021;
+    font-size: 16px;
+    font-family: "Inter";
+    font-weight: 500;
+    padding: 5px 20px;
+    border: 0;
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.footer__search-btn:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+.footer__search button:hover {
+    background-color: #D4AC39;
 }
 
 .footer__middle {
