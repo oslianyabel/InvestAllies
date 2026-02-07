@@ -393,6 +393,7 @@
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
+    padding: 30px 0;
 }
 
 .articles-carousel__button {
@@ -526,7 +527,7 @@
 .opportunities-carousel {
     position: relative;
     display: block;
-    padding: 0 40px;
+    padding: 40px 40px;
     box-sizing: border-box;
 }
 
@@ -537,6 +538,7 @@
     overflow: hidden;
     align-items: stretch;
     box-sizing: border-box;
+    padding: 30px 0;
 }
 
 .opportunities-carousel-card {
@@ -587,13 +589,13 @@
 .opportunities-carousel-card {
     display: flex;
     flex-direction: column;
-    width: 430px;
-    height: 618px;
+    width: 320px;
+    height: 750px;
     border-radius: 20px;
 }
 
 .opportunities-carousel-card-top {
-    height: 65%;
+    flex: 0 0 55%;
     position: relative;
 }
 
@@ -631,12 +633,12 @@
 }
 
 .opportunities-carousel-card-bottom {
-    height: 35%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #1A3732;
-    padding: 5px 20px 30px;
+    padding: 10px 20px 30px;
     border-radius: 0 0 20px 20px;
 }
 
@@ -1526,7 +1528,7 @@
 
     .opportunities-carousel-card {
         width: 392px;
-        height: 618px;
+        height: 750px;
     }
 
     .articles-carousel {
@@ -1539,7 +1541,7 @@
     }
 
     .opportunities-carousel {
-        padding: 0 100px;
+        padding: 60px 100px;
     }
 
     .opportunities-carousel-card {
