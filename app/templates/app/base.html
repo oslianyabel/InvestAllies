@@ -17,13 +17,13 @@
 <body id="top">
   <div class="topbar">
     <div class="topbar__left">
-      <a href="#calculadora-oro" class="topbar__link">Calculadora de Oro</a>
+      <a href="{% url 'app:gold_calculator' %}" class="topbar__link">Calculadora de Oro</a>
       <div class="topbar__divider"></div>
-      <a href="#calculadora-combustible" class="topbar__link">Calculadora de Combustible</a>
+      <a href="{% url 'app:fuel_calculator' %}" class="topbar__link">Calculadora de Combustible</a>
     </div>
-    <div class="topbar__right">
+    <a class="topbar__right" href="{% url 'app:home' %}">
       <span>INVEST ALLIES</span>
-    </div>
+    </a>
   </div>
 
   <header class="navbar">
@@ -31,32 +31,41 @@
       <img src="{% static 'svg/menu.svg' %}" alt="menu" class="navbar__menu-btn">
     </div>
 
-    <a class="navbar__center" href="#top">
-      <img src="{% static 'svg/logo.svg' %}" alt="logo" class="navbar__center-logo">
-      <h1 class="navbar__center-title">INVEST ALLIES</h1>
-    </a>
+    <div class="navbar__center">
+      <a class="navbar__center-logo-link" href="{% url 'app:home' %}">
+        <img src="{% static 'svg/logo.svg' %}" alt="logo" class="navbar__center-logo">
+      </a>
+      <a class="navbar__center-title-link" href="{% url 'app:home' %}">
+        <h1 class="navbar__center-title">INVEST ALLIES</h1>
+      </a>
+    </div>
 
     <nav class="desktop-menu">
       <ul class="desktop-menu__list">
-        <li class="desktop-menu__item"><a href="#inicio" class="desktop-menu__link">Inicio</a></li>
-        <li class="desktop-menu__item"><a href="#oro" class="desktop-menu__link">Oro Físico</a></li>
-        <li class="desktop-menu__item"><a href="#fuel" class="desktop-menu__link">Fuel</a></li>
-        <li class="desktop-menu__item"><a href="#offshore" class="desktop-menu__link">Offshore</a></li>
-        <li class="desktop-menu__item"><a href="#legal" class="desktop-menu__link">Legal & Bancario</a></li>
+        <li class="desktop-menu__item"><a href="{% url 'app:home' %}" class="desktop-menu__link">Inicio</a></li>
+        <li class="desktop-menu__item"><a href="{% url 'app:gold_index' %}" class="desktop-menu__link">Oro Físico</a>
+        </li>
+        <li class="desktop-menu__item"><a href="{% url 'app:fuel_index' %}" class="desktop-menu__link">Fuel</a></li>
+        <li class="desktop-menu__item"><a href="{% url 'app:offshore_index' %}" class="desktop-menu__link">Offshore</a>
+        </li>
+        <li class="desktop-menu__item"><a href="{% url 'app:legal_index' %}" class="desktop-menu__link">Legal &
+            Bancario</a></li>
         <li class="desktop-menu__item desktop-menu__toggle">
-          <a href="#inversion-pais" class="desktop-menu__link">Inversión por País</a>
+          <a href="{% url 'app:investments_index' %}" class="desktop-menu__link">Inversión por País</a>
           <ul class="desktop-menu__submenu">
-            <li class="desktop-menu__submenu-item"><a href="#inversion-españa"
+            <li class="desktop-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
                 class="desktop-menu__submenu-link">España</a></li>
-            <li class="desktop-menu__submenu-item"><a href="#inversion-dubai"
+            <li class="desktop-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
                 class="desktop-menu__submenu-link">Dubai</a></li>
-            <li class="desktop-menu__submenu-item"><a href="#inversion-marruecos"
+            <li class="desktop-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
                 class="desktop-menu__submenu-link">Marruecos</a></li>
-            <li class="desktop-menu__submenu-item"><a href="#inversion-bali" class="desktop-menu__submenu-link">Bali</a>
+            <li class="desktop-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+                class="desktop-menu__submenu-link">Bali</a>
             </li>
-            <li class="desktop-menu__submenu-item"><a href="#inversion-mali" class="desktop-menu__submenu-link">Mali</a>
+            <li class="desktop-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+                class="desktop-menu__submenu-link">Mali</a>
             </li>
-            <li class="desktop-menu__submenu-item"><a href="#inversion-zanzibar"
+            <li class="desktop-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
                 class="desktop-menu__submenu-link">Zanzibar</a></li>
           </ul>
         </li>
@@ -90,25 +99,30 @@
 
     <nav class="mobile-menu">
       <ul class="mobile-menu__list">
-        <li class="mobile-menu__item"><a href="#inicio" class="mobile-menu__link">Inicio</a></li>
-        <li class="mobile-menu__item"><a href="#oro" class="mobile-menu__link">Oro Físico</a></li>
-        <li class="mobile-menu__item"><a href="#fuel" class="mobile-menu__link">Fuel</a></li>
-        <li class="mobile-menu__item"><a href="#offshore" class="mobile-menu__link">Offshore</a></li>
-        <li class="mobile-menu__item"><a href="#legal" class="mobile-menu__link">Legal & Bancario</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'app:home' %}" class="mobile-menu__link">Inicio</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'app:gold_index' %}" class="mobile-menu__link">Oro Físico</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'app:fuel_index' %}" class="mobile-menu__link">Fuel</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'app:offshore_index' %}" class="mobile-menu__link">Offshore</a>
+        </li>
+        <li class="mobile-menu__item"><a href="{% url 'app:legal_index' %}" class="mobile-menu__link">Legal &
+            Bancario</a></li>
         <li class="mobile-menu__item">
-          <a href="#inversion-pais" class="mobile-menu__link">Inversión por País</a>
+          <a href="{% url 'app:investments_index' %}" class="mobile-menu__link">Inversión por País</a>
           <ul class="mobile-menu__submenu">
-            <li class="mobile-menu__submenu-item"><a href="#inversion-españa"
+            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
                 class="mobile-menu__submenu-link">España</a></li>
-            <li class="mobile-menu__submenu-item"><a href="#inversion-dubai" class="mobile-menu__submenu-link">Dubai</a>
+            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+                class="mobile-menu__submenu-link">Dubai</a>
             </li>
-            <li class="mobile-menu__submenu-item"><a href="#inversion-marruecos"
+            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
                 class="mobile-menu__submenu-link">Marruecos</a></li>
-            <li class="mobile-menu__submenu-item"><a href="#inversion-bali" class="mobile-menu__submenu-link">Bali</a>
+            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+                class="mobile-menu__submenu-link">Bali</a>
             </li>
-            <li class="mobile-menu__submenu-item"><a href="#inversion-mali" class="mobile-menu__submenu-link">Mali</a>
+            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+                class="mobile-menu__submenu-link">Mali</a>
             </li>
-            <li class="mobile-menu__submenu-item"><a href="#inversion-zanzibar"
+            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
                 class="mobile-menu__submenu-link">Zanzibar</a></li>
           </ul>
         </li>

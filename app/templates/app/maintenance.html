@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+
+{% block title %}En mantenimiento | InvestAllies{% endblock %}
+
+{% block body %}
+<section class="maintenance">
+  <div class="maintenance__content">
+    <h1>Estamos en mantenimiento</h1>
+    <p>Esta sección está en mantenimiento. Vuelve pronto para conocer las novedades.</p>
+    <a class="maintenance__link" href="{% url 'app:home' %}">Volver al inicio</a>
+  </div>
+</section>
+{% endblock %}

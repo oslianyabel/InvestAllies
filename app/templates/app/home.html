@@ -17,8 +17,8 @@
     especializada para que puedas invertir con
     seguridad en los mercados internacionales más prometedores.</p>
   <div class="hero__image-buttons">
-    <button class="hero__image-buttons-btn">Explorar inversiones</button>
-    <button class="hero__image-buttons-btn">Solicitar asesoría</button>
+    <a class="hero__image-buttons-btn" href="{% url 'app:investments_index' %}">Explorar inversiones</a>
+    <a class="hero__image-buttons-btn" href="{% url 'app:services_index' %}">Solicitar asesoría</a>
   </div>
 </div>
 
@@ -96,12 +96,16 @@
         <div class="destination-card">
           <img src="{% static 'img/spain.jpg' %}" alt="spain" class="destination-card__image">
           <span class="destination-card__label">España</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
         <div class="destination-card">
           <img src="{% static 'img/dubai.png' %}" alt="dubai" class="destination-card__image">
           <span class="destination-card__label">Dubai</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
       </div>
 
@@ -109,12 +113,16 @@
         <div class="destination-card">
           <img src="{% static 'img/marruecos.jpg' %}" alt="marruecos" class="destination-card__image">
           <span class="destination-card__label">Marruecos</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
         <div class="destination-card">
           <img src="{% static 'img/mali.png' %}" alt="mali" class="destination-card__image">
           <span class="destination-card__label">Mali</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
       </div>
 
@@ -122,12 +130,16 @@
         <div class="destination-card">
           <img src="{% static 'img/bali.png' %}" alt="bali" class="destination-card__image">
           <span class="destination-card__label">Bali</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
         <div class="destination-card">
           <img src="{% static 'img/zanzibar.jpg' %}" alt="zanzibar" class="destination-card__image">
           <span class="destination-card__label">Zanzibar</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
       </div>
     </div>
@@ -137,17 +149,23 @@
         <div class="destination-card">
           <img src="{% static 'img/spain.jpg' %}" alt="spain" class="destination-card__image">
           <span class="destination-card__label">España</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
         <div class="destination-card">
           <img src="{% static 'img/dubai.png' %}" alt="dubai" class="destination-card__image">
           <span class="destination-card__label">Dubai</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
         <div class="destination-card">
           <img src="{% static 'img/marruecos.jpg' %}" alt="marruecos" class="destination-card__image">
           <span class="destination-card__label">Marruecos</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
       </div>
 
@@ -155,17 +173,23 @@
         <div class="destination-card">
           <img src="{% static 'img/mali.png' %}" alt="mali" class="destination-card__image">
           <span class="destination-card__label">Mali</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
         <div class="destination-card">
           <img src="{% static 'img/bali.png' %}" alt="bali" class="destination-card__image">
           <span class="destination-card__label">Bali</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
         <div class="destination-card">
           <img src="{% static 'img/zanzibar.jpg' %}" alt="zanzibar" class="destination-card__image">
           <span class="destination-card__label">Zanzibar</span>
-          <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más" class="destination-card__button">
+          <a href="{% url 'app:investments_index' %}" class="destination-card__button">
+            <img src="{% static 'svg/ver_mas.svg' %}" alt="Ver más">
+          </a>
         </div>
       </div>
     </div>
@@ -188,7 +212,7 @@
         <img src="{% static 'svg/left_arrow.svg' %}" alt="flecha izquierda">
       </button>
 
-      <div class="articles-carousel-post">
+      <a class="articles-carousel-post" href="{% url 'app:investments_index' %}">
         <img class="articles-carousel-post-main_image" src="{% static 'img/post1.jpg' %}" alt="">
         <div class="articles-carousel-post-content">
           <div class="articles-carousel-post-content-text">
@@ -208,9 +232,9 @@
             <p class="articles-carousel-post-content-categories-badge">Presentación</p>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="articles-carousel-post">
+      <a class="articles-carousel-post" href="{% url 'app:gold_articles' %}">
         <img class="articles-carousel-post-main_image" src="{% static 'img/post2.jpg' %}" alt="">
         <div class="articles-carousel-post-content">
           <div class="articles-carousel-post-content-text">
@@ -230,9 +254,9 @@
             <p class="articles-carousel-post-content-categories-badge">Presentación</p>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="articles-carousel-post">
+      <a class="articles-carousel-post" href="{% url 'app:fuel_articles' %}">
         <img class="articles-carousel-post-main_image" src="{% static 'img/post3.jpg' %}" alt="">
         <div class="articles-carousel-post-content">
           <div class="articles-carousel-post-content-text">
@@ -252,9 +276,9 @@
             <p class="articles-carousel-post-content-categories-badge">Presentación</p>
           </div>
         </div>
-      </div>
+      </a>
 
-      <div class="articles-carousel-post">
+      <a class="articles-carousel-post" href="{% url 'app:offshore_services' %}">
         <img class="articles-carousel-post-main_image" src="{% static 'img/post3.jpg' %}" alt="">
         <div class="articles-carousel-post-content">
           <div class="articles-carousel-post-content-text">
@@ -274,7 +298,7 @@
             <p class="articles-carousel-post-content-categories-badge">Presentación</p>
           </div>
         </div>
-      </div>
+      </a>
 
       <button class="articles-carousel__button articles-carousel__button--right" aria-label="Desplazar derecha">
         <img src="{% static 'svg/right_arrow_withe.svg' %}" alt="flecha derecha">
@@ -329,10 +353,11 @@
                 <h3>Inversiones desde</h3>
                 <p>250,000</p>
               </div>
-              <div class="opportunities-carousel-card-bottom-profitability-account-button">
+              <a href="{% url 'app:investments_index' %}"
+                class="opportunities-carousel-card-bottom-profitability-account-button">
                 <p>Ver Detalles</p>
                 <img src="{% static 'svg/right_arrow.svg' %}" alt="">
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -375,10 +400,11 @@
                 <h3>Inversiones desde</h3>
                 <p>250,000</p>
               </div>
-              <div class="opportunities-carousel-card-bottom-profitability-account-button">
+              <a href="{% url 'app:investments_index' %}"
+                class="opportunities-carousel-card-bottom-profitability-account-button">
                 <p>Ver Detalles</p>
                 <img src="{% static 'svg/right_arrow.svg' %}" alt="">
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -421,10 +447,11 @@
                 <h3>Inversiones desde</h3>
                 <p>250,000</p>
               </div>
-              <div class="opportunities-carousel-card-bottom-profitability-account-button">
+              <a href="{% url 'app:investments_index' %}"
+                class="opportunities-carousel-card-bottom-profitability-account-button">
                 <p>Ver Detalles</p>
                 <img src="{% static 'svg/right_arrow.svg' %}" alt="">
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -467,10 +494,11 @@
                 <h3>Inversiones desde</h3>
                 <p>250,000</p>
               </div>
-              <div class="opportunities-carousel-card-bottom-profitability-account-button">
+              <a href="{% url 'app:investments_index' %}"
+                class="opportunities-carousel-card-bottom-profitability-account-button">
                 <p>Ver Detalles</p>
                 <img src="{% static 'svg/right_arrow.svg' %}" alt="">
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -506,8 +534,8 @@
         seguro.
       </p>
       <div class="gold-cta">
-        <button class="gold-cta-btn">Comprar Oro</button>
-        <button class="gold-cta-btn">Ver Cotización</button>
+        <a class="gold-cta-btn" href="{% url 'app:gold_buy' %}">Comprar Oro</a>
+        <a class="gold-cta-btn" href="{% url 'app:gold_calculator' %}">Ver Cotización</a>
       </div>
     </div>
 
@@ -538,8 +566,8 @@
         Analizamos las fluctuaciones del mercado para ofrecerte las mejores oportunidades de suministro y logística.
       </p>
       <div class="fuel-cta">
-        <button class="fuel-cta-btn">Ver Precios</button>
-        <button class="fuel-cta-btn">Ver Cotización</button>
+        <a class="fuel-cta-btn" href="{% url 'app:fuel_index' %}">Ver Precios</a>
+        <a class="fuel-cta-btn" href="{% url 'app:fuel_calculator' %}">Ver Cotización</a>
       </div>
     </div>
   </section>
@@ -555,10 +583,10 @@
           fiscalidad de tus inversiones, proteger activos y operar globalmente con cumplimiento normativo. Te
           acompañamos en cada
           paso: desde la constitución hasta la apertura de cuentas bancarias.</p>
-        <button class="more_info-offshore-content-btn">
+        <a class="more_info-offshore-content-btn" href="{% url 'app:offshore_index' %}">
           <p>Ver Detalles</p>
           <img src="{% static 'img/left_arrow.png' %}" alt="left arrow">
-        </button>
+        </a>
       </div>
     </div>
 
@@ -574,10 +602,10 @@
           <li class="more_info-services-calculator-content-point">Calculadora de metales</li>
           <li class="more_info-services-calculator-content-point">Calculadora de costos de fuel</li>
         </ul>
-        <button class="more_info-offshore-content-btn">
+        <a class="more_info-offshore-content-btn" href="{% url 'app:gold_calculator' %}">
           <p>Ver Servicio</p>
           <img src="{% static 'img/left_arrow.png' %}" alt="left arrow">
-        </button>
+        </a>
       </div>
 
       <div class="more_info-services-calculator">
@@ -594,10 +622,10 @@
           <li class="more_info-services-calculator-content-point">Asesoría bancaria global</li>
           <li class="more_info-services-calculator-content-point">Gestión de proyectos de inversión</li>
         </ul>
-        <button class="more_info-offshore-content-btn">
+        <a class="more_info-offshore-content-btn" href="{% url 'app:services_index' %}">
           <p>Ver Servicio</p>
           <img src="{% static 'img/left_arrow.png' %}" alt="left arrow">
-        </button>
+        </a>
       </div>
     </div>
 
@@ -611,10 +639,10 @@
           internacional, fiscalidad en múltiples países y requisitos bancarios. Aprende cómo mover capital
           correctamente, abrir
           cuentas y cumplir con regulaciones globales.</p>
-        <button class="more_info-offshore-content-btn" id="offshore-btn">
+        <a class="more_info-offshore-content-btn" id="offshore-btn" href="{% url 'app:offshore_jurisdictions' %}">
           <p>Explorar Zona Offshore</p>
           <img src="{% static 'img/left_arrow.png' %}" alt="left arrow">
-        </button>
+        </a>
       </div>
     </div>
   </section>

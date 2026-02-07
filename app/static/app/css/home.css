@@ -84,6 +84,11 @@
     color: #33333A;
     border: 0;
     box-shadow: 0 4px 12px var(--gold-yelow);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .hero__image img {
@@ -343,6 +348,10 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
 .destination-card__label {
@@ -443,6 +452,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* ensure posts don't render outside the wrapper when sliding */
@@ -775,6 +786,8 @@
     border-radius: 20px;
     padding: 6px 17px;
     box-shadow: 0 6px 6px #B8B86399;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .opportunities-carousel-card-bottom-profitability-account-button p {
@@ -920,6 +933,10 @@
     width: 202px;
     height: 48px;
     font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-family: Inter;
     font-weight: 800;
     color: #000000;
@@ -1064,6 +1081,10 @@
     width: 202px;
     height: 48px;
     font-size: 16px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-family: Inter;
     font-weight: 800;
     color: #000000;
@@ -1149,6 +1170,7 @@
     border: 0;
     transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
     box-shadow: 0 5px 5px #B8B86399;
+    text-decoration: none;
 }
 
 #offshore-btn {
@@ -1567,10 +1589,14 @@
         transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease;
     }
 
-    .articles-carousel-post:hover,
-    .opportunities-carousel-card:hover {
+    .articles-carousel-post:hover {
         transform: translateY(-10px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .opportunities-carousel-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
     }
 
     .gold:hover,
