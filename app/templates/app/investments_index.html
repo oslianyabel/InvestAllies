@@ -1,1 +1,137 @@
-{% extends 'app/maintenance.html' %}
+{% extends 'app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'app/css/investments_index.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="hero__image">
+    <img src="{% static 'img/hero_investment.jpg' %}" alt="hero">
+    <h1 class="hero__image-title">Inversiones estratégicas en Marruecos</h1>
+    <p class="hero__image-description">Expansión industrial y turística con incentivos atractivos para inversores
+        extranjeros</p>
+    <div class="hero__image-buttons">
+        <a class="hero__image-buttons-btn" href="#">Descargar Guía de Inversión</a>
+        <a class="hero__image-buttons-btn" href="#">Ver Oportunidades</a>
+    </div>
+    <div class="hero__image-country">
+        <p class="hero__image-country-home">Inicio</p>
+        <p>/</p>
+        <p class="hero__image-country-country">Marruecos</p>
+    </div>
+</div>
+
+<div class="country_statistics-desktop">
+    <div class="country_statistics-item">
+        <h2>12.5%</h2>
+        <p>ROI PROMEDIO ANUAL</p>
+    </div>
+    <div class="country_statistics-item country_statistics-item-highlight">
+        <h2>3%</h2>
+        <p>IMPUESTOS</p>
+    </div>
+    <div class="country_statistics-item">
+        <h2>8-10%</h2>
+        <p>RETORNO PROMEDIO</p>
+    </div>
+    <div class="country_statistics-item">
+        <h2>+50K</h2>
+        <p>INVERSORES</p>
+    </div>
+</div>
+
+<div class="page">
+    <div class="country_statistics-mobile">
+        <div class="country_statistics-mobile-row">
+            <div class="country_statistics-item">
+                <h2>12.5%</h2>
+                <p>ROI PROMEDIO ANUAL</p>
+            </div>
+            <div class="country_statistics-item country_statistics-item-highlight">
+                <h2>3%</h2>
+                <p>IMPUESTOS</p>
+            </div>
+        </div>
+
+        <div class="country_statistics-mobile-row">
+            <div class="country_statistics-item">
+                <h2>8-10%</h2>
+                <p>RETORNO PROMEDIO</p>
+            </div>
+            <div class="country_statistics-item">
+                <h2>+50K</h2>
+                <p>INVERSORES</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="article">
+        <p class="article-first_text">A diferencia de otros países de la región, Marruecos destaca por su estabilidad política y macroeconómica. Para 2025,
+        las previsiones de crecimiento rondan el 3,9% con una inflación muy controlada, lo que ofrece un entorno seguro y
+        predecible para el capital extranjero</p>
+        
+        <div class="article-cards">
+            <div class="article-card">
+                <img src="{% static 'img/article-card.png' %}" alt="card">
+                <div class="article-card-content">
+                    <div class="article-card-content-heading">
+                        <h2 class="article-card-content-heading-author">Sunday , 1 Jan 2023</h2>
+                        <div class="article-card-content-heading-text">
+                            <h3>Lorem ipsum</h3>
+                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...</p>
+                        </div>
+                    </div>
+                    <div class="article-card-content-categories">
+                        <div class="article-card-content-categories-badge">Casas</div>
+                        <div class="article-card-content-categories-badge">Artículos</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <img src="{% static 'img/article-card.png' %}" alt="card">
+                <div class="article-card-content">
+                    <div class="article-card-content-heading">
+                        <h2 class="article-card-content-heading-author">Sunday , 1 Jan 2023</h2>
+                        <div class="article-card-content-heading-text">
+                            <h3>Lorem ipsum</h3>
+                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...</p>
+                        </div>
+                    </div>
+                    <div class="article-card-content-categories">
+                        <div class="article-card-content-categories-badge">Casas</div>
+                        <div class="article-card-content-categories-badge">Artículos</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="article-card">
+                <img src="{% static 'img/article-card.png' %}" alt="card">
+                <div class="article-card-content">
+                    <div class="article-card-content-heading">
+                        <h2 class="article-card-content-heading-author">Sunday , 1 Jan 2023</h2>
+                        <div class="article-card-content-heading-text">
+                            <h3>Lorem ipsum</h3>
+                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...</p>
+                        </div>
+                    </div>
+                    <div class="article-card-content-categories">
+                        <div class="article-card-content-categories-badge">Casas</div>
+                        <div class="article-card-content-categories-badge">Artículos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog"></section>
+
+    <section class="title"></section>
+
+    <section class="opportunities"></section>
+</div>
+
+{% endblock %}
