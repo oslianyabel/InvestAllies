@@ -811,3 +811,35 @@ language-menu__item img {
         display: none;
     }
 }
+
+@media (max-width: 580px) {
+
+    html,
+    body {
+        width: 100%;
+    }
+
+    .navbar {
+        padding: 0 16px;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .navbar__center {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .navbar__center-title {
+        font-size: 12px;
+    }
+
+    .navbar__center-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar__language-btn {
+        padding: 4px 8px;
+    }
+}
