@@ -48,8 +48,19 @@
     flex-direction: column;
     gap: 40px;
     background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B);
-    padding: 14px 32px 0;
+    padding: 14px 16px 0;
+    /* Reduced padding from 32px to 16px for mobile */
     margin: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow from child elements like carousels */
+}
+
+@media (min-width: 768px) {
+    .page {
+        padding: 14px 32px 0;
+    }
 }
 
 /* Hero Section */
@@ -58,6 +69,11 @@
     position: relative;
     overflow: hidden;
     background-color: #0D1917;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero__image-title {
@@ -402,7 +418,7 @@
     bottom: 12px;
     left: 12px;
     font-family: "Poppins";
-    font-size: 20px;
+    font-size: 12px;
     color: #F7F7F7;
     z-index: 10;
     transition: transform 0.3s ease;
@@ -422,6 +438,7 @@
     border: 2px solid transparent;
     border-radius: 18px;
     overflow: hidden;
+    box-shadow: 0 4px 4px #8BB69A40;
 }
 
 .destination-card:hover::after {
@@ -740,9 +757,18 @@
 .opportunities-carousel-card {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: 280px;
+    max-width: 85vw;
+    /* Ensure it doesn't exceed small viewports */
     height: 750px;
     border-radius: 20px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+    .opportunities-carousel-card {
+        width: 320px;
+    }
 }
 
 .opportunities-carousel-card-top {
@@ -1059,6 +1085,7 @@
 
 .gold-price-price-percentaje {
     display: flex;
+    align-items: center;
     gap: 1px;
     padding: 3px 5px;
     border-radius: 6px;
@@ -1073,8 +1100,8 @@
 }
 
 .gold-price-price-percentaje img {
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
 }
 
 .gold-description {
@@ -1212,6 +1239,7 @@
 
 .fuel-price-price-percentaje {
     display: flex;
+    align-items: center;
     gap: 1px;
     padding: 3px 5px;
     border-radius: 6px;
@@ -1226,8 +1254,8 @@
 }
 
 .fuel-price-price-percentaje img {
-    width: 16px;
-    height: 16px;
+    width: 24px !important;
+    height: 24px !important;
 }
 
 .fuel-description {
@@ -1401,6 +1429,47 @@
     font-weight: 400;
     font-family: "Poppins";
     padding: 5px;
+    opacity: 0;
+}
+
+.more_info-services-calculator-content.scroll-visible .more_info-services-calculator-content-point {
+    animation: cascade-down 0.5s ease forwards;
+}
+
+.more_info-services-calculator-content.scroll-visible .more_info-services-calculator-content-point:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.more_info-services-calculator-content.scroll-visible .more_info-services-calculator-content-point:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.more_info-services-calculator-content.scroll-visible .more_info-services-calculator-content-point:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.more_info-services-calculator-content.scroll-visible .more_info-services-calculator-content-point:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.more_info-services-calculator-content.scroll-visible .more_info-services-calculator-content-point:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.more_info-services-calculator-content.scroll-visible .more_info-services-calculator-content-point:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+@keyframes cascade-down {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .more_info-services-calculator-description {
@@ -1855,11 +1924,13 @@
     }
 
     .destinations__row {
+        display: flex;
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .destination-card {
-        width: 100%;
+        width: calc(50% - 5px);
     }
 
     .articles-carousel {
@@ -1886,6 +1957,10 @@
     .articles-carousel-post {
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .articles-carousel-post-content-categories-badge {
+        font-size: 8px;
     }
 
     .opportunities-carousel {
@@ -1939,8 +2014,7 @@
         font-size: 26px;
     }
 
-    .fuel-price img,
-    .gold-price img {
+    .fuel-price-line {
         max-width: 100%;
         height: auto;
     }

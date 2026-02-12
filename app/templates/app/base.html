@@ -97,38 +97,39 @@
       </nav>
     </div>
 
-    <nav class="mobile-menu">
-      <ul class="mobile-menu__list">
-        <li class="mobile-menu__item"><a href="{% url 'app:home' %}" class="mobile-menu__link">Inicio</a></li>
-        <li class="mobile-menu__item"><a href="{% url 'app:gold_index' %}" class="mobile-menu__link">Oro Físico</a></li>
-        <li class="mobile-menu__item"><a href="{% url 'app:fuel_index' %}" class="mobile-menu__link">Fuel</a></li>
-        <li class="mobile-menu__item"><a href="{% url 'app:offshore_index' %}" class="mobile-menu__link">Offshore</a>
-        </li>
-        <li class="mobile-menu__item"><a href="{% url 'app:legal_index' %}" class="mobile-menu__link">Legal &
-            Bancario</a></li>
-        <li class="mobile-menu__item">
-          <a href="{% url 'app:investments_index' %}" class="mobile-menu__link">Inversión por País</a>
-          <ul class="mobile-menu__submenu">
-            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
-                class="mobile-menu__submenu-link">España</a></li>
-            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
-                class="mobile-menu__submenu-link">Dubai</a>
-            </li>
-            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
-                class="mobile-menu__submenu-link">Marruecos</a></li>
-            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
-                class="mobile-menu__submenu-link">Bali</a>
-            </li>
-            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
-                class="mobile-menu__submenu-link">Mali</a>
-            </li>
-            <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
-                class="mobile-menu__submenu-link">Zanzibar</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
   </header>
+
+  <nav class="mobile-menu">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="{% url 'app:home' %}" class="mobile-menu__link">Inicio</a></li>
+      <li class="mobile-menu__item"><a href="{% url 'app:gold_index' %}" class="mobile-menu__link">Oro Físico</a></li>
+      <li class="mobile-menu__item"><a href="{% url 'app:fuel_index' %}" class="mobile-menu__link">Fuel</a></li>
+      <li class="mobile-menu__item"><a href="{% url 'app:offshore_index' %}" class="mobile-menu__link">Offshore</a>
+      </li>
+      <li class="mobile-menu__item"><a href="{% url 'app:legal_index' %}" class="mobile-menu__link">Legal &
+          Bancario</a></li>
+      <li class="mobile-menu__item">
+        <a href="{% url 'app:investments_index' %}" class="mobile-menu__link">Inversión por País</a>
+        <ul class="mobile-menu__submenu">
+          <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+              class="mobile-menu__submenu-link">España</a></li>
+          <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+              class="mobile-menu__submenu-link">Dubai</a>
+          </li>
+          <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+              class="mobile-menu__submenu-link">Marruecos</a></li>
+          <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+              class="mobile-menu__submenu-link">Bali</a>
+          </li>
+          <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+              class="mobile-menu__submenu-link">Mali</a>
+          </li>
+          <li class="mobile-menu__submenu-item"><a href="{% url 'app:investments_index' %}"
+              class="mobile-menu__submenu-link">Zanzibar</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
   <div class="m-top-container">
     {% block body %}{% endblock %}
@@ -138,10 +139,10 @@
     <section class="footer--desktop">
       <!-- Row 1 -->
       <div class="footer__top">
-        <a class="footer__logo-link" href="#top">
+        <div class="footer__logo-link">
           <img src="{% static 'svg/logo.svg' %}" alt="logo">
           <h1>INVEST ALLIES</h1>
-        </a>
+        </div>
         <div class="footer__search">
           <div class="footer__search-input">
             <img src="{% static 'svg/search.svg' %}" alt="search icon">
@@ -214,10 +215,10 @@
     </section>
 
     <section class="footer">
-      <a class="footer__title" href="#top">
+      <div class="footer__title">
         <img src="{% static 'svg/logo.svg' %}" alt="logo" class="footer__logo">
         <h1>INVEST ALLIES</h1>
-      </a>
+      </div>
 
       <div class="footer__content">
         <div class="accordion">

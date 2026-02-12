@@ -15,7 +15,7 @@
   <h1 class="hero__image-title">Invierte en oportunidades reales alrededor del mundo</h1>
   <p class="hero__image-description">Te conectamos con proyectos verificados, análisis transparentes y asesoría
     especializada para que puedas invertir con
-    seguridad en los mercados internacionales más prometedores.</p>
+    seguridad en los mercados internacionales más prometedores</p>
   <div class="hero__image-buttons">
     <a class="hero__image-buttons-btn" href="{% url 'app:investments_index' %}">Explorar inversiones</a>
     <a class="hero__image-buttons-btn" href="{% url 'app:services_index' %}">Solicitar asesoría</a>
@@ -512,7 +512,7 @@
         <img src="{% static 'svg/pig.svg' %}" alt="pig">
         <h1>Oro Físico</h1>
       </div>
-      <div class="gold-price">
+      <div class="gold-price scroll-reveal">
         <div class="gold-price-title">
           <p>PRECIO LBMA EN TIEMPO REAL</p>
           <div class="gold-price-title-live">
@@ -521,7 +521,7 @@
           </div>
         </div>
         <div class="gold-price-price">
-          <p>$ 2,321.50</p>
+          <p class="counter-value" data-target="2321.50">$ 0.00</p>
           <div class="gold-price-price-percentaje">
             <img src="{% static 'img/percentaje.png' %}" alt="percentaje">
             <p>+0.8%</p>
@@ -544,7 +544,7 @@
         <img src="{% static 'svg/fuel.svg' %}" alt="pig">
         <h1>Fuel y mercados energéticos</h1>
       </div>
-      <div class="fuel-price">
+      <div class="fuel-price scroll-reveal">
         <div class="fuel-price-title">
           <p>PRECIO DE FUEL PLATTS</p>
           <div class="fuel-price-title-live">
@@ -553,13 +553,13 @@
           </div>
         </div>
         <div class="fuel-price-price">
-          <p>$ 85.42</p>
+          <p class="counter-value" data-target="85.42">$ 0.00</p>
           <div class="fuel-price-price-percentaje">
             <img src="{% static 'img/fuel_graphic.png' %}" alt="percentaje">
             <p>-1.2%</p>
           </div>
         </div>
-        <img src="{% static 'img/Rectangle.png' %}" alt="line">
+        <img class="fuel-price-line" src="{% static 'img/Rectangle.png' %}" alt="line">
       </div>
       <p class="fuel-description">
         Mantente al día con los precios de Fuel Platts en tiempo real y optimiza tus operaciones energéticas.
@@ -597,7 +597,7 @@
           <h2>CALCULADORAS Y PRECIOS</h2>
         </div>
         <p class="more_info-services-calculator-description">Datos reales para tomar mejores decisiones.</p>
-        <ul class="more_info-services-calculator-content">
+        <ul class="more_info-services-calculator-content scroll-reveal">
           <li class="more_info-services-calculator-content-point">Precio Fuel Platts</li>
           <li class="more_info-services-calculator-content-point">Calculadora de metales</li>
           <li class="more_info-services-calculator-content-point">Calculadora de costos de fuel</li>
@@ -614,7 +614,7 @@
           <h2>Acompañamiento integral para tus inversiones</h2>
         </div>
         <p class="more_info-services-calculator-description">Datos reales para tomar mejores decisiones.</p>
-        <ul class="more_info-services-calculator-content">
+        <ul class="more_info-services-calculator-content scroll-reveal">
           <li class="more_info-services-calculator-content-point">Consultoría personalizada</li>
           <li class="more_info-services-calculator-content-point">Análisis de rentabilidad y riesgo</li>
           <li class="more_info-services-calculator-content-point">Creación de empresas (incluye offshore)</li>
@@ -655,15 +655,15 @@
     <h1 class="form-form-title">Formulario de Contacto</h1>
     <div class="form-form-field">
       <label for="">Nombre y Apellidos</label>
-      <input type="text">
+      <input type="text" placeholder="Tu nombre completo">
     </div>
     <div class="form-form-field">
       <label for="">Correo electrónico</label>
-      <input type="email">
+      <input type="email" placeholder="ejemplo@correo.com">
     </div>
     <div class="form-form-field">
       <label for="">Mensaje</label>
-      <textarea></textarea>
+      <textarea placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
     </div>
     <button class="form-form-btn">
       <p>Enviar</p>
