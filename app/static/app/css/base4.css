@@ -334,13 +334,27 @@ language-menu__item img {
 
 .footer__title {
     display: flex;
+    align-items: center;
     gap: 10px;
-    font-size: 18px;
-    font-weight: 400;
+    cursor: pointer;
+}
+
+.footer__title h1 { /* mobile */
     font-family: 'Playfair Display SC';
     color: var(--gold-yelow);
+    font-size: 18px;
+    font-weight: 400;
     text-decoration: none;
-    cursor: pointer;
+    margin: 0;
+}
+
+.footer__logo-link h1 { /* desktop */
+    font-family: 'Playfair Display SC';
+    color: #F7F7F7;
+    font-size: 20px;
+    font-weight: 900;
+    text-decoration: none;
+    margin: 0;
 }
 
 .footer__logo {
@@ -469,14 +483,6 @@ language-menu__item img {
 .footer__logo-link img {
     width: 60px;
     height: 60px;
-}
-
-.footer__logo-link h1 {
-    font-size: 20px;
-    font-weight: 700;
-    font-family: 'Playfair Display SC';
-    color: var(--gold-yelow);
-    margin: 0;
 }
 
 .footer__search {

@@ -9,7 +9,7 @@
 {% block body %}
 
 <div class="hero__image">
-    <img src="{% static 'img/hero_investment.jpg' %}" alt="hero">
+    <img src="{% static 'img/hero_investment.jpg' %}" alt="Inversiones estratégicas en Marruecos">
     <h1 class="hero__image-title">Inversiones estratégicas en Marruecos</h1>
     <p class="hero__image-description">Expansión industrial y turística con incentivos atractivos para inversores
         extranjeros</p>
@@ -69,19 +69,22 @@
     </div>
 
     <section class="article">
-        <p class="article-first_text">A diferencia de otros países de la región, Marruecos destaca por su estabilidad política y macroeconómica. Para 2025,
-        las previsiones de crecimiento rondan el 3,9% con una inflación muy controlada, lo que ofrece un entorno seguro y
-        predecible para el capital extranjero</p>
-        
+        <p class="article-first_text">A diferencia de otros países de la región, Marruecos destaca por su estabilidad
+            política y macroeconómica. Para 2025,
+            las previsiones de crecimiento rondan el 3,9% con una inflación muy controlada, lo que ofrece un entorno
+            seguro y
+            predecible para el capital extranjero</p>
+
         <div class="article-cards">
             <div class="article-card">
-                <img src="{% static 'img/article-card.png' %}" alt="card">
+                <img src="{% static 'img/article-card.png' %}" alt="Representación de proyecto inmobiliario">
                 <div class="article-card-content">
                     <div class="article-card-content-heading">
                         <h2 class="article-card-content-heading-author">Sunday , 1 Jan 2023</h2>
                         <div class="article-card-content-heading-text">
                             <h3>Lorem ipsum</h3>
-                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...</p>
+                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how
+                                to get...</p>
                         </div>
                     </div>
                     <div class="article-card-content-categories">
@@ -98,7 +101,8 @@
                         <h2 class="article-card-content-heading-author">Sunday , 1 Jan 2023</h2>
                         <div class="article-card-content-heading-text">
                             <h3>Lorem ipsum</h3>
-                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...</p>
+                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how
+                                to get...</p>
                         </div>
                     </div>
                     <div class="article-card-content-categories">
@@ -115,7 +119,8 @@
                         <h2 class="article-card-content-heading-author">Sunday , 1 Jan 2023</h2>
                         <div class="article-card-content-heading-text">
                             <h3>Lorem ipsum</h3>
-                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...</p>
+                            <p>Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how
+                                to get...</p>
                         </div>
                     </div>
                     <div class="article-card-content-categories">
@@ -127,11 +132,465 @@
         </div>
     </section>
 
-    <section class="blog"></section>
+    <section class="blog">
+        <h1 class="blog-title">All blog posts</h1>
+        <div class="blog-grid">
+            <a class="articles-carousel-post" href="{% url 'app:investments_index' %}">
+                <img class="articles-carousel-post-main_image" src="{% static 'img/post1.jpg' %}"
+                    alt="Liderazgo empresarial y éxito en equipos">
+                <div class="articles-carousel-post-content">
+                    <div class="articles-carousel-post-content-text">
+                        <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                        <div class="articles-carousel-post-content-text-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="Icono de enlace externo">
+                        </div>
+                        <p class="articles-carousel-post-content-text-text">Like to know the secrets of transforming a
+                            2-14 team into a 3x Super Bowl winning Dynasty?
+                        </p>
+                    </div>
+                    <div class="articles-carousel-post-content-categories">
+                        <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                        <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                        <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                    </div>
+                </div>
+            </a>
 
-    <section class="title"></section>
+            <a class="articles-carousel-post" href="{% url 'app:gold_articles' %}">
+                <img class="articles-carousel-post-main_image" src="{% static 'img/post2.jpg' %}"
+                    alt="Estrategias de diversificación de activos">
+                <div class="articles-carousel-post-content">
+                    <div class="articles-carousel-post-content-text">
+                        <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                        <div class="articles-carousel-post-content-text-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="Icono de flecha enlace">
+                        </div>
+                        <p class="articles-carousel-post-content-text-text">Estrategias clave para diversificar tu
+                            cartera en
+                            activos internacionales y proteger tu capital.
+                        </p>
+                    </div>
+                    <div class="articles-carousel-post-content-categories">
+                        <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                        <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                        <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                    </div>
+                </div>
+            </a>
 
-    <section class="opportunities"></section>
+            <a class="articles-carousel-post" href="{% url 'app:fuel_articles' %}">
+                <img class="articles-carousel-post-main_image" src="{% static 'img/post3.jpg' %}"
+                    alt="Tendencias en el mercado de combustibles y energía">
+                <div class="articles-carousel-post-content">
+                    <div class="articles-carousel-post-content-text">
+                        <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                        <div class="articles-carousel-post-content-text-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="Flecha enlace a combustibles">
+                        </div>
+                        <p class="articles-carousel-post-content-text-text">Tendencias en el mercado de combustibles y
+                            la transición
+                            hacia nuevas fuentes de inversión energética.
+                        </p>
+                    </div>
+                    <div class="articles-carousel-post-content-categories">
+                        <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                        <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                        <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="articles-carousel-post" href="{% url 'app:offshore_services' %}">
+                <img class="articles-carousel-post-main_image" src="{% static 'img/post3.jpg' %}" alt="">
+                <div class="articles-carousel-post-content">
+                    <div class="articles-carousel-post-content-text">
+                        <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                        <div class="articles-carousel-post-content-text-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="icono flecha">
+                        </div>
+                        <p class="articles-carousel-post-content-text-text">Guía básica para entender las jurisdicciones
+                            offshore y
+                            cómo optimizar la seguridad jurídica de tus activos.
+                        </p>
+                    </div>
+                    <div class="articles-carousel-post-content-categories">
+                        <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                        <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                        <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="articles-carousel-post" href="{% url 'app:investments_index' %}">
+                <img class="articles-carousel-post-main_image" src="{% static 'img/post1.jpg' %}" alt="">
+                <div class="articles-carousel-post-content">
+                    <div class="articles-carousel-post-content-text">
+                        <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                        <div class="articles-carousel-post-content-text-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="icono flecha">
+                        </div>
+                        <p class="articles-carousel-post-content-text-text">Like to know the secrets of transforming a
+                            2-14 team into a 3x Super Bowl winning Dynasty?
+                        </p>
+                    </div>
+                    <div class="articles-carousel-post-content-categories">
+                        <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                        <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                        <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                    </div>
+                </div>
+            </a>
+
+            <a class="articles-carousel-post" href="{% url 'app:gold_articles' %}">
+                <img class="articles-carousel-post-main_image" src="{% static 'img/post2.jpg' %}" alt="">
+                <div class="articles-carousel-post-content">
+                    <div class="articles-carousel-post-content-text">
+                        <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                        <div class="articles-carousel-post-content-text-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="icono flecha">
+                        </div>
+                        <p class="articles-carousel-post-content-text-text">Estrategias clave para diversificar tu
+                            cartera en
+                            activos internacionales y proteger tu capital.
+                        </p>
+                    </div>
+                    <div class="articles-carousel-post-content-categories">
+                        <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                        <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                        <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="title">
+        <div class="title-description">
+            <p>Nuestra selección no es aleatoria; es el resultado de un análisis exhaustivo de
+                los sectores que están transformando la
+                economía regional. Presentamos activos y proyectos estratégicos en Marruecos diseñados para inversores
+                que
+                buscan
+                seguridad jurídica, rentabilidad sostenida y un impacto real</p>
+        </div>
+        <div class="title-category">
+            <div class="title-category-item title-category-item-selected">
+                <p>Todos</p>
+            </div>
+            <div class="title-category-item">
+                <p>Hoteles</p>
+            </div>
+            <div class="title-category-item">
+                <p>Casas</p>
+            </div>
+            <div class="title-category-item">
+                <p>Villas</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="opportunity">
+        <div class="opportunity-card">
+            <div class="opportunity-card-img">
+                <img src="{% static 'img/inv_opp_card.jpg' %}" alt="card">
+                <button class="opportunity-card-float_btn">
+                    <img src="{% static 'img/location.png' %}" alt="location icon">
+                    <p>España</p>
+                </button>
+            </div>
+            <div class="opportunity-card-content">
+                <div class="opportunity-card-content-title">
+                    <p class="opportunity-card-content-title-text">Residencia luxuri</p>
+                    <p class="opportunity-card-content-title-money">$ 2,321.50</p>
+                </div>
+                <p class="opportunity-card-content-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris nunc tortor, tempus ac metus ut, fermentum rutrum magna.
+                    Etiam luctus, arcu
+                </p>
+                <div class="opportunity-card-content-container">
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">RENTABILIDAD EST.</p>
+                            <p class="opportunity-card-content-container-frame-column-value">10-12% </p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Tipo</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Residencia / Hotel</p>
+                        </div>
+                    </div>
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Entrega</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Q4 2025</p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Superficie</p>
+                            <p class="opportunity-card-content-container-frame-column-value">85M</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="opportunity-card-btn">
+                    <p>Explorar Inversión</p>
+                    <img src="{% static 'img/left_arrow.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="opportunity-card">
+            <div class="opportunity-card-img">
+                <img src="{% static 'img/inv_opp_card.jpg' %}" alt="card">
+                <button class="opportunity-card-float_btn">
+                    <img src="{% static 'img/location.png' %}" alt="location icon">
+                    <p>España</p>
+                </button>
+            </div>
+            <div class="opportunity-card-content">
+                <div class="opportunity-card-content-title">
+                    <p class="opportunity-card-content-title-text">Residencia luxuri</p>
+                    <p class="opportunity-card-content-title-money">$ 2,321.50</p>
+                </div>
+                <p class="opportunity-card-content-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris nunc tortor, tempus ac metus ut, fermentum rutrum magna.
+                    Etiam luctus, arcu
+                </p>
+                <div class="opportunity-card-content-container">
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">RENTABILIDAD EST.</p>
+                            <p class="opportunity-card-content-container-frame-column-value">10-12% </p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Tipo</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Residencia / Hotel</p>
+                        </div>
+                    </div>
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Entrega</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Q4 2025</p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Superficie</p>
+                            <p class="opportunity-card-content-container-frame-column-value">85M</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="opportunity-card-btn">
+                    <p>Explorar Inversión</p>
+                    <img src="{% static 'img/left_arrow.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="opportunity-card">
+            <div class="opportunity-card-img">
+                <img src="{% static 'img/inv_opp_card.jpg' %}" alt="card">
+                <button class="opportunity-card-float_btn">
+                    <img src="{% static 'img/location.png' %}" alt="location icon">
+                    <p>España</p>
+                </button>
+            </div>
+            <div class="opportunity-card-content">
+                <div class="opportunity-card-content-title">
+                    <p class="opportunity-card-content-title-text">Residencia luxuri</p>
+                    <p class="opportunity-card-content-title-money">$ 2,321.50</p>
+                </div>
+                <p class="opportunity-card-content-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris nunc tortor, tempus ac metus ut, fermentum rutrum magna.
+                    Etiam luctus, arcu
+                </p>
+                <div class="opportunity-card-content-container">
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">RENTABILIDAD EST.</p>
+                            <p class="opportunity-card-content-container-frame-column-value">10-12% </p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Tipo</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Residencia / Hotel</p>
+                        </div>
+                    </div>
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Entrega</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Q4 2025</p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Superficie</p>
+                            <p class="opportunity-card-content-container-frame-column-value">85M</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="opportunity-card-btn">
+                    <p>Explorar Inversión</p>
+                    <img src="{% static 'img/left_arrow.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="opportunity-card">
+            <div class="opportunity-card-img">
+                <img src="{% static 'img/inv_opp_card.jpg' %}" alt="card">
+                <button class="opportunity-card-float_btn">
+                    <img src="{% static 'img/location.png' %}" alt="location icon">
+                    <p>España</p>
+                </button>
+            </div>
+            <div class="opportunity-card-content">
+                <div class="opportunity-card-content-title">
+                    <p class="opportunity-card-content-title-text">Residencia luxuri</p>
+                    <p class="opportunity-card-content-title-money">$ 2,321.50</p>
+                </div>
+                <p class="opportunity-card-content-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Mauris nunc tortor, tempus ac metus ut, fermentum rutrum magna.
+                    Etiam luctus, arcu
+                </p>
+                <div class="opportunity-card-content-container">
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">RENTABILIDAD EST.</p>
+                            <p class="opportunity-card-content-container-frame-column-value">10-12% </p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Tipo</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Residencia / Hotel</p>
+                        </div>
+                    </div>
+                    <div class="opportunity-card-content-container-frame">
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Entrega</p>
+                            <p class="opportunity-card-content-container-frame-column-value">Q4 2025</p>
+                        </div>
+                        <div class="opportunity-card-content-container-frame-column">
+                            <p class="opportunity-card-content-container-frame-column-field">Superficie</p>
+                            <p class="opportunity-card-content-container-frame-column-value">85M</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="opportunity-card-btn">
+                    <p>Explorar Inversión</p>
+                    <img src="{% static 'img/left_arrow.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pagination">
+        <button class="pagination-btn">
+            <img src="{% static 'svg/arrow-left-pagination.svg' %}" alt="">
+            <p>Anterior</p>
+        </button>
+        <div class="pagination-numbers">
+            <div class="pagination-numbers-number pagination-numbers-number-selected">
+                <p>1</p>
+            </div>
+            <div class="pagination-numbers-number">
+                <p>2</p>
+            </div>
+            <div class="pagination-numbers-number">
+                <p>3</p>
+            </div>
+            <div class="pagination-numbers-number">
+                <p>4</p>
+            </div>
+            <div class="pagination-numbers-number">
+                <p>5</p>
+            </div>
+        </div>
+        <button class="pagination-btn">
+            <p>Siguiente</p>
+            <img src="{% static 'svg/arrow-right-pagination.svg' %}" alt="">
+        </button>
+    </section>
 </div>
 
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const categoryItems = document.querySelectorAll('.title-category-item');
+
+        categoryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove the selected class from all items
+                categoryItems.forEach(i => i.classList.remove('title-category-item-selected'));
+
+                // Add the selected class to the clicked item
+                item.classList.add('title-category-item-selected');
+            });
+        });
+
+        const paginationItems = document.querySelectorAll('.pagination-numbers-number');
+
+        paginationItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove the selected class from all items
+                paginationItems.forEach(i => i.classList.remove('pagination-numbers-number-selected'));
+
+                // Add the selected class to the clicked item
+                item.classList.add('pagination-numbers-number-selected');
+            });
+        });
+
+        // Counter effect for money figures
+        const animateCounter = (el) => {
+            const targetText = el.innerText;
+            const targetValue = parseFloat(targetText.replace(/[^0-9.-]+/g, ""));
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+            const prefix = targetText.split(/[0-9]/)[0]; // Extracts "$ " or similar
+            const formatter = new Intl.NumberFormat('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            });
+
+            const update = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Easing function: easeOutExpo
+                const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+
+                const currentValue = targetValue * easeProgress;
+                el.innerText = `${prefix}${formatter.format(currentValue)}`;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.innerText = targetText; // Ensure exact final value
+                }
+            };
+
+            requestAnimationFrame(update);
+        };
+
+        const moneyElements = document.querySelectorAll('.opportunity-card-content-title-money');
+
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target); // Solo animar una vez
+                }
+            });
+        }, observerOptions);
+
+        moneyElements.forEach(el => observer.observe(el));
+    });
+</script>
 {% endblock %}

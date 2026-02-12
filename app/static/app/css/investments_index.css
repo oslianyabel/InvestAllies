@@ -50,6 +50,7 @@
 }
 
 .hero__image-buttons-btn {
+    text-align: center;
     background-color: #DDC086;
     border-radius: 0.7px;
     padding: 5px 8px;
@@ -64,7 +65,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    padding: 10px 20px;
     transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -114,9 +114,9 @@
 .page {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B);
-    padding: 0 32px;
+    padding: 0 15px 15px;
     margin: 0;
 }
 
@@ -273,6 +273,220 @@
     filter: brightness(1.02);
 }
 
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.title-description p {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 12px;
+    color: #C6C6CC;
+}
+
+.title-category {
+    width: 100%;
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #3B7062;
+    box-shadow: 0 4px 15px 0 #77B2A266;
+}
+
+.title-category-item {
+    padding: 10px 0;
+    border-radius: 8px;
+    flex: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.title-category-item-selected {
+    background-color: #183932;
+}
+
+.title-category-item p {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 12px;
+    color: #C7DBCE;
+    text-align: center;
+}
+
+.opportunity {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.opportunity-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #1A3732;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.opportunity-card-img {
+    height: 232px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.opportunity-card-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.opportunity-card-img:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+}
+
+.opportunity-card-content {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.opportunity-card-content-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opportunity-card-content-title-text {
+    font-family: "Playfair Display SC";
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.opportunity-card-content-title-money {
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFCB3C;
+}
+
+.opportunity-card-content-description p {
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 12px;
+    color: #EDEDED;
+}
+
+.opportunity-card-float_btn {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    border-radius: 2.54px;
+    background-color: rgba(1, 1, 1, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: inset 0 0 8px 2px #FFE9E966;
+}
+
+.opportunity-card-float_btn img {
+    width: 10;
+    height: 10px;
+}
+
+.opportunity-card-float_btn p {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 8px;
+    color: #FFFFFF;
+}
+
+.opportunity-card-content-description {
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 12px;
+    color: #EDEDED;
+}
+
+.opportunity-card-content-container {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: solid 1px rgba(119, 178, 162, 0.3);
+    border-bottom: solid 1px rgba(119, 178, 162, 0.3);
+}
+
+.opportunity-card-content-container-frame {
+    display: flex;
+}
+
+.opportunity-card-content-container-frame-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    width: 50%;
+}
+
+.opportunity-card-content-container-frame-column-field {
+    font-family: "Poppins";
+    font-weight: 300;
+    font-size: 10px;
+    color: #C6C6CC;
+}
+
+.opportunity-card-content-container-frame-column-value {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 12px;
+    color: #F7F7F7;
+}
+
+.opportunity-card-btn {
+    border-radius: 2.54px;
+    background-color: #E5BE4A;
+    padding: 5px 10px;
+    display: flex;
+    gap: 5px;
+    border: none;
+    box-shadow: 0 4px 4px #B8B86399;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.opportunity-card-btn:hover {
+    background-color: #D4AC39;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px #B8B863CC;
+}
+
+.opportunity-card-btn p {
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 10px;
+    color: #33333A;
+}
+
+.opportunity-card-btn img {
+    width: 12px;
+    height: 12px;
+}
+
+.pagination {
+    display: none;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -307,6 +521,7 @@
     .hero__image-buttons-btn {
         border-radius: 5px;
         font-size: 20px;
+        padding: 10px 20px;
     }
 
     .hero__image-country {
@@ -326,7 +541,7 @@
     }
 
     .page {
-        padding: 0 70px;
+        padding: 0 70px 15px;
     }
 
     .country_statistics-mobile {
@@ -391,4 +606,280 @@
     .article-card-content-categories-badge {
         font-size: 14px;
     }
+
+    .title-description p {
+        font-size: 20px;
+    }
+
+    .title-category-item p {
+        font-size: 14px;
+    }
+
+    .opportunity-card-content-title-text {
+        font-size: 24px;
+    }
+
+    .opportunity-card-content-title-money {
+        font-size: 24px;
+    }
+
+    .opportunity-card-content-description p {
+        font-size: 16px;
+    }
+
+    .opportunity-card-float_btn p {
+        font-size: 16px;
+    }
+
+    .opportunity-card-content-container {
+        gap: 15px;
+        width: 370px;
+    }
+
+    .opportunity-card-content-container-frame-column {
+        gap: 5px;
+    }
+
+    .opportunity-card-content-container-frame-column-field {
+        font-size: 12px;
+    }
+
+    .opportunity-card-content-container-frame-column-value {
+        font-size: 18px;
+    }
+
+    .opportunity-card-btn {
+        padding: 10px 15px;
+        border-radius: 8px;
+        width: 214px;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .opportunity-card-btn p {
+        font-size: 14px;
+    }
+
+    .opportunity-card-btn img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .opportunity-card {
+        flex-direction: row;
+    }
+
+    .opportunity-card-img {
+        height: 388px;
+        width: 50%;
+    }
+
+    .opportunity-card-content {
+        width: 50%;
+        gap: 30px;
+    }
+
+    .opportunity-card-content-title {
+        margin-top: 20px;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .title-category {
+        width: 555px;
+    }
+
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #183932;
+        padding-top: 10px;
+    }
+
+    .pagination-btn {
+        display: flex;
+        border: none;
+        background-color: transparent;
+        width: 91px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pagination-btn p {
+        font-size: 14px;
+        font-family: "Inter";
+        font-weight: 500;
+        color: #183932;
+    }
+
+    .pagination-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .pagination-numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .pagination-numbers-number {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .pagination-numbers-number p {
+        font-size: 14px;
+        font-family: "Inter";
+        font-weight: 500;
+        color: #E5FFE5;
+    }
+
+    .pagination-numbers-number-selected {
+        background-color: #245448;
+    }
+}
+
+/* Blog section */
+.blog {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog-title {
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.blog-grid {
+    display: grid;
+    gap: 32px;
+}
+
+/* Mobile: 3 rows of 2 posts */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .articles-carousel-post-content-text-heading p {
+        font-size: 16px !important;
+    }
+
+    .articles-carousel-post-content-text-text {
+        font-size: 12px !important;
+    }
+}
+
+/* Desktop: 2 rows of 3 posts */
+@media (min-width: 769px) {
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Reusing articles-carousel-post styles from home.css */
+.articles-carousel-post {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.articles-carousel-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.articles-carousel-post-main_image {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.articles-carousel-post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.articles-carousel-post-content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.articles-carousel-post-content-text-author {
+    color: var(--gold-yelow);
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.articles-carousel-post-content-text-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articles-carousel-post-content-text-heading p {
+    color: #FFFFFF;
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.articles-carousel-post-content-text-heading img {
+    height: 20px;
+    width: 20px;
+}
+
+.articles-carousel-post-content-text-text {
+    color: #C6C6CC;
+    font-family: "Poppins";
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.articles-carousel-post-content-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+.articles-carousel-post-content-categories-badge {
+    border-radius: 16px;
+    padding: 2px 10px;
+    font-family: "Poppins";
+    font-size: 8px;
+    font-weight: 500;
+    background-color: #F9F5FF;
+}
+
+.articles-carousel-post-content-categories *:nth-child(1) {
+    color: #6941C6;
+}
+
+.articles-carousel-post-content-categories *:nth-child(2) {
+    color: #363F72;
+}
+
+.articles-carousel-post-content-categories *:nth-child(3) {
+    color: #C11574;
 }
