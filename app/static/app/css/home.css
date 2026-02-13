@@ -140,7 +140,7 @@
     font-weight: 700;
     color: #33333A;
     border: 0;
-    box-shadow: 0 4px 12px var(--gold-yelow);
+    box-shadow: 0 4px 12px var(--gold-yellow);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -288,7 +288,7 @@
 }
 
 .about__desktop-title {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
     font-family: 'Playfair Display SC';
     font-weight: 700;
     font-size: 24px;
@@ -341,7 +341,7 @@
 }
 
 .investment__title-text {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
     font-family: 'Playfair Display SC';
     font-weight: 700;
     font-size: 20px;
@@ -527,7 +527,7 @@
 }
 
 .articles-title h1 {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
     font-size: 48px;
     font-weight: 700;
     font-family: "Playfair Display SC";
@@ -631,7 +631,7 @@
 }
 
 .articles-carousel-post-content-text-author {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
     font-family: "Poppins";
     font-size: 14px;
     font-weight: 600;

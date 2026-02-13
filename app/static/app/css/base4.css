@@ -15,7 +15,7 @@ a {
 :root {
     --color-primary: #062021;
     --footer-background: #245448;
-    --gold-yelow: #EAC966;
+    --gold-yellow: #EAC966;
     --text: #33333A;
 }
 
@@ -58,7 +58,7 @@ body {
     font-family: "Playfair Display SC";
     font-size: 32px;
     margin-bottom: 12px;
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
 }
 
 .maintenance__content p {
@@ -118,17 +118,17 @@ body {
 }
 
 .topbar__link:hover {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
 }
 
 .topbar__divider {
     width: 1px;
     height: 20px;
-    background-color: var(--gold-yelow);
+    background-color: var(--gold-yellow);
 }
 
 .topbar__right {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
     font-family: 'Playfair Display SC';
     font-weight: 700;
     font-size: 14px;
@@ -196,7 +196,7 @@ body {
 }
 
 .navbar__center-title {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
     font-family: 'Playfair Display SC';
     font-weight: 400;
     font-size: 14px;
@@ -339,16 +339,18 @@ language-menu__item img {
     cursor: pointer;
 }
 
-.footer__title h1 { /* mobile */
+.footer__title h1 {
+    /* mobile */
     font-family: 'Playfair Display SC';
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
     font-size: 18px;
     font-weight: 400;
     text-decoration: none;
     margin: 0;
 }
 
-.footer__logo-link h1 { /* desktop */
+.footer__logo-link h1 {
+    /* desktop */
     font-family: 'Playfair Display SC';
     color: #F7F7F7;
     font-size: 20px;
@@ -571,7 +573,7 @@ language-menu__item img {
 }
 
 .footer__column-link:hover {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
 }
 
 .footer__social-links {
@@ -620,7 +622,7 @@ language-menu__item img {
 }
 
 .footer__link:hover {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
 }
 
 /* Mobile Menu */
@@ -734,7 +736,7 @@ language-menu__item img {
 }
 
 .desktop-menu__link:hover {
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
 }
 
 .desktop-menu__toggle>.desktop-menu__link::after {
@@ -785,7 +787,7 @@ language-menu__item img {
 
 .desktop-menu__submenu-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: var(--gold-yelow);
+    color: var(--gold-yellow);
 }
 
 /* Media Queries */

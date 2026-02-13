@@ -1,1 +1,240 @@
-{% extends 'app/maintenance.html' %}
+{% extends 'app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'app/css/country_articles.css' %}">
+{% endblock %}
+
+{% block body %}
+
+<div class="title">
+    <div class="title-top">
+        <p class="title-top-path">Inicio / Marruecos / <span>Por qué invertir en Marruecos</span></p>
+        <button class="title-top-btn">
+            <p>Análisis Económico</p>
+        </button>
+    </div>
+    <h1 class="title-text">¿POR QUÉ INVERTIR EN MARRUECOS?</h1>
+    <div class="title-bottom">
+        <div class="title-bottom-date">
+            <img src="{% static 'svg/calendar.svg' %}" alt="Calendario">
+            <p>14 Oct. 2025</p>
+        </div>
+        <div class="title-bottom-time">
+            <img src="{% static 'svg/clock.svg' %}" alt="Reloj">
+            <p>5 min de lectura</p>
+        </div>
+    </div>
+
+    <img class="title-main_image" src="{% static 'img/blog_example.jpg' %}" alt="Imagen principal del artículo">
+
+    <p class="title-description">En la última década, Tanzania ha pasado de ser un destino turístico exótico a
+        convertirse en uno de los mercados
+        emergentes más robustos de África Oriental. Con políticas fiscales agresivas para atraer capital extranjero y
+        una
+        estabilidad política envidiable, los inversores globales están poniendo su mirada en este paraíso.
+    </p>
+</div>
+
+<div class="page">
+    <img class="title-main_image-desktop" src="{% static 'img/blog_example.jpg' %}" alt="Imagen principal del artículo">
+    <div class="page-content-aside">
+        <section class="content">
+            <p class="title-description-desktop">En la última década, Tanzania ha pasado de ser un destino turístico
+                exótico
+                a
+                convertirse en uno de los mercados
+                emergentes más robustos de África Oriental. Con políticas fiscales agresivas para atraer capital
+                extranjero
+                y
+                una
+                estabilidad política envidiable, los inversores globales están poniendo su mirada en este paraíso.
+            </p>
+
+            <h2>Estabilidad Política y Crecimiento Sostenido</h2>
+            <p>
+                A diferencia de sus vecinos regionales, Tanzania ha mantenido una trayectoria de paz y estabilidad
+                democrática desde
+                su
+                independencia. El gobierno actual, bajo la administración de la presidenta Samia Suluhu Hassan, ha
+                reforzado
+                el
+                compromiso con la apertura de mercados y la protección de la propiedad privada.
+            </p>
+            <p>
+                A diferencia de sus vecinos regionales, Tanzania ha mantenido una trayectoria de paz y estabilidad
+                democrática desde su
+                independencia. El gobierno actual, bajo la administración de la presidenta Samia Suluhu Hassan, ha
+                reforzado
+                el
+                compromiso con la apertura de mercados y la protección de la propiedad privada.
+            </p>
+
+            <h2>2. El Fenómeno Zanzíbar y el Marco Legal ZIPA</h2>
+            <p>
+                La joya de la corona para la inversión inmobiliaria es, sin duda, el archipiélago de Zanzíbar. A través
+                de
+                la Zanzibar
+                Investment Promotion Authority (ZIPA), el gobierno ofrece incentivos fiscales sin precedentes para
+                desarrolladores y
+                compradores extranjeros.
+            </p>
+
+            <div class="content-phrase">
+                <p>"La nueva ley de condominios permite a los extranjeros poseer el 100% de la propiedad y repatriar sus
+                    beneficios sin
+                    restricciones, un cambio de juego total para la región."
+                </p>
+            </div>
+
+            <div class="content-list">
+                <h3>Entre los beneficios más destacados se incluyen:</h3>
+                <ul>
+                    <li>
+                        <img src="{% static 'svg/check_point.svg' %}" alt="Punto de verificación">
+                        <p>Exención del impuesto sobre la renta por 5 años para proyectos estratégicos.</p>
+                    </li>
+                    <li>
+                        <img src="{% static 'svg/check_point.svg' %}" alt="Punto de verificación">
+                        <p>0% de impuesto sobre la plusvalía en la reventa de propiedades.</p>
+                    </li>
+                    <li>
+                        <img src="{% static 'svg/check_point.svg' %}" alt="Punto de verificación">
+                        <p>Residencia dorada para inversores que superen ciertos umbrales de capital.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <h2>Perspectivas a Futuro</h2>
+            <p>Con la expansión del aeropuerto internacional y la mejora de la infraestructura vial, se espera que el
+                turismo de lujo
+                continúe su ascenso. Invertir ahora significa entrar en un mercado en fase de aceleración, donde los
+                precios
+                de entrada
+                siguen siendo competitivos en comparación con destinos saturados como el Caribe o el Sudeste Asiático.
+            </p>
+        </section>
+        <aside>
+            <div class="page-content-aside-cta">
+                <h3>¿Buscas algo en específico?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc tortor, tempus ac metus ut,
+                    fermentum
+                    rutrum magna.
+                    Etiam luctus, arcu</p>
+                <button class="page-content-aside-cta-btn">
+                    <p>Agendar Consulta</p>
+                    <img src="{% static 'svg/right_arrow.svg' %}" alt="Icono de flecha">
+                </button>
+            </div>
+            <div class="page-content-aside-trends">
+                <div class="page-content-aside-trends-title">
+                    <img src="{% static 'svg/trends.svg' %}" alt="Icono de tendencias">
+                    <h2>Tendencias Recientes</h2>
+                </div>
+                <div class="page-content-aside-trends-column">
+                    <div class="trends-column-frame">
+                        <h3>Golden Visa en España</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc tortor</p>
+                    </div>
+                    <div class="trends-column-frame">
+                        <h3>Golden Visa en España</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc tortor</p>
+                    </div>
+                    <div class="trends-column-frame">
+                        <h3>Golden Visa en España</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc tortor</p>
+                    </div>
+                    <div class="trends-column-frame">
+                        <h3>Golden Visa en España</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nunc tortor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content-aside-suscribe">
+                <div class="suscribe-title">
+                    <img src="{% static 'svg/suscribe.svg' %}" alt="Icono de suscripción">
+                    <h2>Suscríbete para recibir nuestro boletín semanal</h2>
+                </div>
+                <div class="suscribe-frame">
+                    <p>Mantente informado sobre las mejores oportunidades de inversión.</p>
+                    <input type="text" placeholder="Ingrese su correo electrónico">
+                    <button>Suscribirme</button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <section class="articles">
+        <a class="articles-carousel-post" href="{% url 'app:investments_index' %}">
+            <img class="articles-carousel-post-main_image" src="{% static 'img/post1.jpg' %}" alt="Análisis de Mercado">
+            <div class="articles-carousel-post-content">
+                <div class="articles-carousel-post-content-text">
+                    <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                    <div class="articles-carousel-post-content-text-heading">
+                        <p>Análisis de Mercado</p>
+                        <img src="{% static 'svg/arrow-up-right.svg' %}" alt="icono flecha">
+                    </div>
+                    <p class="articles-carousel-post-content-text-text">Descubre los secretos para transformar un equipo
+                        de
+                        inversión y lograr rendimientos excepcionales en mercados volátiles.
+                    </p>
+                </div>
+
+                <div class="articles-carousel-post-content-categories">
+                    <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                    <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                    <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                </div>
+            </div>
+        </a>
+
+        <a class="articles-carousel-post" href="{% url 'app:gold_articles' %}">
+            <img class="articles-carousel-post-main_image" src="{% static 'img/post2.jpg' %}" alt="Inversión Global">
+            <div class="articles-carousel-post-content">
+                <div class="articles-carousel-post-content-text">
+                    <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                    <div class="articles-carousel-post-content-text-heading">
+                        <p>Inversión Global</p>
+                        <img src="{% static 'svg/arrow-up-right.svg' %}" alt="icono flecha">
+                    </div>
+                    <p class="articles-carousel-post-content-text-text">Estrategias clave para diversificar tu cartera
+                        en
+                        activos internacionales y proteger tu capital.
+                    </p>
+                </div>
+
+                <div class="articles-carousel-post-content-categories">
+                    <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                    <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                    <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                </div>
+            </div>
+        </a>
+
+        <a class="articles-carousel-post" href="{% url 'app:fuel_articles' %}">
+            <img class="articles-carousel-post-main_image" src="{% static 'img/post3.jpg' %}" alt="Futuro Energético">
+            <div class="articles-carousel-post-content">
+                <div class="articles-carousel-post-content-text">
+                    <h2 class="articles-carousel-post-content-text-author">Domingo, 1 Ene 2023</h2>
+                    <div class="articles-carousel-post-content-text-heading">
+                        <p>Futuro Energético</p>
+                        <img src="{% static 'svg/arrow-up-right.svg' %}" alt="icono flecha">
+                    </div>
+                    <p class="articles-carousel-post-content-text-text">Tendencias en el mercado de combustibles y la
+                        transición
+                        hacia nuevas fuentes de inversión energética.
+                    </p>
+                </div>
+
+                <div class="articles-carousel-post-content-categories">
+                    <p class="articles-carousel-post-content-categories-badge">Liderazgo</p>
+                    <p class="articles-carousel-post-content-categories-badge">Gestión</p>
+                    <p class="articles-carousel-post-content-categories-badge">Presentación</p>
+                </div>
+            </div>
+        </a>
+    </section>
+</div>
+
+{% endblock %}
