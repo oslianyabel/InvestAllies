@@ -1,1 +1,245 @@
-{% extends 'app/maintenance.html' %}
+{% extends 'app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'app/css/gold.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="page">
+    <section class="hero">
+        <div class="hero-search">
+            <div class="hero-search-container">
+                Inicio /<span>Oro Físico</span>
+            </div>
+            <div class="hero-search-bar">
+                <input class="hero-search-bar-input" type="text" placeholder="Buscar en el blog de oro físico">
+                <div class="hero-search-bar-btn">
+                    <img class="hero-search-bar-btn-img" src="{% static 'svg/search_gold.svg' %}" alt="search">
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-title">
+            <h1>INVERTIR EN ORO FÍSICO</h1>
+            <p>Invierta en oro físico con pureza certificada y custodia de máxima seguridad. La forma más sólida de
+                proteger sus
+                ahorros contra la inflación</p>
+        </div>
+    </section>
+
+    <section class="calculator_gold">
+        <div class="calculator_gold-title">
+            <div class="calculator_gold-title-container">
+                <h1 class="calculator_gold-title-container-heading">Calculadora de Metales</h1>
+                <div class="calculator_gold-title-container-live">
+                    <img src="{% static 'svg/oval.svg' %}" alt="live">
+                    <p>En Vivo</p>
+                </div>
+            </div>
+            <p class="calculator_gold-title-heading">Precios LBMA en tiempo Real</p>
+        </div>
+        <div class="calculator_gold-category">
+            <p class="calculator_gold-category-heading">Seleccione Metal</p>
+            <div class="calculator_gold-category-selection">
+                <div class="calculator_gold-category-selection-item calculator_gold-category-selection-item-selected">
+                    Oro</div>
+                <div class="calculator_gold-category-selection-item">Plata</div>
+                <div class="calculator_gold-category-selection-item">Platino</div>
+                <div class="calculator_gold-category-selection-item">Paladio</div>
+            </div>
+        </div>
+
+        <div class="calculator_gold-container">
+            <div class="calculator_gold-container-amount">
+                <p>Monto de Inversión</p>
+                <div class="calculator_gold-container-amount-container">
+                    <p>1000</p>
+                    <div class="calculator_gold-container-amount-container-currency">
+                        <p class="calculator_gold-container-amount-container-currency-p">USD</p>
+                        <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                    </div>
+                </div>
+            </div>
+            <div class="calculator_gold-container-change">
+                <div class="calculator_gold-container-change-line"></div>
+                <div class="calculator_gold-container-change-swap">
+                    <img class="calculator_gold-container-change-swap-img" src="{% static 'img/swap.png' %}" alt="swap">
+                </div>
+                <div class="calculator_gold-container-change-line"></div>
+            </div>
+            <div class="calculator_gold-container-discount">
+                <p>Añadir Descuento</p>
+                <div class="calculator_gold-container-discount-container">
+                    <p>5</p>
+                    <div class="calculator_gold-container-discount-container-currency">
+                        <p class="calculator_gold-container-discount-container-currency-p">%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="calculator_gold-container-receive">
+                <p>Monto a recibir</p>
+                <div class="calculator_gold-container-receive-container">
+                    <p>0.424</p>
+                    <div class="calculator_gold-container-receive-container-currency">
+                        <p class="calculator_gold-container-receive-container-currency-p">Onza Troy</p>
+                        <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="{% static 'svg/Rectangle.svg' %}" alt="rectangle">
+
+        <div class="calculator_gold-price">
+            <p>Precio Actual del Oro</p>
+            <div class="calculator_gold-price-price">
+                <p>$ 2,321.50</p>
+                <div class="calculator_gold-price-price-percentaje">
+                    <p>+5.2%</p>
+                    <p>(+0.53)</p>
+                </div>
+            </div>
+        </div>
+
+        <btn class="calculator_gold-btn">Comprar Oro</btn>
+    </section>
+
+    <section class="gold_price_trend">
+        <h1 class="gold_price_trend-heading">Evolución del precio del oro</h1>
+        <div class="gold_price_trend-category">
+            <div class="gold_price_trend-category-item">1D</div>
+            <div class="gold_price_trend-category-item">1S</div>
+            <div class="gold_price_trend-category-item gold_price_trend-category-item-selected">1M</div>
+            <div class="gold_price_trend-category-item">1M</div>
+            <div class="gold_price_trend-category-item">1A</div>
+        </div>
+        <img class="gold_price_trend-graphic" src="{% static 'img/graphic.jpg' %}" alt="graphic">
+    </section>
+
+    <section class="articles">
+        <div class="articles-article">
+            <img class="articles-article-main_img" src="{% static 'img/gold_article.jpg' %}" alt="">
+            <div class="articles-article-info">
+                <button class="articles-article-info-category">Análisis Premium</button>
+                <h2>Porque el Oro es un activo refugia en tiempos de crisis</h2>
+                <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty? Like to
+                    know the secrets of
+                    transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                <button class="articles-article-info-cta">
+                    <p>Leer Mas</p>
+                    <img src="{% static 'svg/right_arrow.svg' %}" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div class="articles-article2">
+            <img class="articles-article2-main_img" src="{% static 'img/gold_article2.jpg' %}" alt="">
+            <div class="articles-article2-content">
+                <div class="articles-article2-content-heading">
+                    <h1>Sunday , 1 Jan 2023</h1>
+                    <h2>Lorem Impsum</h2>
+                    <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                </div>
+                <div class="articles-article2-content-categories">
+                    <div class="articles-article2-content-categories-badge">Economía</div>
+                    <button class="articles-article2-content-categories-cta">
+                        <p>Leer Mas</p>
+                        <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="articles-article2">
+            <img class="articles-article2-main_img" src="{% static 'img/gold_article3.jpg' %}" alt="">
+            <div class="articles-article2-content">
+                <div class="articles-article2-content-heading">
+                    <h1>Sunday , 1 Jan 2023</h1>
+                    <h2>Lorem Impsum</h2>
+                    <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                </div>
+                <div class="articles-article2-content-categories">
+                    <div class="articles-article2-content-categories-badge">Economía</div>
+                    <button class="articles-article2-content-categories-cta">
+                        <p>Leer Mas</p>
+                        <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="articles-article2">
+            <img class="articles-article2-main_img" src="{% static 'img/gold_article4.jpg' %}" alt="">
+            <div class="articles-article2-content">
+                <div class="articles-article2-content-heading">
+                    <h1>Sunday , 1 Jan 2023</h1>
+                    <h2>Lorem Impsum</h2>
+                    <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                </div>
+                <div class="articles-article2-content-categories">
+                    <div class="articles-article2-content-categories-badge">Economía</div>
+                    <button class="articles-article2-content-categories-cta">
+                        <p>Leer Mas</p>
+                        <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.querySelector('.hero-search-bar-btn');
+        const input = document.querySelector('.hero-search-bar-input');
+
+        btn.addEventListener('click', function () {
+            const isActive = input.classList.toggle('active');
+
+            // Animación press del botón
+            btn.classList.add('pressed');
+            setTimeout(() => btn.classList.remove('pressed'), 200);
+
+            if (isActive) {
+                setTimeout(() => input.focus(), 420);
+            }
+        });
+
+        // Cerrar con Escape
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                input.classList.remove('active');
+                input.blur();
+            }
+        });
+
+        // Selector de metal
+        const SELECTED = 'calculator_gold-category-selection-item-selected';
+        const items = document.querySelectorAll('.calculator_gold-category-selection-item');
+
+        items.forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (item.classList.contains(SELECTED)) return;
+                items.forEach(el => el.classList.remove(SELECTED));
+                item.classList.add(SELECTED);
+            });
+        });
+
+        // Selector de período del gráfico
+        const TREND_SELECTED = 'gold_price_trend-category-item-selected';
+        const trendItems = document.querySelectorAll('.gold_price_trend-category-item');
+
+        trendItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (item.classList.contains(TREND_SELECTED)) return;
+                trendItems.forEach(el => el.classList.remove(TREND_SELECTED));
+                item.classList.add(TREND_SELECTED);
+            });
+        });
+    });
+</script>
+{% endblock %}

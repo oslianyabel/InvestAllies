@@ -1,0 +1,790 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 30px;
+    background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B);
+    gap: 30px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.hero-search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
+.hero-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-search-bar-input {
+    width: 0;
+    height: 42px;
+    padding: 0;
+    background-color: #062021;
+    border: 1.5px solid transparent;
+    border-radius: 20.16px;
+    color: #F7F7F7;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s ease,
+        padding 0.4s ease,
+        border-color 0.3s ease;
+    pointer-events: none;
+}
+
+.hero-search-bar-input.active {
+    width: 260px;
+    padding: 0 16px;
+    opacity: 1;
+    border-color: #3B7062;
+    pointer-events: all;
+}
+
+.hero-search-bar-input.active:focus {
+    border-color: #E5BE4A;
+    box-shadow: 0 0 0 3px rgba(229, 190, 74, 0.12);
+}
+
+.hero-search-bar-input::placeholder {
+    color: #5a8a7e;
+    font-size: 12px;
+}
+
+.hero-search-bar-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background-color: #3B7062;
+    border-radius: 20.16px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-search-bar-btn:hover {
+    background-color: #4d8e7d;
+    box-shadow: 0 4px 14px rgba(59, 112, 98, 0.45);
+}
+
+.hero-search-bar-btn:active,
+.hero-search-bar-btn.pressed {
+    transform: scale(0.88);
+    background-color: #2e5a50;
+    box-shadow: 0 2px 6px rgba(59, 112, 98, 0.3);
+}
+
+.hero-search-bar-btn-img {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+    transition: transform 0.15s ease;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.hero-title h1 {
+    font-family: "Playfair Display SC";
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    -webkit-text-stroke: 0.3px #E5BE4A;
+}
+
+.hero-title p {
+    font-family: "Poppins";
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.hero-search-container {
+    color: #F7F7F7;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.hero-search-container span {
+    color: #77B2A2;
+}
+
+.calculator_gold {
+    border-radius: 6px;
+    border: 0.41px solid #FFFFFF;
+    padding: 40px 15px 10px;
+    background-color: #062021;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.calculator_gold-container-change {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calculator_gold-container-change-line {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 1px;
+}
+
+.calculator_gold-container-change-swap {
+    padding: 8px 4px;
+    border-radius: 11px;
+    background-color: #245448;
+}
+
+.calculator_gold-title-container-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-family: "Poppins";
+}
+
+.calculator_gold-title-container-live {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.calculator_gold-title-container-live img {
+    width: 20px;
+    height: 20px;
+}
+
+.calculator_gold-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.calculator_gold-title-container-live p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #C6C6CC;
+    font-family: "Poppins";
+    margin-top: 1px;
+}
+
+.calculator_gold-title-heading {
+    font-size: 14px;
+    font-weight: 300;
+    color: #EDEDED;
+    font-family: "Poppins";
+}
+
+.calculator_gold-category {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calculator_gold-category-heading {
+    font-size: 12px;
+    font-weight: 300;
+    color: #FFFFFF;
+    font-family: "Poppins";
+}
+
+.calculator_gold-category-selection {
+    display: flex;
+    gap: 1px;
+    padding: 5px;
+    background-color: #183932;
+    border-radius: 8.26px;
+    box-shadow: inset 0 0 0 0.5px #FFFFFF;
+}
+
+.calculator_gold-category-selection-item {
+    border-radius: 8px;
+    background-color: #183932;
+    padding: 5px 20px;
+    color: #B4B4BF;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+    user-select: none;
+}
+
+.calculator_gold-category-selection-item:hover:not(.calculator_gold-category-selection-item-selected) {
+    background-color: #244f45;
+    color: #e0e0e0;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.calculator_gold-category-selection-item:active:not(.calculator_gold-category-selection-item-selected) {
+    transform: scale(0.95);
+    background-color: #1e3f38;
+}
+
+.calculator_gold-category-selection-item-selected {
+    background-color: #FFCB3B;
+    color: #062021;
+    box-shadow: 0 2px 8px rgba(255, 203, 59, 0.35);
+}
+
+.calculator_gold-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.calculator_gold-container-amount,
+.calculator_gold-container-receive,
+.calculator_gold-container-discount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.calculator_gold-container-amount p,
+.calculator_gold-container-receive p,
+.calculator_gold-container-discount p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #FFFFFF;
+    font-family: "Poppins";
+}
+
+.calculator_gold-container-amount-container,
+.calculator_gold-container-receive-container,
+.calculator_gold-container-discount-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #183932;
+    padding: 5px;
+    border-radius: 5.51px;
+    border: 0.28px solid #E6C9C9;
+}
+
+.calculator_gold-container-amount-container-currency,
+.calculator_gold-container-discount-container-currency,
+.calculator_gold-container-receive-container-currency {
+    display: flex;
+    gap: 1px;
+}
+
+.calculator_gold-container-discount-container p,
+.calculator_gold-container-amount-container p,
+.calculator_gold-container-receive-container p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #EDEDED;
+    font-family: "Poppins";
+}
+
+.calculator_gold-container-amount-container-currency-p,
+.calculator_gold-container-discount-container-currency-p,
+.calculator_gold-container-receive-container-currency-p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #EDEDED;
+    font-family: "Poppins";
+}
+
+.calculator_gold-container-amount-container-currency img {
+    width: 14px;
+    height: 14px;
+}
+
+.calculator_gold-price {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.calculator_gold-price p {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
+.calculator_gold-price-price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.calculator_gold-price-price p {
+    color: #FFCB3C;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Poppins";
+}
+
+.calculator_gold-price-price-percentaje {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.calculator_gold-price-price-percentaje p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #34C759;
+    font-family: "Poppins";
+}
+
+.calculator_gold-btn {
+    background: linear-gradient(#DA8207, #DD9318, #FFCB3C, #FFCB3C, #E39C1E, #FBC63A);
+    padding: 5px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #060606;
+    font-family: "Inter";
+    text-align: center;
+    border: 1px solid #FDECBA;
+    cursor: pointer;
+    transition: filter 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.calculator_gold-btn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 203, 60, 0.35);
+}
+
+.calculator_gold-btn:active {
+    transform: scale(0.97) translateY(0);
+    filter: brightness(0.95);
+    box-shadow: 0 2px 6px rgba(255, 203, 60, 0.2);
+}
+
+.gold_price_trend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #062021;
+    padding: 20px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.gold_price_trend-heading {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-family: "Poppins";
+    padding: 2px 0 5px;
+}
+
+.gold_price_trend-category {
+    display: flex;
+    align-items: center;
+    background-color: #183932;
+    padding: 5px 8px;
+    gap: 0;
+    border-radius: 6px;
+}
+
+.gold_price_trend-category-item {
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 570;
+    color: #B4B4BF;
+    font-family: "Poppins";
+    padding: 8px 0;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.gold_price_trend-category-item-selected {
+    background-color: #FFCB3B;
+    color: #062021;
+}
+
+.gold_price_trend-graphic {
+    border-radius: 8.26px;
+    width: 100%;
+    height: 304px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+}
+
+.articles-article {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: #062021;
+    gap: 0;
+    width: 100%;
+}
+
+.articles-article img {
+    width: 100%;
+    height: 277px;
+    object-fit: cover;
+}
+
+.articles-article-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px 20px 60px;
+}
+
+.articles-article-info-category {
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 500;
+    box-shadow: inset 0px 2.15px 39.99px rgba(255, 233, 233, 0.4);
+    font-family: "Poppins";
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 4.29px;
+    border: none;
+    padding: 2px 10px 5px;
+}
+
+.articles-article-info h2 {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins";
+}
+
+.articles-article-info p {
+    color: #C0C5D0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins";
+    line-height: 20px;
+}
+
+.articles-article-info-cta {
+    width: 116px;
+    background-color: #E5BE4A;
+    border-radius: 4.29px;
+    border: 0;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 3.2px 3.2px 0 rgba(184, 184, 99, 0.6);
+    transition: filter 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.articles-article-info-cta:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(184, 184, 99, 0.55);
+}
+
+.articles-article-info-cta:active {
+    transform: scale(0.95);
+    filter: brightness(0.95);
+    box-shadow: 0 3.2px 3.2px 0 rgba(184, 184, 99, 0.6);
+}
+
+.articles-article-info-cta img {
+    width: 9.6px;
+    height: 9.6px;
+}
+
+.articles-article-info-cta p {
+    color: #000;
+    font-size: 9px;
+    font-weight: 700;
+    font-family: "Inter";
+}
+
+.articles-article2 {
+    display: flex;
+    flex-direction: column;
+    background-color: #062021;
+    gap: 0;
+    width: 100%;
+}
+
+.articles-article2-main_img,
+.articles-article-main_img {
+    width: 100%;
+    height: 322px;
+    object-fit: cover;
+    border-radius: 6.4px;
+}
+
+.articles-article2-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px 30px;
+}
+
+.articles-article2-content-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.articles-article2-content-heading h1 {
+    color: #E5BE4A;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: "Inter";
+}
+
+.articles-article2-content-heading h2 {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
+.articles-article2-content-heading p {
+    color: #C0C5D0;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins";
+    line-height: 20px;
+}
+
+.articles-article2-content-categories {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articles-article2-content-categories-badge {
+    border-radius: 12.8px;
+    background-color: #F9F5FF;
+    columns: #6941C6;
+    padding: 2px 5px;
+    width: 74px;
+    height: 20px;
+    color: #6941C6;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.articles-article2-content-categories-cta {
+    border-radius: 6px;
+    background-color: #E5BE4A;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0 3.2px 3.2px 0 rgba(184, 184, 99, 0.6);
+    transition: filter 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.articles-article2-content-categories-cta:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(184, 184, 99, 0.55);
+}
+
+.articles-article2-content-categories-cta:active {
+    transform: scale(0.95);
+    filter: brightness(0.95);
+    box-shadow: 0 3.2px 3.2px 0 rgba(184, 184, 99, 0.6);
+}
+
+.articles-article2-content-categories-cta p {
+    color: #000;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: "Inter";
+}
+
+.articles-article2-content-categories-cta img {
+    width: 15px;
+    height: 15px;
+}
+
+@media (min-width: 1024px) {
+    .page {
+        padding: 0 30px;
+    }
+
+    .articles-article-main_img {
+        width: 708px;
+        height: 428px;
+        border-radius: 10.05px;
+    }
+
+    .articles-article2-main_img {
+        width: 346.5px;
+        height: 294px;
+        border-radius: 5.84px;
+    }
+
+    .hero-search-container {
+        font-size: 20px;
+    }
+
+    .hero-title h1 {
+        font-size: 48px;
+    }
+
+    .hero-title p {
+        font-size: 24px;
+    }
+
+    .calculator_gold-title-container-heading {
+        font-size: 32px;
+    }
+
+    .calculator_gold-title-container-live p {
+        font-size: 16px;
+    }
+
+    .calculator_gold-title-heading {
+        font-size: 22px;
+    }
+
+    .calculator_gold-category-heading {
+        font-size: 18px;
+    }
+
+    .calculator_gold-category-selection-item {
+        font-size: 16px;
+    }
+
+    .calculator_gold-container-amount p,
+    .calculator_gold-container-discount p,
+    .calculator_gold-container-receive p {
+        font-size: 18px;
+    }
+
+    .calculator_gold-container-amount-container p,
+    .calculator_gold-container-discount-container p,
+    .calculator_gold-container-receive-container p {
+        font-size: 14px;
+    }
+
+    .calculator_gold-container-amount-container-currency-p,
+    .calculator_gold-container-discount-container-currency-p,
+    .calculator_gold-container-receive-container-currency-p {
+        font-size: 14px;
+    }
+
+    .calculator_gold-container-amount-container-currency img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .calculator_gold-price p {
+        font-size: 20px;
+    }
+
+    .calculator_gold-price-price p {
+        font-size: 36px;
+    }
+
+    .calculator_gold-price-price-percentaje p {
+        font-size: 20px;
+    }
+
+    .calculator_gold-btn {
+        font-size: 18px;
+    }
+
+    .gold_price_trend-heading {
+        font-size: 30px;
+    }
+
+    .gold_price_trend-category-item {
+        font-size: 16px;
+    }
+
+    .articles-article-info-category {
+        font-size: 16px;
+    }
+
+    .articles-article-info h2 {
+        font-size: 28px;
+    }
+
+    .articles-article-info p {
+        font-size: 18px;
+    }
+
+    .articles-article-info-cta p {
+        font-size: 16px;
+    }
+
+    .articles-article2-content-heading h1 {
+        font-size: 10.22px;
+    }
+
+    .articles-article2-content-heading h2 {
+        font-size: 24px;
+    }
+
+    .articles-article2-content-heading p {
+        font-size: 16px;
+    }
+
+    .articles-article2-content-categories-badge {
+        font-size: 10.22px;
+    }
+
+    .articles-article2-content-categories-cta p {
+        font-size: 12px;
+    }
+
+    .hero-search-bar-input {
+        font-size: 16px;
+    }
+}
