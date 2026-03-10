@@ -42,14 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
             e.stopPropagation();
             desktopSubmenu.classList.toggle('desktop-menu__submenu--open');
         });
-
-        desktopSubmenuToggle.addEventListener('mouseenter', function () {
-            desktopSubmenu.classList.add('desktop-menu__submenu--open');
-        });
-
-        desktopSubmenuToggle.addEventListener('mouseleave', function () {
-            desktopSubmenu.classList.remove('desktop-menu__submenu--open');
-        });
     }
 
     document.addEventListener('click', function () {

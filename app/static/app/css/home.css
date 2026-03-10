@@ -7,7 +7,7 @@
 }
 
 .scroll-reveal.scroll-fade-up {
-    transform: translateY(40px);
+    transform: translateX(-40px);
 }
 
 .scroll-reveal.scroll-fade-left {
@@ -15,11 +15,11 @@
 }
 
 .scroll-reveal.scroll-fade-right {
-    transform: translateX(40px);
+    transform: translateX(-40px);
 }
 
 .scroll-reveal.scroll-zoom-in {
-    transform: scale(0.92);
+    transform: translateX(-40px);
 }
 
 .scroll-reveal.scroll-visible {
@@ -409,6 +409,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    z-index: 10;
 }
 
 .destination-card__label {
@@ -439,15 +440,15 @@
     box-shadow: 0 4px 4px #8BB69A40;
 }
 
-.destination-card:hover::after {
+.destination-card:hover:not(:has(.destination-card__button:hover))::after {
     animation: pulse-overlay 0.6s ease-in-out 0.15s 1 forwards;
 }
 
-.destination-card:hover {
+.destination-card:hover:not(:has(.destination-card__button:hover)) {
     animation: pulse-border 2.4s ease-in-out 0.15s 1 forwards;
 }
 
-.destination-card:hover .destination-card__label {
+.destination-card:hover:not(:has(.destination-card__button:hover)) .destination-card__label {
     animation: pulse-label 0.8s ease-in-out 0.15s 3;
 }
 
@@ -1594,6 +1595,167 @@
     height: 12px;
 }
 
+@media (max-width: 580px) {
+    .page {
+        padding: 14px 16px 0;
+    }
+
+    .destinations__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .destination-card {
+        width: calc(50% - 5px);
+    }
+
+    .articles-carousel {
+        flex-wrap: nowrap;
+        gap: 16px;
+        padding: 20px 48px;
+        overflow: hidden;
+    }
+
+    .articles-carousel__button {
+        display: flex;
+        height: 56px;
+        padding: 0 10px;
+    }
+
+    .articles-carousel__button--left {
+        left: 4px;
+    }
+
+    .articles-carousel__button--right {
+        right: 4px;
+    }
+
+    .articles-carousel-post {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .articles-carousel-post-content-categories-badge {
+        font-size: 8px;
+    }
+
+    .opportunities-carousel {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 24px 16px;
+    }
+
+    .opportunities-carousel-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero__image-buttons {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .gold-cta,
+    .fuel-cta {
+        flex-wrap: wrap;
+    }
+
+    .gold-cta-btn,
+    .fuel-cta-btn {
+        width: 100%;
+    }
+
+    .gold,
+    .fuel {
+        padding: 40px 12px;
+    }
+
+    .gold-title h1,
+    .fuel-title h1 {
+        font-size: 24px;
+    }
+
+    .gold-price,
+    .fuel-price {
+        padding: 14px;
+    }
+
+    .gold-price-title p,
+    .fuel-price-title p {
+        font-size: 14px;
+    }
+
+    .gold-price-price p,
+    .fuel-price-price p {
+        font-size: 26px;
+    }
+
+    .fuel-price-line {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .opportunities-title h1 {
+        font-size: 28px;
+    }
+
+    .opportunities-title h2 {
+        font-size: 20px;
+    }
+
+    .opportunities-title p {
+        font-size: 16px;
+    }
+
+    .articles-title h1 {
+        font-size: 28px;
+    }
+
+    .articles-title p {
+        font-size: 16px;
+    }
+
+    .more_info-offshore-content h2 {
+        font-size: 24px;
+    }
+
+    .more_info-offshore-content h3 {
+        font-size: 16px;
+    }
+
+    .more_info-offshore-content p {
+        font-size: 15px;
+    }
+
+    .more_info-offshore-content-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    #offshore-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .more_info-services-calculator-description {
+        font-size: 22px;
+    }
+
+    .form {
+        padding: 0 16px;
+    }
+
+    .form-img {
+        width: 100%;
+        max-width: 336px;
+    }
+
+    .opportunities-carousel-card {
+        height: auto;
+    }
+}
+
 /* Tablet styles */
 @media (min-width: 700px) and (max-width: 1023px) {
     .hero__image {
@@ -1779,10 +1941,13 @@
     }
 
     .destination-card__button {
-        bottom: 0;
-        right: 16px;
-        width: 150px;
-        height: 60px;
+        bottom: 10;
+        right: 20px;
+    }
+
+    .destination-card__button img {
+        width: 173px;
+        height: 44px;
     }
 
     /* articles */
@@ -1909,167 +2074,6 @@
     .form-form-btn img {
         width: 24px;
         height: 24px;
-    }
-}
-
-@media (max-width: 580px) {
-    .page {
-        padding: 14px 16px 0;
-    }
-
-    .destinations__row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .destination-card {
-        width: calc(50% - 5px);
-    }
-
-    .articles-carousel {
-        flex-wrap: nowrap;
-        gap: 16px;
-        padding: 20px 48px;
-        overflow: hidden;
-    }
-
-    .articles-carousel__button {
-        display: flex;
-        height: 56px;
-        padding: 0 10px;
-    }
-
-    .articles-carousel__button--left {
-        left: 4px;
-    }
-
-    .articles-carousel__button--right {
-        right: 4px;
-    }
-
-    .articles-carousel-post {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .articles-carousel-post-content-categories-badge {
-        font-size: 8px;
-    }
-
-    .opportunities-carousel {
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 24px 16px;
-    }
-
-    .opportunities-carousel-card {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .hero__image-buttons {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .gold-cta,
-    .fuel-cta {
-        flex-wrap: wrap;
-    }
-
-    .gold-cta-btn,
-    .fuel-cta-btn {
-        width: 100%;
-    }
-
-    .gold,
-    .fuel {
-        padding: 40px 12px;
-    }
-
-    .gold-title h1,
-    .fuel-title h1 {
-        font-size: 24px;
-    }
-
-    .gold-price,
-    .fuel-price {
-        padding: 14px;
-    }
-
-    .gold-price-title p,
-    .fuel-price-title p {
-        font-size: 14px;
-    }
-
-    .gold-price-price p,
-    .fuel-price-price p {
-        font-size: 26px;
-    }
-
-    .fuel-price-line {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .opportunities-title h1 {
-        font-size: 28px;
-    }
-
-    .opportunities-title h2 {
-        font-size: 20px;
-    }
-
-    .opportunities-title p {
-        font-size: 16px;
-    }
-
-    .articles-title h1 {
-        font-size: 28px;
-    }
-
-    .articles-title p {
-        font-size: 16px;
-    }
-
-    .more_info-offshore-content h2 {
-        font-size: 24px;
-    }
-
-    .more_info-offshore-content h3 {
-        font-size: 16px;
-    }
-
-    .more_info-offshore-content p {
-        font-size: 15px;
-    }
-
-    .more_info-offshore-content-btn {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    #offshore-btn {
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .more_info-services-calculator-description {
-        font-size: 22px;
-    }
-
-    .form {
-        padding: 0 16px;
-    }
-
-    .form-img {
-        width: 100%;
-        max-width: 336px;
-    }
-
-    .opportunities-carousel-card {
-        height: auto;
     }
 
     .destination-card__label {

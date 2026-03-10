@@ -146,7 +146,7 @@ body {
     justify-content: flex-start;
     gap: 30px;
     background-color: var(--color-primary);
-    padding: 0 40px;
+    padding: 40px;
     height: 70px;
     z-index: 1000;
     transform: translateZ(0);
@@ -195,6 +195,11 @@ body {
     color: inherit;
 }
 
+.navbar__center-logo-link img {
+    width: 42px;
+    height: auto;
+}
+
 .navbar__center-title {
     color: var(--gold-yellow);
     font-family: 'Playfair Display SC';
@@ -219,7 +224,7 @@ body {
     gap: 5px;
     background-color: #EDEDED;
     border-radius: 4px;
-    padding: 5px 10px;
+    padding: 8px 20px 8px 10px;
     border: none;
     cursor: pointer;
     font-family: 'Inter';
@@ -280,6 +285,8 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 language-menu__item img {
@@ -302,8 +309,9 @@ language-menu__item img {
     transition: background-color 0.2s ease;
 }
 
-.language-menu__link:hover {
+.language-menu__item:hover {
     background-color: var(--footer-background);
+    border-radius: 4px;
 }
 
 .m-top-container {
@@ -659,7 +667,7 @@ language-menu__item img {
     text-decoration: none;
     font-family: "Poppins";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     transition: background-color 0.2s ease;
 }
 
@@ -729,7 +737,7 @@ language-menu__item img {
     text-decoration: none;
     font-family: "Poppins";
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.2s ease;
     display: block;
     padding: 8px 0;
@@ -771,6 +779,12 @@ language-menu__item img {
 
 .desktop-menu__submenu-item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0s, box-shadow 0.2s ease;
+}
+
+.desktop-menu__submenu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 8px rgba(212, 212, 212, 0.5);
 }
 
 .desktop-menu__submenu-item:last-child {
@@ -779,18 +793,65 @@ language-menu__item img {
 
 .desktop-menu__submenu-link {
     padding: 10px 16px;
-    font-size: 13px;
+    font-size: 18px;
     color: #D4D4D4;
     display: block;
     text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .desktop-menu__submenu-link:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    color: var(--gold-yellow);
 }
 
 /* Media Queries */
+@media (max-width: 580px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding: 0 16px;
+        justify-content: center;
+        top: 0 !important;
+        /* Ensure navbar stays at the very top */
+    }
+
+    .navbar__center {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .navbar__center-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar__language {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 581px) and (max-width: 1023px) {
+    .navbar__center {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar__center {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
 @media (min-width: 1024px) {
     .topbar {
         display: flex;
@@ -822,56 +883,32 @@ language-menu__item img {
         display: none;
     }
 
+    .navbar__center-title-link {
+        display: none;
+    }
+
     .mobile-menu {
         display: none !important;
     }
-}
 
-@media (min-width: 768px) {
-    .navbar__center {
-        display: flex;
+    .navbar__language-current {
+        font-size: 16px;
     }
 
-    .mobile-menu {
-        display: none;
-    }
-}
-
-@media (max-width: 580px) {
-
-    html,
-    body {
-        width: 100%;
-        overflow-x: hidden;
+    .topbar__right {
+        font-size: 20px;
     }
 
-    .navbar {
-        padding: 0 16px;
-        gap: 16px;
-        justify-content: center;
-        top: 0 !important;
-        /* Ensure navbar stays at the very top */
+    .navbar__center-logo-link {
+        height: 100%;
     }
 
-    .navbar__center {
-        flex: 1;
-        justify-content: center;
+    .navbar__center-logo-link img {
+        height: 100%;
+        width: auto;
     }
 
-    .navbar__center-title {
-        font-size: 12px;
-    }
-
-    .navbar__center-logo {
-        width: 40px;
-        height: 40px;
-    }
-
-    .navbar__language-btn {
-        padding: 4px 8px;
-    }
-
-    .navbar__language {
-        margin-left: 0;
+    .topbar__link {
+        font-size: 14px;
     }
 }
