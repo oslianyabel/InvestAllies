@@ -14,10 +14,14 @@
                 Inicio /<span>Oro Físico</span>
             </div>
             <div class="hero-search-bar">
-                <input class="hero-search-bar-input" type="text" placeholder="Buscar en el blog de oro físico">
+                <input class="hero-search-bar-input" type="text" placeholder="Búsqueda ...">
                 <div class="hero-search-bar-btn">
                     <img class="hero-search-bar-btn-img" src="{% static 'svg/search_gold.svg' %}" alt="search">
                 </div>
+            </div>
+            <div class="hero-search-bar-desktop">
+                <img class="hero-search-bar-img-desktop" src="{% static 'svg/black_search.svg' %}" alt="search">
+                <input class="hero-search-bar-input-desktop" type="text" placeholder="Búsqueda ...">
             </div>
         </div>
 
@@ -29,165 +33,196 @@
         </div>
     </section>
 
-    <section class="calculator_gold">
-        <div class="calculator_gold-title">
-            <div class="calculator_gold-title-container">
-                <h1 class="calculator_gold-title-container-heading">Calculadora de Metales</h1>
-                <div class="calculator_gold-title-container-live">
-                    <img src="{% static 'svg/oval.svg' %}" alt="live">
-                    <p>En Vivo</p>
+    <div class="content-grid">
+        <div class="content-right">
+            <section class="calculator_gold">
+                <div class="calculator_gold-title">
+                    <div class="calculator_gold-title-container">
+                        <h1 class="calculator_gold-title-container-heading">Calculadora de Metales</h1>
+                        <div class="calculator_gold-title-container-live">
+                            <img src="{% static 'svg/oval.svg' %}" alt="live">
+                            <p>En Vivo</p>
+                        </div>
+                    </div>
+                    <p class="calculator_gold-title-heading">Precios LBMA en tiempo Real</p>
                 </div>
-            </div>
-            <p class="calculator_gold-title-heading">Precios LBMA en tiempo Real</p>
-        </div>
-        <div class="calculator_gold-category">
-            <p class="calculator_gold-category-heading">Seleccione Metal</p>
-            <div class="calculator_gold-category-selection">
-                <div class="calculator_gold-category-selection-item calculator_gold-category-selection-item-selected">
-                    Oro</div>
-                <div class="calculator_gold-category-selection-item">Plata</div>
-                <div class="calculator_gold-category-selection-item">Platino</div>
-                <div class="calculator_gold-category-selection-item">Paladio</div>
-            </div>
-        </div>
-
-        <div class="calculator_gold-container">
-            <div class="calculator_gold-container-amount">
-                <p>Monto de Inversión</p>
-                <div class="calculator_gold-container-amount-container">
-                    <p>1000</p>
-                    <div class="calculator_gold-container-amount-container-currency">
-                        <p class="calculator_gold-container-amount-container-currency-p">USD</p>
-                        <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                <div class="calculator_gold-category">
+                    <p class="calculator_gold-category-heading">Seleccione Metal</p>
+                    <div class="calculator_gold-category-selection">
+                        <div class="calculator_gold-category-selection-item calculator_gold-category-selection-item-selected">
+                            Oro</div>
+                        <div class="calculator_gold-category-selection-item">Plata</div>
+                        <div class="calculator_gold-category-selection-item">Platino</div>
+                        <div class="calculator_gold-category-selection-item">Paladio</div>
                     </div>
                 </div>
-            </div>
-            <div class="calculator_gold-container-change">
-                <div class="calculator_gold-container-change-line"></div>
-                <div class="calculator_gold-container-change-swap">
-                    <img class="calculator_gold-container-change-swap-img" src="{% static 'img/swap.png' %}" alt="swap">
-                </div>
-                <div class="calculator_gold-container-change-line"></div>
-            </div>
-            <div class="calculator_gold-container-discount">
-                <p>Añadir Descuento</p>
-                <div class="calculator_gold-container-discount-container">
-                    <p>5</p>
-                    <div class="calculator_gold-container-discount-container-currency">
-                        <p class="calculator_gold-container-discount-container-currency-p">%</p>
+
+                <div class="calculator_gold-container">
+                    <div class="calculator_gold-container-amount">
+                        <p>Monto de Inversión</p>
+                        <div class="calculator_gold-container-amount-container">
+                            <p>1000</p>
+                            <div class="calculator_gold-container-amount-container-currency">
+                                <p class="calculator_gold-container-amount-container-currency-p">USD</p>
+                                <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator_gold-container-change">
+                        <div class="calculator_gold-container-change-line"></div>
+                        <div class="calculator_gold-container-change-swap">
+                            <img class="calculator_gold-container-change-swap-img" src="{% static 'img/swap.png' %}" alt="swap">
+                        </div>
+                        <div class="calculator_gold-container-change-line"></div>
+                    </div>
+                    <div class="calculator_gold-container-discount">
+                        <p>Añadir Descuento</p>
+                        <div class="calculator_gold-container-discount-container">
+                            <p>5</p>
+                            <div class="calculator_gold-container-discount-container-currency">
+                                <p class="calculator_gold-container-discount-container-currency-p">%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator_gold-container-receive">
+                        <p>Monto a recibir</p>
+                        <div class="calculator_gold-container-receive-container">
+                            <p>0.424</p>
+                            <div class="calculator_gold-container-receive-container-currency">
+                                <p class="calculator_gold-container-receive-container-currency-p">Onza Troy</p>
+                                <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="calculator_gold-container-receive">
-                <p>Monto a recibir</p>
-                <div class="calculator_gold-container-receive-container">
-                    <p>0.424</p>
-                    <div class="calculator_gold-container-receive-container-currency">
-                        <p class="calculator_gold-container-receive-container-currency-p">Onza Troy</p>
-                        <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+
+                <img src="{% static 'svg/Rectangle.svg' %}" alt="rectangle">
+
+                <div class="calculator_gold-price">
+                    <p>Precio Actual del Oro</p>
+                    <div class="calculator_gold-price-price">
+                        <p>$ 2,321.50</p>
+                        <div class="calculator_gold-price-price-percentaje">
+                            <p>+5.2%</p>
+                            <p>(+0.53)</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <img src="{% static 'svg/Rectangle.svg' %}" alt="rectangle">
+                <btn class="calculator_gold-btn">Comprar Oro</btn>
+            </section>
 
-        <div class="calculator_gold-price">
-            <p>Precio Actual del Oro</p>
-            <div class="calculator_gold-price-price">
-                <p>$ 2,321.50</p>
-                <div class="calculator_gold-price-price-percentaje">
-                    <p>+5.2%</p>
-                    <p>(+0.53)</p>
+            <section class="gold_price_trend">
+                <h1 class="gold_price_trend-heading">Evolución del precio del oro</h1>
+                <div class="gold_price_trend-category">
+                    <div class="gold_price_trend-category-item">1D</div>
+                    <div class="gold_price_trend-category-item">1S</div>
+                    <div class="gold_price_trend-category-item gold_price_trend-category-item-selected">1M</div>
+                    <div class="gold_price_trend-category-item">1M</div>
+                    <div class="gold_price_trend-category-item">1A</div>
                 </div>
-            </div>
-        </div>
+                <img class="gold_price_trend-graphic" src="{% static 'img/graphic.jpg' %}" alt="graphic">
+            </section>
 
-        <btn class="calculator_gold-btn">Comprar Oro</btn>
-    </section>
-
-    <section class="gold_price_trend">
-        <h1 class="gold_price_trend-heading">Evolución del precio del oro</h1>
-        <div class="gold_price_trend-category">
-            <div class="gold_price_trend-category-item">1D</div>
-            <div class="gold_price_trend-category-item">1S</div>
-            <div class="gold_price_trend-category-item gold_price_trend-category-item-selected">1M</div>
-            <div class="gold_price_trend-category-item">1M</div>
-            <div class="gold_price_trend-category-item">1A</div>
+            <section class="section_cta">
+                <h1 class="section_cta-heading">Desbloquea Oportunidades Premium</h1>
+                <p class="section_cta-description">Conecte con nuestro asesores de inversión para un servicio a medida</p>
+                <button class="section_cta-btn">Solicitar Consulta Personalizada</button>
+            </section>
         </div>
-        <img class="gold_price_trend-graphic" src="{% static 'img/graphic.jpg' %}" alt="graphic">
-    </section>
+        <div class="content-left">
+            <section class="articles">
+                <div class="articles-article">
+                    <img class="articles-article-main_img" src="{% static 'img/gold_article.jpg' %}" alt="">
+                    <div class="articles-article-info">
+                        <button class="articles-article-info-category">Análisis Premium</button>
+                        <h2>Porque el Oro es un activo refugia en tiempos de crisis</h2>
+                        <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty? Like to
+                            know the secrets of
+                            transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        <button class="articles-article-info-cta">
+                            <p>Leer Mas</p>
+                            <img src="{% static 'svg/right_arrow.svg' %}" alt="">
+                        </button>
+                    </div>
+                </div>
 
-    <section class="articles">
-        <div class="articles-article">
-            <img class="articles-article-main_img" src="{% static 'img/gold_article.jpg' %}" alt="">
-            <div class="articles-article-info">
-                <button class="articles-article-info-category">Análisis Premium</button>
-                <h2>Porque el Oro es un activo refugia en tiempos de crisis</h2>
-                <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty? Like to
-                    know the secrets of
-                    transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
-                <button class="articles-article-info-cta">
-                    <p>Leer Mas</p>
-                    <img src="{% static 'svg/right_arrow.svg' %}" alt="">
-                </button>
-            </div>
-        </div>
+                <div class="articles-grid">
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/gold_article2.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="articles-article2">
-            <img class="articles-article2-main_img" src="{% static 'img/gold_article2.jpg' %}" alt="">
-            <div class="articles-article2-content">
-                <div class="articles-article2-content-heading">
-                    <h1>Sunday , 1 Jan 2023</h1>
-                    <h2>Lorem Impsum</h2>
-                    <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/gold_article3.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="articles-article2-content-categories">
-                    <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
-                    <button class="articles-article2-content-categories-cta">
-                        <p>Leer Mas</p>
-                        <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <div class="articles-article2">
-            <img class="articles-article2-main_img" src="{% static 'img/gold_article3.jpg' %}" alt="">
-            <div class="articles-article2-content">
-                <div class="articles-article2-content-heading">
-                    <h1>Sunday , 1 Jan 2023</h1>
-                    <h2>Lorem Impsum</h2>
-                    <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/gold_article4.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="articles-article2-content-categories">
-                    <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
-                    <button class="articles-article2-content-categories-cta">
-                        <p>Leer Mas</p>
-                        <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
-                    </button>
-                </div>
-            </div>
-        </div>
 
-        <div class="articles-article2">
-            <img class="articles-article2-main_img" src="{% static 'img/gold_article4.jpg' %}" alt="">
-            <div class="articles-article2-content">
-                <div class="articles-article2-content-heading">
-                    <h1>Sunday , 1 Jan 2023</h1>
-                    <h2>Lorem Impsum</h2>
-                    <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/gold_article4.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="articles-article2-content-categories">
-                    <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
-                    <button class="articles-article2-content-categories-cta">
-                        <p>Leer Mas</p>
-                        <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
-                    </button>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
+    </div>
 </div>
 {% endblock %}
 

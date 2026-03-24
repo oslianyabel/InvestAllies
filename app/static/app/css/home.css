@@ -49,8 +49,6 @@
     gap: 40px;
     background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B);
     padding: 14px 16px 0;
-    /* Reduced padding from 32px to 16px for mobile */
-    margin: 0;
     width: 100%;
     max-width: 100%;
 }

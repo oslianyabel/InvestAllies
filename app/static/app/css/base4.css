@@ -870,10 +870,6 @@ language-menu__item img {
         margin-top: 0;
     }
 
-    .page {
-        margin-top: 110px;
-    }
-
     .desktop-menu {
         display: flex;
         align-items: center;
