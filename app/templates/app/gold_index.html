@@ -61,10 +61,16 @@
                     <div class="calculator_gold-container-amount">
                         <p>Monto de Inversión</p>
                         <div class="calculator_gold-container-amount-container">
-                            <p>1000</p>
+                            <input class="calculator_gold-container-amount-container-input" type="text" value="1000">
                             <div class="calculator_gold-container-amount-container-currency">
                                 <p class="calculator_gold-container-amount-container-currency-p">USD</p>
                                 <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                                <div class="currency-dropdown">
+                                    <div class="currency-dropdown-item">EUR</div>
+                                    <div class="currency-dropdown-item">GBP</div>
+                                    <div class="currency-dropdown-item">RUB</div>
+                                    <div class="currency-dropdown-item">JPY</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -78,7 +84,7 @@
                     <div class="calculator_gold-container-discount">
                         <p>Añadir Descuento</p>
                         <div class="calculator_gold-container-discount-container">
-                            <p>5</p>
+                            <input class="calculator_gold-container-discount-container-input" type="text" value="5">
                             <div class="calculator_gold-container-discount-container-currency">
                                 <p class="calculator_gold-container-discount-container-currency-p">%</p>
                             </div>
@@ -87,16 +93,22 @@
                     <div class="calculator_gold-container-receive">
                         <p>Monto a recibir</p>
                         <div class="calculator_gold-container-receive-container">
-                            <p>0.424</p>
+                            <input class="calculator_gold-container-receive-container-input" type="text" value="0.424">
                             <div class="calculator_gold-container-receive-container-currency">
                                 <p class="calculator_gold-container-receive-container-currency-p">Onza Troy</p>
                                 <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                                <div class="currency-dropdown">
+                                    <div class="currency-dropdown-item">Gramo</div>
+                                    <div class="currency-dropdown-item">Kilogramo</div>
+                                    <div class="currency-dropdown-item">Libra Troy</div>
+                                    <div class="currency-dropdown-item">Onza Troy</div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <img src="{% static 'svg/Rectangle.svg' %}" alt="rectangle">
+                <img class="calculator_gold-line" src="{% static 'svg/Rectangle.svg' %}" alt="rectangle">
 
                 <div class="calculator_gold-price">
                     <p>Precio Actual del Oro</p>
@@ -274,6 +286,69 @@
                 trendItems.forEach(el => el.classList.remove(TREND_SELECTED));
                 item.classList.add(TREND_SELECTED);
             });
+        });
+
+        // Dropdowns de moneda y unidades
+        function initDropdown(wrapperSelector, labelSelector) {
+            const wrapper = document.querySelector(wrapperSelector);
+            if (!wrapper) return;
+            const label = wrapper.querySelector(labelSelector);
+            const dropdown = wrapper.querySelector('.currency-dropdown');
+            if (!dropdown) return;
+
+            function updateVisibility() {
+                dropdown.querySelectorAll('.currency-dropdown-item').forEach(function (opt) {
+                    opt.style.display = opt.textContent.trim() === label.textContent.trim() ? 'none' : '';
+                });
+            }
+
+            wrapper.addEventListener('click', function (e) {
+                e.stopPropagation();
+                document.querySelectorAll('.currency-dropdown.open').forEach(function (d) {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                updateVisibility();
+                dropdown.classList.toggle('open');
+            });
+
+            dropdown.querySelectorAll('.currency-dropdown-item').forEach(function (option) {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    label.textContent = option.textContent;
+                    dropdown.classList.remove('open');
+                });
+            });
+        }
+
+        initDropdown(
+            '.calculator_gold-container-amount-container-currency',
+            '.calculator_gold-container-amount-container-currency-p'
+        );
+        initDropdown(
+            '.calculator_gold-container-receive-container-currency',
+            '.calculator_gold-container-receive-container-currency-p'
+        );
+
+        document.addEventListener('click', function () {
+            document.querySelectorAll('.currency-dropdown.open').forEach(function (d) {
+                d.classList.remove('open');
+            });
+        });
+
+        // Swap de calculadora (amount ↔ discount + receive)
+        let calcSwapped = false;
+        const calcContainer = document.querySelector('.calculator_gold-container');
+        const amountEl = calcContainer.querySelector('.calculator_gold-container-amount');
+        const changeEl = calcContainer.querySelector('.calculator_gold-container-change');
+        const discountEl = calcContainer.querySelector('.calculator_gold-container-discount');
+        const receiveEl = calcContainer.querySelector('.calculator_gold-container-receive');
+
+        document.querySelector('.calculator_gold-container-change-swap').addEventListener('click', function () {
+            calcSwapped = !calcSwapped;
+            const order = calcSwapped
+                ? [discountEl, receiveEl, changeEl, amountEl]
+                : [amountEl, changeEl, discountEl, receiveEl];
+            order.forEach(el => calcContainer.appendChild(el));
         });
     });
 </script>

@@ -1,1 +1,344 @@
-{% extends 'app/maintenance.html' %}
+{% extends 'app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'app/css/fuel.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="page">
+    <section class="hero">
+        <div class="hero-search">
+            <div class="hero-search-container">
+                Inicio / <span>Fuel</span>
+            </div>
+            <div class="hero-search-bar">
+                <input class="hero-search-bar-input" type="text" placeholder="Búsqueda ...">
+                <div class="hero-search-bar-btn">
+                    <img class="hero-search-bar-btn-img" src="{% static 'svg/search_gold.svg' %}" alt="search">
+                </div>
+            </div>
+            <div class="hero-search-bar-desktop">
+                <img class="hero-search-bar-img-desktop" src="{% static 'svg/black_search.svg' %}" alt="search">
+                <input class="hero-search-bar-input-desktop" type="text" placeholder="Búsqueda ...">
+            </div>
+        </div>
+
+        <div class="hero-title">
+            <h1>INVERTIR EN FUEL/PLATSS</h1>
+            <p>Invertir en Fuel Plants representa una entrada directa en el sector de activos reales más crítico del mundo: la infraestructura energética. Estas instalaciones no son solo  plantas de procesamiento o almacenamiento; son los centros logísticos que garantizan que la economía global siga moviéndose.
+            Este sector ofrece una combinación única de estabilidad patrimonial, rendimientos constantes y una capacidad excepcional de adaptación ante la transición energética global.
+            </p>
+        </div>
+    </section>
+
+    <div class="content-grid">
+        <div class="content-right">
+            <section class="calculator_gold">
+                <div class="calculator_gold-title">
+                    <div class="calculator_gold-title-container">
+                        <h1 class="calculator_gold-title-container-heading">Calculadora Fuel Platss</h1>
+                        <div class="calculator_gold-title-container-live">
+                            <img src="{% static 'svg/oval.svg' %}" alt="live">
+                            <p>En Vivo</p>
+                        </div>
+                    </div>
+                    <p class="calculator_gold-title-heading">Cotización en tiempo real</p>
+                </div>
+                <div class="calculator_gold-category">
+                    <p class="calculator_gold-category-heading">Tipos de Combustible</p>
+                    <div class="calculator_gold-category-selection">
+                        <div class="calculator_gold-category-selection-item calculator_gold-category-selection-item-selected">Diesel D2</div>
+                        <div class="calculator_gold-category-selection-item">Jet A1</div>
+                        <div class="calculator_gold-category-selection-item">Crudo</div>
+                        <div class="calculator_gold-category-selection-item">Gasolina</div>
+                    </div>
+                </div>
+
+                <div class="calculator_gold-container">
+                    <div class="calculator_gold-container-amount">
+                        <p>Monto de Inversión</p>
+                        <div class="calculator_gold-container-amount-container">
+                            <input class="calculator_gold-container-amount-container-input" type="text" value="1000">
+                            <div class="calculator_gold-container-amount-container-currency">
+                                <p class="calculator_gold-container-amount-container-currency-p">USD</p>
+                                <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                                <div class="currency-dropdown">
+                                    <div class="currency-dropdown-item">EUR</div>
+                                    <div class="currency-dropdown-item">GBP</div>
+                                    <div class="currency-dropdown-item">RUB</div>
+                                    <div class="currency-dropdown-item">JPY</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculator_gold-container-change">
+                        <div class="calculator_gold-container-change-line"></div>
+                        <div class="calculator_gold-container-change-swap">
+                            <img class="calculator_gold-container-change-swap-img" src="{% static 'img/swap.png' %}" alt="swap">
+                        </div>
+                        <div class="calculator_gold-container-change-line"></div>
+                    </div>
+                    <div class="calculator_gold-container-receive">
+                        <p>Volumen a recibir</p>
+                        <div class="calculator_gold-container-receive-container">
+                            <input class="calculator_gold-container-receive-container-input" type="text" value="0.424">
+                            <div class="calculator_gold-container-receive-container-currency">
+                                <p class="calculator_gold-container-receive-container-currency-p">Tm (Ton)</p>
+                                <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                                <div class="currency-dropdown">
+                                    <div class="currency-dropdown-item">Barril</div>
+                                    <div class="currency-dropdown-item">Litro</div>
+                                    <div class="currency-dropdown-item">Galón</div>
+                                    <div class="currency-dropdown-item">Tm (Ton)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <img class="calculator_gold-line" src="{% static 'svg/Rectangle.svg' %}" alt="rectangle">
+
+                <div class="calculator_gold-price">
+                    <p>Precio Actual del Fuel</p>
+                    <div class="calculator_gold-price-price">
+                        <p>$ 588.40</p>
+                        <div class="calculator_gold-price-price-percentaje">
+                            <p>+5.2%</p>
+                            <p>(+0.53)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <btn class="calculator_gold-btn">Comprar Fuels</btn>
+            </section>
+
+            <section class="gold_price_trend">
+                <h1 class="gold_price_trend-heading">Evolución del precio del FUEL</h1>
+                <div class="gold_price_trend-category">
+                    <div class="gold_price_trend-category-item">1D</div>
+                    <div class="gold_price_trend-category-item">1S</div>
+                    <div class="gold_price_trend-category-item gold_price_trend-category-item-selected">1M</div>
+                    <div class="gold_price_trend-category-item">1M</div>
+                    <div class="gold_price_trend-category-item">1A</div>
+                </div>
+                <img class="gold_price_trend-graphic" src="{% static 'img/graphic.jpg' %}" alt="graphic">
+            </section>
+
+            <section class="section_cta">
+                <h1 class="section_cta-heading">Desbloquea Oportunidades Premium</h1>
+                <p class="section_cta-description">Conecte con nuestro asesores de inversión para un servicio a medida</p>
+                <button class="section_cta-btn">Ver Análisis</button>
+            </section>
+        </div>
+        <div class="content-left">
+            <section class="articles">
+                <div class="articles-article">
+                    <img class="articles-article-main_img" src="{% static 'img/fuel_main.jpg' %}" alt="fuel article">
+                    <div class="articles-article-info">
+                        <button class="articles-article-info-category">Análisis Premium</button>
+                        <h2>Porque Invertir en Diesel D2, Un mercado extenso de posibilidades</h2>
+                        <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty? Like to
+                            know the secrets of
+                            transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        <button class="articles-article-info-cta">
+                            <p>Leer Mas</p>
+                            <img src="{% static 'svg/right_arrow.svg' %}" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="articles-grid">
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/fuel_article2.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/fuel_article3.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/fuel_article4.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="articles-article2">
+                    <img class="articles-article2-main_img" src="{% static 'img/fuel_article5.jpg' %}" alt="">
+                    <div class="articles-article2-content">
+                        <div class="articles-article2-content-heading">
+                            <h1>Sunday , 1 Jan 2023</h1>
+                            <h2>Lorem Impsum</h2>
+                            <p>Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?</p>
+                        </div>
+                        <div class="articles-article2-content-categories">
+                            <div class="articles-article2-content-categories-badge"><p>Economía</p></div>
+                            <button class="articles-article2-content-categories-cta">
+                                <p>Leer Mas</p>
+                                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.querySelector('.hero-search-bar-btn');
+        const input = document.querySelector('.hero-search-bar-input');
+
+        btn.addEventListener('click', function () {
+            const isActive = input.classList.toggle('active');
+
+            // Animación press del botón
+            btn.classList.add('pressed');
+            setTimeout(() => btn.classList.remove('pressed'), 200);
+
+            if (isActive) {
+                setTimeout(() => input.focus(), 420);
+            }
+        });
+
+        // Cerrar con Escape
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                input.classList.remove('active');
+                input.blur();
+            }
+        });
+
+        // Selector de metal
+        const SELECTED = 'calculator_gold-category-selection-item-selected';
+        const items = document.querySelectorAll('.calculator_gold-category-selection-item');
+
+        items.forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (item.classList.contains(SELECTED)) return;
+                items.forEach(el => el.classList.remove(SELECTED));
+                item.classList.add(SELECTED);
+            });
+        });
+
+        // Selector de período del gráfico
+        const TREND_SELECTED = 'gold_price_trend-category-item-selected';
+        const trendItems = document.querySelectorAll('.gold_price_trend-category-item');
+
+        trendItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (item.classList.contains(TREND_SELECTED)) return;
+                trendItems.forEach(el => el.classList.remove(TREND_SELECTED));
+                item.classList.add(TREND_SELECTED);
+            });
+        });
+
+        // Dropdowns de moneda y unidades
+        function initDropdown(wrapperSelector, labelSelector) {
+            const wrapper = document.querySelector(wrapperSelector);
+            if (!wrapper) return;
+            const label = wrapper.querySelector(labelSelector);
+            const dropdown = wrapper.querySelector('.currency-dropdown');
+            if (!dropdown) return;
+
+            function updateVisibility() {
+                dropdown.querySelectorAll('.currency-dropdown-item').forEach(function (opt) {
+                    opt.style.display = opt.textContent.trim() === label.textContent.trim() ? 'none' : '';
+                });
+            }
+
+            wrapper.addEventListener('click', function (e) {
+                e.stopPropagation();
+                document.querySelectorAll('.currency-dropdown.open').forEach(function (d) {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                updateVisibility();
+                dropdown.classList.toggle('open');
+            });
+
+            dropdown.querySelectorAll('.currency-dropdown-item').forEach(function (option) {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    label.textContent = option.textContent;
+                    dropdown.classList.remove('open');
+                });
+            });
+        }
+
+        initDropdown(
+            '.calculator_gold-container-amount-container-currency',
+            '.calculator_gold-container-amount-container-currency-p'
+        );
+        initDropdown(
+            '.calculator_gold-container-receive-container-currency',
+            '.calculator_gold-container-receive-container-currency-p'
+        );
+
+        document.addEventListener('click', function () {
+            document.querySelectorAll('.currency-dropdown.open').forEach(function (d) {
+                d.classList.remove('open');
+            });
+        });
+
+        // Swap de calculadora (amount ↔ receive)
+        let calcSwapped = false;
+        const calcContainer = document.querySelector('.calculator_gold-container');
+        const amountEl = calcContainer.querySelector('.calculator_gold-container-amount');
+        const changeEl = calcContainer.querySelector('.calculator_gold-container-change');
+        const receiveEl = calcContainer.querySelector('.calculator_gold-container-receive');
+
+        document.querySelector('.calculator_gold-container-change-swap').addEventListener('click', function () {
+            calcSwapped = !calcSwapped;
+            const order = calcSwapped
+                ? [receiveEl, changeEl, amountEl]
+                : [amountEl, changeEl, receiveEl];
+            order.forEach(el => calcContainer.appendChild(el));
+        });
+    });
+</script>
+{% endblock %}
