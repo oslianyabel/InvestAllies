@@ -294,8 +294,148 @@
     height: 18px;
 }
 
+.desktop {
+    display: none;
+}
+
 @media (min-width: 1024px) {
+    .page {
+        display: none;
+    }
+
+    .category-category {
+        width: 414px;
+    }
+
     .hero-search-bar {
         display: none;
+    }
+
+    .desktop {
+        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        padding: 80px 60px;
+        background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B);
+    }
+
+    .desktop-title h1 {
+        color: #FFFFFF;
+        font-family: "Poppins";
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .desktop-title p {
+        color: #FFFFFF;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .hero-search-bar-desktop {
+        width: 100%;
+        border-radius: 40px;
+        background-color: #F2F4F8;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .hero-search-bar-input-desktop {
+        color: #878B8F;
+        font-size: 16px;
+        font-family: "Inter";
+        font-weight: 500;
+        width: 100%;
+        border: none;
+        line-height: 24px;
+        outline: none;
+        background-color: #F2F4F8;
+    }
+
+    .hero-search-bar-img-desktop {
+        width: 19.5px;
+        height: 19.5px;
+        margin-left: 10px;
+    }
+
+    .desktop-content {
+        display: flex;
+        gap: 30px;
+    }
+
+    .desktop-content-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .articles-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    .article {
+        width: 50%;
+    }
+
+    .hero-top {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-content p {
+        font-size: 24px;
+    }
+
+    .hero-content-buttons-btn {
+        font-size: 20px;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-top {
+        top: 30px;
+        left: 180px;
+    }
+
+    .hero-content {
+        margin-top: 120px;
+        padding: 0 180px;
+        gap: 40px;
+    }
+
+    .questions {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 40px;
+    }
+
+    .questions-row {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        border-bottom: solid 2px #183932;
+    }
+
+    .questions-row img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .questions-row p {
+        color: #062021;
+        font-size: 20px;
+        font-family: "Poppins";
+        font-weight: 500;
     }
 }
