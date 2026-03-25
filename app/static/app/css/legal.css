@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('/static/img/legal_home.jpg');
+    background-image: url('/static/img/legal_hero_mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -400,6 +400,7 @@
 
     .hero {
         height: 500px;
+        background-image: url('/static/img/legal_hero_desktop.jpg');
     }
 
     .hero-top {
