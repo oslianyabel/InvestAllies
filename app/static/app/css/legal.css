@@ -1,0 +1,301 @@
+.hero {
+    background-image: url('/static/img/legal_home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 300px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(6, 32, 33, 0) 0%, rgba(6, 32, 33, 0.30) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-top {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: #F7F7F7;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Poppins";
+}
+
+.hero-content {
+    margin-top: 70px;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-content h1 {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: "Playfair Display SC";
+    -webkit-text-stroke: 0.3px #E5BE4A;
+}
+
+.hero-content p {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Poppins";
+    margin-bottom: 30px;
+}
+
+.hero-content-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-content-buttons-btn {
+    background-color: #DDC086;
+    border-radius: 4px;
+    border: 0.6px solid #DBC390;
+    padding: 5px;
+    color: #33333A;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: "Poppins";
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.hero-content-buttons-btn:hover {
+    background-color: #c9a85c;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(221, 192, 134, 0.45);
+}
+
+.hero-content-buttons-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.hero-search-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-search-bar-input {
+    width: 0;
+    height: 42px;
+    padding: 0;
+    background-color: #062021;
+    border: 1.5px solid transparent;
+    border-radius: 20.16px;
+    color: #F7F7F7;
+    font-family: "Poppins";
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s ease,
+        padding 0.4s ease,
+        border-color 0.3s ease;
+    pointer-events: none;
+}
+
+.hero-search-bar-input.active {
+    width: 260px;
+    padding: 0 16px;
+    opacity: 1;
+    border-color: #3B7062;
+    pointer-events: all;
+}
+
+.hero-search-bar-input.active:focus {
+    border-color: #E5BE4A;
+    box-shadow: 0 0 0 3px rgba(229, 190, 74, 0.12);
+}
+
+.hero-search-bar-input::placeholder {
+    color: #5a8a7e;
+    font-size: 12px;
+}
+
+.hero-search-bar-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background-color: #3B7062;
+    border-radius: 20.16px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: transform 0.15s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-search-bar-btn:hover {
+    background-color: #4d8e7d;
+    box-shadow: 0 4px 14px rgba(59, 112, 98, 0.45);
+}
+
+.hero-search-bar-btn:active,
+.hero-search-bar-btn.pressed {
+    transform: scale(0.88);
+    background-color: #2e5a50;
+    box-shadow: 0 2px 6px rgba(59, 112, 98, 0.3);
+}
+
+.hero-search-bar-btn-img {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
+    transition: transform 0.15s ease;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 20px;
+    background: linear-gradient(#0D1917, #041E1D, #0A2B24, #173630, #235146, #225045, #4F7C6A, #8CB79B)
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.category-category {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category-category-frame {
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    border-radius: 5.4px;
+}
+
+.category-category-frame-main {
+    background-color: #245448;
+    box-shadow: inset 0 0 0 0.33px #FFFFFF;
+}
+
+.category-category-frame img {
+    width: 24px;
+    height: 24px;
+}
+
+.category-category-frame h2 {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+.article-category {
+    width: 122px;
+    height: 33px;
+    border-radius: 8px;
+    background-color: rgba(1, 1, 1, 0.5);
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 74.5px 0 #FFE9E966, 0 4px 4px 0 #00000040;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.article-content h1 {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Poppins";
+}
+
+.article-content p {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Poppins";
+}
+
+.article-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E5BE4A;
+    border-radius: 20px;
+    padding: 10px;
+    width: 135px;
+    box-shadow: 0 4px 4px 0 #B8B86399;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.article-cta:hover {
+    background-color: #d4a832;
+    box-shadow: 0 6px 12px 0 #B8B86366;
+    transform: translateY(-2px);
+}
+
+.article-cta-download {
+    width: 170px;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.article-cta p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Inter";
+}
+
+.article-cta img {
+    width: 18px;
+    height: 18px;
+}
+
+@media (min-width: 1024px) {
+    .hero-search-bar {
+        display: none;
+    }
+}

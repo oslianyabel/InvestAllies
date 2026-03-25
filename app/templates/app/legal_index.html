@@ -1,1 +1,253 @@
-{% extends 'app/maintenance.html' %}
+{% extends 'app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'app/css/legal.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="hero">
+    <div class="hero-top">
+        Inicio / Legal y Bancario
+    </div>
+    <div class="hero-content">
+        <h1>INVIERTA EN SU FUTURO HOY</h1>
+        <p>En un entorno financiero en constante evolución, la certeza jurídica es el activo más valioso. Ponemos a tu
+            disposición nuestra estructura bancaria diseñada para mitigar riesgos y optimizar el cumplimiento normativo.
+        </p>
+        <div class="hero-content-buttons">
+            <button class="hero-content-buttons-btn">Descargar Guía de Inversión</button>
+            <button class="hero-content-buttons-btn">Ver Oportunidades</button>
+        </div>
+    </div>
+</section>
+
+<div class="page">
+    <section class="category">
+        <div class="hero-search-bar">
+            <div class="hero-search-bar-btn">
+                <img class="hero-search-bar-btn-img" src="{% static 'svg/search_gold.svg' %}" alt="search">
+            </div>
+            <input class="hero-search-bar-input" type="text" placeholder="Búsqueda ...">
+        </div>
+        <div class="category-category">
+            <div class="category-category-frame category-category-frame-main">
+                <img src="{% static 'svg/legal_frame1.svg' %}" alt="">
+                <h2>Regulaciones y Cumplimientos</h2>
+            </div>
+            <div class="category-category-frame">
+                <img src="{% static 'svg/legal_frame2.svg' %}" alt="">
+                <h2>Información Bancaria</h2>
+            </div>
+            <div class="category-category-frame">
+                <img src="{% static 'svg/legal_frame3.svg' %}" alt="">
+                <h2>Documentos Legales y Claves</h2>
+            </div>
+            <div class="category-category-frame">
+                <img src="{% static 'svg/legal_frame4.svg' %}" alt="">
+                <h2>Documentos Legales y Claves</h2>
+            </div>
+            <div class="category-category-frame">
+                <img src="{% static 'svg/legal_frame5.svg' %}" alt="">
+                <h2>Fiscalidad e Impuestos</h2>
+            </div>
+            <div class="category-category-frame">
+                <img src="{% static 'svg/legal_frame6.svg' %}" alt="">
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="articles">
+        <div class="article">
+            <div class="article-category">Regulación</div>
+            <div class="article-content">
+                <h1>Regulación de inversiones en la Unión Europea</h1>
+                <p>Una guía completa sobre el marco regulatorio MiFID II y cómo afecta a los inversores dentro de la UE.</p>
+            </div>
+            <div class="article-cta article-cta-download">
+                <img src="{% static 'svg/download.svg' %}" alt="download">
+                <p>Descargar PDF</p>
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-category">Documento</div>
+            <div class="article-content">
+                <h1>Acuerdo de cliente y término de servicio</h1>
+                <p>Descargue la última guía de nuestro acuerdo de cliente es crucial leerlo antes de invertir</p>
+            </div>
+            <div class="article-cta">
+                <p>Leer Más</p>
+                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-category">FAQ</div>
+            <div class="article-content">
+                <h1>Regulación de inversiones en la Unión Europea</h1>
+                <p>Una guía completa sobre el marco regulatorio MiFID II y cómo afecta a los inversores dentro de la UE.</p>
+            </div>
+            <div class="article-cta">
+                <p>Leer Más</p>
+                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-category">Guía</div>
+            <div class="article-content">
+                <h1>Regulación de inversiones en la Unión Europea</h1>
+                <p>Una guía completa sobre el marco regulatorio MiFID II y cómo afecta a los inversores dentro de la UE.</p>
+            </div>
+            <div class="article-cta">
+                <p>Leer Más</p>
+                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-category">Regulación</div>
+            <div class="article-content">
+                <h1>Regulación de inversiones en la Unión Europea</h1>
+                <p>Una guía completa sobre el marco regulatorio MiFID II y cómo afecta a los inversores dentro de la UE.</p>
+            </div>
+            <div class="article-cta">
+                <p>Leer Más</p>
+                <img src="{% static 'svg/right_arrow.svg' %}" alt="arrow right">
+            </div>
+        </div>
+
+        <div class="article">
+            <div class="article-category">Documento</div>
+            <div class="article-content">
+                <h1>Política de privacidad y proteccion de datos</h1>
+                <p>Conozca como recopilamos, usamos y protegemos sui información personal de acuerdo con el GDRP Y otras Regulaciones</p>
+            </div>
+            <div class="article-cta article-cta-download">
+                <img src="{% static 'svg/download.svg' %}" alt="download">
+                <p>Descargar PDF</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.querySelector('.hero-search-bar-btn');
+        const input = document.querySelector('.hero-search-bar-input');
+
+        btn.addEventListener('click', function () {
+            const isActive = input.classList.toggle('active');
+
+            // Animación press del botón
+            btn.classList.add('pressed');
+            setTimeout(() => btn.classList.remove('pressed'), 200);
+
+            if (isActive) {
+                setTimeout(() => input.focus(), 420);
+            }
+        });
+
+        // Cerrar con Escape
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                input.classList.remove('active');
+                input.blur();
+            }
+        });
+
+        // Selector de metal
+        const SELECTED = 'calculator_gold-category-selection-item-selected';
+        const items = document.querySelectorAll('.calculator_gold-category-selection-item');
+
+        items.forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (item.classList.contains(SELECTED)) return;
+                items.forEach(el => el.classList.remove(SELECTED));
+                item.classList.add(SELECTED);
+            });
+        });
+
+        // Selector de período del gráfico
+        const TREND_SELECTED = 'gold_price_trend-category-item-selected';
+        const trendItems = document.querySelectorAll('.gold_price_trend-category-item');
+
+        trendItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (item.classList.contains(TREND_SELECTED)) return;
+                trendItems.forEach(el => el.classList.remove(TREND_SELECTED));
+                item.classList.add(TREND_SELECTED);
+            });
+        });
+
+        // Dropdowns de moneda y unidades
+        function initDropdown(wrapperSelector, labelSelector) {
+            const wrapper = document.querySelector(wrapperSelector);
+            if (!wrapper) return;
+            const label = wrapper.querySelector(labelSelector);
+            const dropdown = wrapper.querySelector('.currency-dropdown');
+            if (!dropdown) return;
+
+            function updateVisibility() {
+                dropdown.querySelectorAll('.currency-dropdown-item').forEach(function (opt) {
+                    opt.style.display = opt.textContent.trim() === label.textContent.trim() ? 'none' : '';
+                });
+            }
+
+            wrapper.addEventListener('click', function (e) {
+                e.stopPropagation();
+                document.querySelectorAll('.currency-dropdown.open').forEach(function (d) {
+                    if (d !== dropdown) d.classList.remove('open');
+                });
+                updateVisibility();
+                dropdown.classList.toggle('open');
+            });
+
+            dropdown.querySelectorAll('.currency-dropdown-item').forEach(function (option) {
+                option.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    label.textContent = option.textContent;
+                    dropdown.classList.remove('open');
+                });
+            });
+        }
+
+        initDropdown(
+            '.calculator_gold-container-amount-container-currency',
+            '.calculator_gold-container-amount-container-currency-p'
+        );
+        initDropdown(
+            '.calculator_gold-container-receive-container-currency',
+            '.calculator_gold-container-receive-container-currency-p'
+        );
+
+        document.addEventListener('click', function () {
+            document.querySelectorAll('.currency-dropdown.open').forEach(function (d) {
+                d.classList.remove('open');
+            });
+        });
+
+        // Swap de calculadora (amount ↔ discount + receive)
+        let calcSwapped = false;
+        const calcContainer = document.querySelector('.calculator_gold-container');
+        const amountEl = calcContainer.querySelector('.calculator_gold-container-amount');
+        const changeEl = calcContainer.querySelector('.calculator_gold-container-change');
+        const discountEl = calcContainer.querySelector('.calculator_gold-container-discount');
+        const receiveEl = calcContainer.querySelector('.calculator_gold-container-receive');
+
+        document.querySelector('.calculator_gold-container-change-swap').addEventListener('click', function () {
+            calcSwapped = !calcSwapped;
+            const order = calcSwapped
+                ? [discountEl, receiveEl, changeEl, amountEl]
+                : [amountEl, changeEl, discountEl, receiveEl];
+            order.forEach(el => calcContainer.appendChild(el));
+        });
+    });
+</script>
+{% endblock %}
