@@ -1,1 +1,538 @@
-{% extends 'app/maintenance.html' %}
+{% extends 'app/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'app/css/offshore.css' %}">
+{% endblock %}
+
+{% block body %}
+<section class="hero">
+    <div class="hero-top">
+        Inicio / Zonas Offshore
+    </div>
+    <div class="hero-content">
+        <h1>Expanda sus horizontes: inversión y apertura de empresas en zonas offshore</h1>
+        <p>Optimice sus Operaciones globales y proteja sus activos con nuestra asesoría experta</p>
+        <div class="hero-content-buttons">
+            <button class="hero-content-buttons-btn">Solicitar Asesoría</button>
+        </div>
+    </div>
+</section>
+
+<div class="page">
+    <section class="blog">
+        <div class="blog-categories-desktop">
+            <div class="blog-categories-desktop-text">
+                <h2>Conocimiento Experto : Zonas Offshore</h2>
+                <h3>Explore análisis profundos y guías esenciales sobre jurisdicciones Internacionales</h3>
+            </div>
+            <div class="blog-categories-desktop-categories">
+                <div class="blog-categories-item blog-categories-item-selected">
+                    <p>Todos</p>
+                </div>
+                <div class="blog-categories-item">
+                    <p>Hoteles</p>
+                </div>
+                <div class="blog-categories-item">
+                    <p>Casas</p>
+                </div>
+                <div class="blog-categories-item">
+                    <p>Villas</p>
+                </div>
+            </div>
+        </div>
+        <div class="blog-categories-mobile">
+            <div class="blog-categories-item blog-categories-item-selected">
+                <p>Todos</p>
+            </div>
+            <div class="blog-categories-item">
+                <p>Hoteles</p>
+            </div>
+            <div class="blog-categories-item">
+                <p>Casas</p>
+            </div>
+            <div class="blog-categories-item">
+                <p>Villas</p>
+            </div>
+        </div>
+        <div class="blog-articles">
+            <div class="blog-articles-row">
+                <div class="blog-articles-article">
+                    <img class="blog-articles-article-img" src="{% static 'img/offshore_article1.jpg' %}" alt="">
+                    <div class="blog-articles-article-content">
+                        <div class="blog-articles-article-content-author">Sunday , 1 Jan 2023</div>
+                        <div class="blog-articles-article-content-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow link">
+                        </div>
+                        <p class="blog-articles-article-content-text">Like to know the secrets of transforming a 2-14
+                            team into a 3x
+                            Super Bowl winning Dynasty?</p>
+                        <div class="blog-articles-article-content-categories">
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--leadership">
+                                Leadership</div>
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--management">
+                                Management</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-articles-article">
+                    <img class="blog-articles-article-img" src="{% static 'img/offshore_article2.jpg' %}" alt="">
+                    <div class="blog-articles-article-content">
+                        <div class="blog-articles-article-content-author">Sunday , 1 Jan 2023</div>
+                        <div class="blog-articles-article-content-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow link">
+                        </div>
+                        <p class="blog-articles-article-content-text">Like to know the secrets of transforming a 2-14
+                            team into a 3x
+                            Super Bowl winning Dynasty?</p>
+                        <div class="blog-articles-article-content-categories">
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--leadership">
+                                Leadership</div>
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--management">
+                                Management</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-articles-row">
+                <div class="blog-articles-article">
+                    <img class="blog-articles-article-img" src="{% static 'img/offshore_article3.jpg' %}" alt="">
+                    <div class="blog-articles-article-content">
+                        <div class="blog-articles-article-content-author">Sunday , 1 Jan 2023</div>
+                        <div class="blog-articles-article-content-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow link">
+                        </div>
+                        <p class="blog-articles-article-content-text">Like to know the secrets of transforming a 2-14
+                            team into a 3x
+                            Super Bowl winning Dynasty?</p>
+                        <div class="blog-articles-article-content-categories">
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--leadership">
+                                Leadership</div>
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--management">
+                                Management</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-articles-article">
+                    <img class="blog-articles-article-img" src="{% static 'img/offshore_article4.jpg' %}" alt="">
+                    <div class="blog-articles-article-content">
+                        <div class="blog-articles-article-content-author">Sunday , 1 Jan 2023</div>
+                        <div class="blog-articles-article-content-heading">
+                            <p>Lorem Impsum</p>
+                            <img src="{% static 'svg/arrow-up-right.svg' %}" alt="arrow link">
+                        </div>
+                        <p class="blog-articles-article-content-text">Like to know the secrets of transforming a 2-14
+                            team into a 3x
+                            Super Bowl winning Dynasty?</p>
+                        <div class="blog-articles-article-content-categories">
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--leadership">
+                                Leadership</div>
+                            <div
+                                class="blog-articles-article-content-categories-badge blog-articles-article-content-categories-badge--presentation">
+                                Presentación</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-articles"></div>
+    </section>
+
+    <section class="calculator">
+        <h1 class="calculator-title">Calculadora de Impuesto y Rentabilidad</h1>
+        <div class="calculator-content">
+            <div class="calculator-content-title">
+                <img src="{% static 'img/green_bar.png' %}" alt="Calculator Icon">
+                <p>Parámetros de Inversión</p>
+            </div>
+            <div class="calculator-content-content">
+                <div class="calculator-content-content-row">
+                    <h2 class="calculator-content-content-row-heading">País de Inversión</h2>
+                    <div class="calculator-content-content-row-container calculator-content-content-row-container-country"
+                        id="country-selector">
+                        <p id="country-selected">España (ES)</p>
+                        <img src="{% static 'svg/arrow_down_white.svg' %}" alt="arrow down">
+                        <div class="country-dropdown" id="country-dropdown">
+                            <div class="country-dropdown-item" data-value="Marruecos">Marruecos</div>
+                            <div class="country-dropdown-item" data-value="Bali">Bali</div>
+                            <div class="country-dropdown-item" data-value="Zanzíbar">Zanzíbar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-content-content-row">
+                    <h2 class="calculator-content-content-row-heading">Capital Inicial</h2>
+                    <div class="calculator-content-content-row-container">
+                        <input type="text" placeholder="5000">
+                    </div>
+                </div>
+                <div class="calculator-content-content-row">
+                    <h2 class="calculator-content-content-row-heading">Ingresos Anuales Estimados</h2>
+                    <div class="calculator-content-content-row-container">
+                        <input type="text" placeholder="120000">
+                    </div>
+                </div>
+                <div class="calculator-content-content-row">
+                    <h2 class="calculator-content-content-row-heading">Gatos Operativos</h2>
+                    <div class="calculator-content-content-row-container">
+                        <input type="text" placeholder="10000">
+                    </div>
+                </div>
+            </div>
+            <div class="calculator-content-btn">
+                <img src="{% static 'svg/reload.svg' %}" alt="reload icon">
+                <p>Calcular Estimación</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="results">
+        <div class="results-title">
+            <h2>Resultados Proyectados</h2>
+            <p>Base Anual</p>
+        </div>
+        <div class="results-container">
+            <div class="results-container-frame">
+                <p class="results-container-frame-text">IMPUESTOS 0%</p>
+                <h3 class="results-container-frame-money">$ 0</h3>
+                <p class="results-container-frame-footer">Ahorro Vs Onshore</p>
+            </div>
+            <div class="results-container-frame">
+                <p class="results-container-frame-text">RENTABILIDAD (ROI)</p>
+                <h3 class="results-container-frame-money">$ 2,100%</h3>
+                <p class="results-container-frame-footer">Calculado sobre el capital Inicial</p>
+            </div>
+            <div class="results-container-frame">
+                <p class="results-container-frame-text">BENEFICIO NETO</p>
+                <h3 class="results-container-frame-money">$ 105,00</h3>
+                <img src="{% static 'img/offshore_line.png' %}" alt="line icon">
+            </div>
+        </div>
+        <div class="results-information">
+            <h2 class="results-information-title">Desglose de Flujo de Caja</h2>
+            <div class="results-information-frame">
+                <div class="results-information-frame-left">
+                    <p class="results-information-frame-left-top">Beneficio neto</p>
+                    <p class="results-information-frame-left-down">85%</p>
+                </div>
+                <div class="results-information-frame-right">
+                    <p class="results-information-frame-left-top">Gastos</p>
+                    <p class="results-information-frame-left-down">15%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner-text">
+            <h1>LISTO PARA DAR EL SIGUIENTE PASO EN SU ESTATEGIA GLOBAL</h1>
+            <p>Nuestro equipo de expertos esta listo para guiarle. Contáctenos hoy y descubra cómo podemos ayudarle a
+                alcanzar sus
+                objetivos financiero y empresariales</p>
+        </div>
+        <div class="banner-btn">
+            <p>Contactar un Especialista</p>
+        </div>
+    </section>
+
+    <section class="follow">
+        <div class="icons">
+            <div class="icons-frame">
+                <div class="icons-frame-icon">
+                    <img src="{% static 'img/offshore_circle_icon1.png' %}" alt="">
+                </div>
+                <img class="icons-frame-vertical_line" src="{% static 'img/offshore_line_vertical.png' %}" alt="">
+            </div>
+            <div class="icons-frame">
+                <div class="icons-frame-icon">
+                    <img src="{% static 'img/offshore_circle_icon2.png' %}" alt="">
+                </div>
+                <img class="icons-frame-vertical_line2" src="{% static 'img/offshore_line_vertical2.png' %}" alt="">
+            </div>
+            <div class="icons-frame">
+                <div class="icons-frame-icon">
+                    <img src="{% static 'img/offshore_circle_icon3.png' %}" alt="">
+                </div>
+                <img class="icons-frame-vertical_line3" src="{% static 'img/offshore_line_vertical3.png' %}" alt="">
+            </div>
+            <div class="icons-frame">
+                <div class="icons-frame-icon">
+                    <img src="{% static 'img/offshore_circle_icon4.png' %}" alt="">
+                </div>
+                <img class="icons-frame-vertical_line4" src="{% static 'img/offshore_line_vertical4.png' %}" alt="">
+            </div>
+            <div class="icons-frame">
+                <div class="icons-frame-icon">
+                    <img src="{% static 'img/offshore_circle_icon5.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="frames">
+            <div class="frames-frame">
+                <div class="frames-frame-text">
+                    <h1>1. Consulta Inicial y estrategia</h1>
+                    <p>Comenzamos con una entrevista profunda para entender su perfil de inversor. No vendemos paquetes
+                        genéricos; diseñamos trajes a la medida. Identificamos sus objetivos operativos, fiscales y de
+                        sucesión.</p>
+                </div>
+                <div class="frames-frame-questions">
+                    <h1>PREGUNTAS CLAVES QUE ABORDAMOS</h1>
+                    <div class="frames-frame-questions-frame">
+                        <div class="frames-frame-questions-frame-column">
+                            <div class="frames-frame-questions-frame-column-item">
+                                <img src="{% static 'img/offshore_mark.png' %}" alt="">
+                                <p>¿Cuál es la naturaleza de las transacciones internacionales?</p>
+                            </div>
+                            <div class="frames-frame-questions-frame-column-item">
+                                <img src="{% static 'img/offshore_mark.png' %}" alt="">
+                                <p>¿Busca privacidad máxima o transparencia comercial?</p>
+                            </div>
+                        </div>
+                        <div class="frames-frame-questions-frame-column">
+                            <div class="frames-frame-questions-frame-column-item">
+                                <img src="{% static 'img/offshore_mark.png' %}" alt="">
+                                <p>¿Requiere tratados de doble imposición específicos?</p>
+                            </div>
+                            <div class="frames-frame-questions-frame-column-item">
+                                <img src="{% static 'img/offshore_mark.png' %}" alt="">
+                                <p>¿Necesitará servicios de director nominado?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frames-frame">
+                <div class="frames-frame-text">
+                    <h1>2. Selección de Jurisdicción Inteligente</h1>
+                    <p>Analizamos criterios críticos como estabilidad política, sistema legal (Common Law vs Civil Law),
+                        y reputación
+                        bancaria.
+                        Seleccionamos la jurisdicción que maximiza sus beneficios.</p>
+                </div>
+                <div class="frames-card">
+                    <div class="frames-card-title">
+                        <h1>España</h1>
+                        <div class="frames-card-title-badge">
+                            <p>Fondos</p>
+                        </div>
+                    </div>
+                    <div class="frames-card-text">
+                        <p>Ideal para fondos de inversión y vehículos estructurados.</p>
+                        <ul>
+                            <li>Neutralidad fiscal absoluta</li>
+                            <li>Marco regulatorio sofisticado</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="frames-card">
+                    <div class="frames-card-title">
+                        <h1>España</h1>
+                        <div class="frames-card-title-badge">
+                            <p>Fondos</p>
+                        </div>
+                    </div>
+                    <div class="frames-card-text">
+                        <p>Ideal para fondos de inversión y vehículos estructurados.</p>
+                        <ul>
+                            <li>Neutralidad fiscal absoluta</li>
+                            <li>Marco regulatorio sofisticado</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="frames-card">
+                    <div class="frames-card-title">
+                        <h1>España</h1>
+                        <div class="frames-card-title-badge">
+                            <p>Fondos</p>
+                        </div>
+                    </div>
+                    <div class="frames-card-text">
+                        <p>Ideal para fondos de inversión y vehículos estructurados.</p>
+                        <ul>
+                            <li>Neutralidad fiscal absoluta</li>
+                            <li>Marco regulatorio sofisticado</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="frames-footer">Otro Países de inversión disponibles MALI, BALI, ZANIBAR</p>
+            </div>
+            <div class="frames-frame frames-frame-dark">
+                <div class="frames-frame-text">
+                    <h1>3. Gestión Documental y Legal "End-to-End"</h1>
+                    <p>Nos encargamos de la burocracia para que usted se enfoque en el negocio. Desde la redacción de
+                        estatutos hasta la
+                        obtención del certificado de incorporación.</p>
+                </div>
+                <div class="frames-materials">
+                    <div class="frames-materials-item">
+                        <img src="{% static 'img/offshore_material1.png' %}" alt="">
+                        <h2>Libros Corporativos</h2>
+                    </div>
+                    <div class="frames-materials-item">
+                        <img src="{% static 'img/offshore_material2.png' %}" alt="">
+                        <h2>Obtención de Licencias</h2>
+                    </div>
+                    <div class="frames-materials-item">
+                        <img src="{% static 'img/offshore_material3.png' %}" alt="">
+                        <h2>Registro Gubernamental</h2>
+                    </div>
+                    <div class="frames-materials-item">
+                        <img src="{% static 'img/offshore_material4.png' %}" alt="">
+                        <h2>Preparación de Estatutos</h2>
+                    </div>
+                </div>
+                <div class="frames-frame-footer">
+                    <h2>100%</h2>
+                    <h3>Cumplimiento Legal</h3>
+                    <p>Garantía de conformidad con leyes locales</p>
+                </div>
+            </div>
+            <div class="frames-frame frames-frame-dark">
+                <div class="frames-frame-text">
+                    <h1>4. Apertura de Cuenta Bancaria</h1>
+                    <p>La empresa no esta operativa sin su cuenta bancaria. Facilitamos la Introducción y apertura en
+                        instituciones del primer
+                        nivel</p>
+                </div>
+                <div class="frames-frame-card">
+                    <div class="frames-frame-card-image">
+                        <img src="{% static 'img/offshore_card_icon.png' %}" alt="icon">
+                    </div>
+                    <div class="frames-frame-card-content">
+                        <h2>Asistencia KYC/AML</h2>
+                        <p>Opere en USD, EUR, JBP Y JPY desde una sola plataforma de banca online.</p>
+                    </div>
+                </div>
+                <div class="frames-frame-card">
+                    <div class="frames-frame-card-image">
+                        <img src="{% static 'img/offshore_card_icon2.png' %}" alt="icon">
+                    </div>
+                    <div class="frames-frame-card-content">
+                        <h2>Cuentas Multidivisas</h2>
+                        <p>Pre Aprobación de documentos de cumplimiento para evitar rechazos bancarios</p>
+                    </div>
+                </div>
+                <div class="frames-frame-card">
+                    <div class="frames-frame-card-image">
+                        <img src="{% static 'img/offshore_card_icon3.png' %}" alt="icon">
+                    </div>
+                    <div class="frames-frame-card-content">
+                        <h2>Privacidad Financiera</h2>
+                        <p>Estructuras que respetan la confidencialidad dentro del marco CRS/FATCA.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="frames-frame frames-frame-last frames-frame-dark">
+                <div class="frames-frame-text">
+                    <h1>5. Soporte Corporativo continuo</h1>
+                    <div class="frames-frame-text-badge">
+                        <p>Nuevo Servicio</p>
+                    </div>
+                    <p>Su empresa requiere mantenimiento para conservar su estatus legal (Good Standing). Ofrecemos
+                        gestión anualidades,
+                        presentación de reportes financiero y auditorias si la jurisdicción lo exige.</p>
+                </div>
+                <div class="frames-frame-btn">
+                    <p>Contactar Soporte</p>
+                    <img src="{% static 'img/offshore_support.png' %}" alt="support icon">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+
+{% block extrajs %}
+<script>
+    const countrySelector = document.getElementById('country-selector');
+    const countryDropdown = document.getElementById('country-dropdown');
+    const countrySelected = document.getElementById('country-selected');
+
+    countrySelector.addEventListener('click', () => {
+        countryDropdown.classList.toggle('country-dropdown-open');
+    });
+
+    document.querySelectorAll('.country-dropdown-item').forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.stopPropagation();
+            countrySelected.textContent = option.dataset.value;
+            countryDropdown.classList.remove('country-dropdown-open');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!countrySelector.contains(e.target)) {
+            countryDropdown.classList.remove('country-dropdown-open');
+        }
+    });
+
+    document.querySelectorAll('.blog-categories-item').forEach(item => {
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.blog-categories-item-selected').forEach(el => el.classList.remove('blog-categories-item-selected'));
+            item.classList.add('blog-categories-item-selected');
+        });
+    });
+
+    // Results bar animation
+    (function () {
+        const frame = document.querySelector('.results-information-frame');
+        const leftBar = document.querySelector('.results-information-frame-left');
+        const rightBar = document.querySelector('.results-information-frame-right');
+        if (!frame || !leftBar || !rightBar) return;
+
+        // Capture final widths from rendered layout
+        const leftFinalWidth = parseFloat(getComputedStyle(leftBar).width);
+        const rightFinalWidth = parseFloat(getComputedStyle(rightBar).width);
+
+        // Percentage elements (both share the class results-information-frame-left-down)
+        const leftPercent = leftBar.querySelector('.results-information-frame-left-down');
+        const rightPercent = rightBar.querySelector('.results-information-frame-left-down');
+        const leftTarget = leftPercent ? parseInt(leftPercent.textContent) : 0;
+        const rightTarget = rightPercent ? parseInt(rightPercent.textContent) : 0;
+
+        // Reset to initial state
+        leftBar.style.width = '0px';
+        rightBar.style.width = '0px';
+        if (leftPercent) leftPercent.textContent = '0%';
+        if (rightPercent) rightPercent.textContent = '0%';
+
+        function animateCounter(el, to, duration) {
+            if (!el) return;
+            const start = performance.now();
+            function step(now) {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.round(to * eased) + '%';
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    leftBar.style.width = leftFinalWidth + 'px';
+                    rightBar.style.width = rightFinalWidth + 'px';
+                    animateCounter(leftPercent, leftTarget, 1200);
+                    animateCounter(rightPercent, rightTarget, 1200);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(frame);
+    })();
+</script>
+{% endblock %}

@@ -498,8 +498,7 @@
 }
 
 .gold_price_trend-category-item {
-    width: 60px;
-    height: 30px;
+    flex: 1;
     font-size: 12px;
     font-weight: 570;
     color: #B4B4BF;
